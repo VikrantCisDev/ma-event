@@ -1,8 +1,18 @@
 import React from 'react'
+import HomePage from './pages/HomePage/HomePage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import New from './pages/HomePage/New'
 
 const App = () => {
   return (
-    <div>Appsdgasfdg</div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/new" element={<New />}></Route>
+      </Routes>
+    </BrowserRouter>
+    </div >
   )
 }
 
