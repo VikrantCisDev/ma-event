@@ -10,10 +10,9 @@
 .header{
     background-color: var(--light-pink);
     border-bottom: 10px solid var(--pink);
-}
-.custom-container{
     padding: 0 40px;
 }
+
 .header .logo{
     max-width: 200px;
 }
@@ -69,7 +68,7 @@
     padding: 4px;
     margin: 0;
 }
-.nav-search button {
+.nav-search button,.nav-search button:hover {
     background: transparent;
 }
 .nav-search button svg {
@@ -88,6 +87,7 @@
 
 .social-icons a{
     color: var(--pink);
+    transition: all 0.5s;
     font-size: 30px;
 }
 .social-icons {
@@ -116,15 +116,58 @@
     justify-content: center;
     align-items: center;
 }
-.roundPinkImg .icon{
+.roundPinkImg .icon {
     background-color: var(--pink);
     color: #fff;
     width: 100%;
     height: 100%;
     border-radius: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    cursor: pointer;
 }
-.roundPinkImg .icon svg{
-    width: 70px;
+
+
+.roundPinkImg .icon:hover svg {
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.social-icons a:hover svg {
+    transform: translateY(-3px);
+    transform: scale(1.2);
+}
+
+.roundPinkImg .icon svg {
+    max-width: 70px;
     background: transparent;
+    height: 70px;
+    width: 100%;
+    border: unset;
+    border-radius: unset;
+}
+.twoBtnSec ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+
+body .dark-btn {
+    border: 1px solid var(--pink);
+    border-radius: 0;
+    background-color: var(--pink);
+    padding: 8px 10px;
+    min-width: 120px;
+}
+
+
+body .dark-btn:hover {
+    background-color: #fff;
+    color: var(--pink);
+    border: 1px solid var(--pink);
 }

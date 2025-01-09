@@ -13,8 +13,10 @@ input:focus,select:focus,input:focus-visible,select:focus-visible {
     box-shadow: unset !important;
 }
 
-.custom-container{
-    padding: 0 40px;
+.custom-container {
+    padding: 0 15px;
+    max-width: 1480px;
+    margin: 0 auto;
 }
 
 .carousel-item img {
@@ -138,7 +140,7 @@ input:focus,select:focus,input:focus-visible,select:focus-visible {
 
 
 footer.footer {
-    padding: 40px 15px 10px;
+    padding: 40px 40px  10px;
     background: var(--pink);
 }
 

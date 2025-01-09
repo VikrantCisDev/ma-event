@@ -93,7 +93,7 @@ const Footer = () => {
           </ul>
         </Col>
         <Col>
-          <h2>Get our App</h2>
+          <h2 className='mb-2'>Get our App</h2>
           <ul className='appStoreSec'>
             <li className='mb-3'>
               <a href='#'>

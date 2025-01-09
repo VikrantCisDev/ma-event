@@ -20,7 +20,7 @@ import { IoLogoWechat } from "react-icons/io5";
 import { FaRegHandshake } from "react-icons/fa6";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiPartyPopper } from "react-icons/gi";
-
+import Button from 'react-bootstrap/Button';
 
 
 const HomePage = () => {
@@ -133,9 +133,8 @@ const HomePage = () => {
             }
           </Row>
         </div>
-
       </section>
-      <section className='py-5'>
+      <section className='pb-5'>
         <div className='custom-container'>
           <div className="heading-wrapper pink-text text-center mb-5">
             <h3 className=' fs-1 mb-2 fw-normal'>How it works</h3>
@@ -159,6 +158,18 @@ const HomePage = () => {
           </div>
         </div>
 
+      </section>
+
+
+      <section className='pb-5 twoBtnSec'>
+            <ul className='list-style-none m-0'>
+              <li>
+                <Button className='dark-btn'>Latest Events</Button>
+              </li>
+              <li>
+                <Button className='dark-btn'>Gallry</Button>
+              </li>
+            </ul>
       </section>
 
       <Footer />

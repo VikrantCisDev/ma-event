@@ -15,88 +15,88 @@ const Header = () => {
     return (
         <header className='header'>
 
-            <div className="custom-container">
-                <Navbar expand="lg" className="">
-                    <Navbar.Brand className='pe-4' href="#home">
-                        <img className='img-fluid logo' src={logo} alt="Ma-event" />
-                    </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className=" center-links text-uppercase">
-                            <Nav.Link href="#home">ABout ma-event</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Planning tools</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="#action/3.1">Vendors</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.2">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">
-                                    Separated link
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="#link">latest events</Nav.Link>
-                            <Nav.Link href="#link">Images</Nav.Link>
-                            <Nav.Link href="#link">Blog</Nav.Link>
-                            <Nav.Link href="#link">Faq's</Nav.Link>
-                        </Nav>
-                        <div className="nav-right">
-                            <div className='social-icons d-flex gap-3'>
-                                <a href='#'>
-                                    <ImFacebook2 />
-                                </a>
-                                <a href='#'>
-                                    <FaInstagram />
-                                </a>
-                                <a href='#'>
-                                    <FaTwitter />
-                                </a>
-                                <a href='#'>
-                                    <FaYoutube/>
-                                </a>
+
+            <Navbar expand="lg" className="">
+                <Navbar.Brand className='pe-4' href="#home">
+                    <img className='img-fluid logo' src={logo} alt="Ma-event" />
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className=" center-links text-uppercase">
+                        <Nav.Link href="#home">ABout ma-event</Nav.Link>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Planning tools</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Another action
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">
+                                Separated link
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown.Item href="#action/3.1">Vendors</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.2">
+                                Another action
+                            </NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">
+                                Separated link
+                            </NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link href="#link">latest events</Nav.Link>
+                        <Nav.Link href="#link">Images</Nav.Link>
+                        <Nav.Link href="#link">Blog</Nav.Link>
+                        <Nav.Link href="#link">Faq's</Nav.Link>
+                    </Nav>
+                    <div className="nav-right">
+                        <div className='social-icons d-flex gap-3'>
+                            <a href='#'>
+                                <ImFacebook2 />
+                            </a>
+                            <a href='#'>
+                                <FaInstagram />
+                            </a>
+                            <a href='#'>
+                                <FaTwitter />
+                            </a>
+                            <a href='#'>
+                                <FaYoutube />
+                            </a>
+                        </div>
+                        <div className='d-flex gap-5 align-items-center'>
+                            <div className='user-wrapper text-uppercase d-flex gap-3'>
+                                <Nav.Link href="#link">
+                                    <span className='d-flex'><FaUserCircle /></span>
+                                    Register
+                                </Nav.Link>
+                                <Nav.Link href="#link">Login</Nav.Link>
                             </div>
-                            <div className='d-flex gap-5 align-items-center'>
-                                <div className='user-wrapper text-uppercase d-flex gap-3'>
-                                    <Nav.Link href="#link">
-                                        <span className='d-flex'><FaUserCircle /></span>
-                                        Register
-                                    </Nav.Link>
-                                    <Nav.Link href="#link">Login</Nav.Link>
-                                </div>
-                                <div className='nav-search'>
-                                    <Form inline>
-                                        <Row>
-                                            <Col xs="auto" className='p-0'>
-                                                <Form.Control
-                                                    type="text"
-                                                    placeholder="Search..."
-                                                    className=" "
-                                                />
-                                            </Col>
-                                            <Col xs="auto" className='p-0'>
-                                                <Button type="submit" className='d-flex'>
-                                                    <HiMagnifyingGlass />
-                                                </Button>
-                                            </Col>
-                                        </Row>
-                                    </Form>
-                                </div>
+                            <div className='nav-search'>
+                                <Form inline>
+                                    <Row>
+                                        <Col xs="auto" className='p-0'>
+                                            <Form.Control
+                                                type="text"
+                                                placeholder="Search..."
+                                                className=" "
+                                            />
+                                        </Col>
+                                        <Col xs="auto" className='p-0'>
+                                            <Button type="submit" className='d-flex'>
+                                                <HiMagnifyingGlass />
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </Form>
                             </div>
                         </div>
-                    </Navbar.Collapse>
-                </Navbar>
-            </div>
+                    </div>
+                </Navbar.Collapse>
+            </Navbar>
+
         </header>
     )
 }
