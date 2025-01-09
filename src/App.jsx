@@ -12,7 +12,7 @@ const App = () => {
           <Route path="/new" element={<New />}></Route>
       </Routes>
     </BrowserRouter>
-    </div >
+    </div>
   )
 }
 
