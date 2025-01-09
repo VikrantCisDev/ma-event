@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 const ImageCard = ({data,cardStyle}) => {
   const styleOptions ={
     primary: "position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center bg-opacity-50 bg-black text-light",
-    secondary: ""
+    secondary: "pink-text"
   }
   return (
     <Card className='border-0'>
@@ -17,4 +17,4 @@ const ImageCard = ({data,cardStyle}) => {
   )
 }
 
-export default ImageCard
+export default ImageCard;

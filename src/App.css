@@ -3,10 +3,16 @@
     --pink: #921f62;
 }
 
+.pink-text{
+    color: var(--pink);
+}
+
 .header{
     background-color: var(--light-pink);
-    padding: 0 40px;
     border-bottom: 10px solid var(--pink);
+}
+.custom-container{
+    padding: 0 40px;
 }
 .header .logo{
     max-width: 200px;
@@ -14,11 +20,13 @@
 .header .navbar{
     padding: 0;
 }
-.header .navbar .nav-link{
+.header  .nav-link{
     color: var(--pink);
-    font-size: 20px;
+    font-size: 18px;
+    padding: 0.5rem;
     padding-bottom: 30px;
     transition: unset;
+    font-weight: 500;
 }
 .header .navbar .nav-link:hover::before{
     content: "";
@@ -34,9 +42,64 @@
     color: var(--light-pink);
     position: relative;
 }
-.header .navbar-expand-lg .navbar-collapse {
+.header .navbar-expand-lg .navbar-collapse{
     align-self: end;
+}
+.nav-search {
+    align-self: flex-start;
 }
 .header .navbar-expand-lg .navbar-nav{
     gap: 15px;
+}
+.header .center-links {
+    align-self: end;
+}
+.nav-search input,
+.nav-search button{
+    border-radius: 0;
+    border: none;
+}
+
+.header .center-links{
+    flex: 1 1 0;
+}
+
+.nav-search .row {
+    background: #921f62;
+    padding: 4px;
+    margin: 0;
+}
+.nav-search button {
+    background: transparent;
+}
+.nav-search button svg {
+    font-size: 24px;
+}
+.user-wrapper .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-weight: 700;
+}
+.user-wrapper .nav-link svg {
+    font-size: 30px;
+    color: #000;
+}
+
+.social-icons a{
+    color: var(--pink);
+    font-size: 30px;
+}
+.social-icons {
+    justify-content: end;
+    align-items: flex-start;
+    padding-bottom: 12px;
+}
+
+.header .navbar .user-wrapper .nav-link:hover{
+    background-color: transparent;
+    color: var(--pink)
+}
+.user-wrapper .nav-link::before{
+    display: none;
 }
