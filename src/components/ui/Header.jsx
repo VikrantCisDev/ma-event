@@ -24,7 +24,7 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className=" center-links text-uppercase">
                         <Nav.Link href="#home">ABout ma-event</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <NavDropdown title="Planning tools" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Planning tools</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Another action
@@ -35,7 +35,7 @@ const Header = () => {
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <NavDropdown title="Vendors" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Vendors</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Another action
