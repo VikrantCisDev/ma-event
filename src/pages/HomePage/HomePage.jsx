@@ -21,7 +21,7 @@ import { FaRegHandshake } from "react-icons/fa6";
 import { FaTruckFast } from "react-icons/fa6";
 import { GiPartyPopper } from "react-icons/gi";
 import Button from 'react-bootstrap/Button';
-
+import './style.css'
 
 const HomePage = () => {
 
@@ -94,83 +94,66 @@ const HomePage = () => {
       <Header />
 
 
+      <main className='main-section'>
 
-      <div className="banner-sec">
-        <Banner />
-      </div>
+        <section className="banner-sec">
+          <Banner />
+        </section>
 
-      {/* <div className="cardSec">
-        <Container>
-          <h3 className='text-center py-2'>Your Perfect Event with all your Vendors on one platform</h3>
-          <Row className='row-gap-3'>
-            {
-              cardData.map((item, index) => {
-                return (
-                  <Col lg={3} md={4} sm={6} key={index}>
-                    <ImageCard data={item} cardStyle={"primary"} />
-                  </Col>
-                )
-              })
-            }
-          </Row>
-        </Container >
-      </div> */}
-
-
-
-      <section className='py-5 cardSec'>
-        <div className='custom-container'>
-          <h3 className='text-center mb-4'>Your Perfect Event with all your Vendors on one platform</h3>
-          <Row className='row-gap-3'>
-            {
-              cardData.map((item, index) => {
-                return (
-                  <Col lg={3} md={4} sm={6} key={index}>
-                    <ImageCard data={item} cardStyle={"primary"} />
-                  </Col>
-                )
-              })
-            }
-          </Row>
-        </div>
-      </section>
-      <section className='pb-5'>
-        <div className='custom-container'>
-          <div className="heading-wrapper pink-text text-center mb-5">
-            <h3 className=' fs-1 mb-2 fw-normal'>How it works</h3>
-            <p className='fs-4 fw-medium'>The most efficient way to find all your event vendors in one place</p>
-          </div>
-        </div>
-        <div className="howitworkbg">
+        <section className='py-5 cardSec'>
           <div className='custom-container'>
-
-            <Row className='py-5 '>
+            <h3 className='text-center mb-4'>Your Perfect Event with all your Vendors on one platform</h3>
+            <Row className='row-gap-3'>
               {
-                cardData2.map((item, index) => {
+                cardData.map((item, index) => {
                   return (
-                    <Col lg={2} md={4} sm={6} key={index}>
-                      <ImageCard data={item} cardStyle={"secondary"} />
+                    <Col lg={3} md={4} sm={6} key={index}>
+                      <ImageCard data={item} cardStyle={"primary"} />
                     </Col>
                   )
                 })
               }
             </Row>
           </div>
-        </div>
-      </section>
+        </section>
 
+        <section className='pb-5'>
+          <div className='custom-container'>
+            <div className="heading-wrapper pink-text text-center mb-5">
+              <h3 className=' fs-1 mb-2 fw-normal'>How it works</h3>
+              <p className='fs-4 fw-medium'>The most efficient way to find all your event vendors in one place</p>
+            </div>
+          </div>
+          <div className="howitworkbg">
+            <div className='custom-container'>
 
-      <section className='pb-5 twoBtnSec'>
-        <ul className='list-style-none m-0'>
-          <li>
-            <Button className='dark-btn'>Latest Events</Button>
-          </li>
-          <li>
-            <Button className='dark-btn'>Gallry</Button>
-          </li>
-        </ul>
-      </section>
+              <Row className='py-5 '>
+                {
+                  cardData2.map((item, index) => {
+                    return (
+                      <Col lg={2} md={4} sm={6} key={index}>
+                        <ImageCard data={item} cardStyle={"secondary"} />
+                      </Col>
+                    )
+                  })
+                }
+              </Row>
+            </div>
+          </div>
+        </section>
 
+        <section className='pb-5 twoBtnSec'>
+          <ul className='list-style-none m-0'>
+            <li>
+              <Button className='dark-btn'>Latest Events</Button>
+            </li>
+            <li>
+              <Button className='dark-btn'>Gallry</Button>
+            </li>
+          </ul>
+        </section>
+
+      </main>
       <Footer />
 
 
