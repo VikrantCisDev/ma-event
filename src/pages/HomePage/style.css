@@ -203,11 +203,19 @@ input:focus,select:focus,input:focus-visible,select:focus-visible {
     position: absolute;
     top: 0;
     left: 0;
-    background: #110f3e4d;
+    background: rgb(0 0 0 / 40%);
     width: 100%;
     height: 100%;
 }
 
+
+.howitworkbg .col-lg-2 > a {
+    text-decoration: none;
+}
+.twoBtnSec button.dark-btn {
+    min-width: 200px;
+    font-weight: 700;
+}
 
 
 .bannerTxt h2 span{

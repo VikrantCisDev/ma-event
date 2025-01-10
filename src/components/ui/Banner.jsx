@@ -11,7 +11,7 @@ const Banner = () => {
     return (
         <Carousel>
             <Carousel.Item className='BannerImgs'>
-                <Image src={BannerImg} rounded />
+                <Image src={BannerImg}  />
                 <Carousel.Caption className='bannerCaption'>
                     <div className='bannerTxt'>
                         <h2>Ma Event, <span>My Way</span> ...</h2>

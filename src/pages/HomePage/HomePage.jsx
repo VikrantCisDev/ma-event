@@ -108,7 +108,9 @@ const HomePage = () => {
                 cardData.map((item, index) => {
                   return (
                     <Col lg={3} md={4} sm={6} key={index}>
-                      <ImageCard data={item} cardStyle={"primary"} />
+                      <a href='#'>
+                        <ImageCard data={item} cardStyle={"primary"} />
+                      </a>
                     </Col>
                   )
                 })
@@ -132,7 +134,9 @@ const HomePage = () => {
                   cardData2.map((item, index) => {
                     return (
                       <Col lg={2} md={4} sm={6} key={index}>
+                        <a href='#'>
                         <ImageCard data={item} cardStyle={"secondary"} />
+                        </a>
                       </Col>
                     )
                   })
@@ -148,7 +152,7 @@ const HomePage = () => {
               <Button className='dark-btn'>Latest Events</Button>
             </li>
             <li>
-              <Button className='dark-btn'>Gallry</Button>
+              <Button className='dark-btn'>Gallery</Button>
             </li>
           </ul>
         </section>
