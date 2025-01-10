@@ -11,10 +11,12 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import { ImFacebook2 } from "react-icons/im";
 import { FaUserCircle, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import MegaMenu from './MegaMenu';
+import { Container } from 'react-bootstrap';
 
 const Header = () => {
     return (
         <header className='header'>
+            <Container className="custom-container">
             <Navbar expand="lg" className="">
                 <Navbar.Brand className='pe-4' href="#home">
                     <img className='img-fluid logo' src={logo} alt="Ma-event" />
@@ -62,6 +64,7 @@ const Header = () => {
                     </div>
                 </Navbar.Collapse>
             </Navbar>
+            </Container>
         </header>
     );
 }

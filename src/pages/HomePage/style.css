@@ -6,14 +6,14 @@
 }
 
 .header .logo{
-    max-width: 200px;
+    max-width: 160px;
 }
 .header .navbar{
     padding: 0;
 }
 .header  .nav-link{
     color: var(--pink);
-    font-size: 18px;
+    font-size: 16px;
     padding: 0.5rem;
     padding-bottom: 30px;
     transition: unset;
@@ -323,22 +323,27 @@ footer.footer ul {
 footer.footer ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 footer {
     color: #ffffff;
 }
 
+footer.footer h4 {
+    font-size: 24px;
+    margin-bottom: 20px !important;
+}
+
 .ft-logo-sec  h6{
     letter-spacing: 1px;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
  .copyrightSec h6{
-    font-size: 24px;
+    font-size: 18px;
     font-style: italic;
 }
 
@@ -349,7 +354,7 @@ footer {
 }
 
 footer.footer ul.social_links li a {
-    font-size: 40px;
+    font-size: 32px;
 }
 
 .appStoreSec img {
@@ -357,4 +362,23 @@ footer.footer ul.social_links li a {
 }
 
 
+footer.footer ul li a:hover {
+    text-decoration: underline;
+}
+
 /* FOOTER */
+
+.cardSec .card {
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.cardSec .card:hover img {
+    transform: scale(1.2);
+  transition: all 0.5s;
+}
+
+
+.cardSec .card img {
+    transition: all 0.5s;
+}

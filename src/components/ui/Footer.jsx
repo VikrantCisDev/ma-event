@@ -14,153 +14,153 @@ import appleStore from '../../assets/Images/apple-store.png'
 const Footer = () => {
   return (
     <footer className='footer'>
+      <Container className='custom-container'>
+        <Row>
+          <Col>
+            <div className="ft-logo-sec">
+              <Image src={footerLogo} rounded />
+              <h6 >Interact with us Socially</h6>
+            </div>
+          </Col>
+          <Col>
+            <h4>Get to Know Us</h4>
 
-      <Row>
-        <Col>
-          <div className="ft-logo-sec">
-            <Image src={footerLogo} rounded />
-            <h6 >Interact with us Socially</h6>
-          </div>
-        </Col>
-        <Col>
-          <h4>Get to Know Us</h4>
-
-          <ul>
-            <li>
-              <a href='#'>About Maevent</a>
-            </li>
-            <li>
-              <a href='#'>Rules for Vendor Placement</a>
-            </li>
-            <li>
-              <a href='#'>Maevent Blog</a>
-            </li>
-            <li>
-              <a href='#'>Maevent for Business</a>
-            </li>
-          </ul>
-
-
-        </Col>
-        <Col>
-          <h4>Smart Nav </h4>
-
-          <ul>
-            <li>
-              <a href='#'>Vendors</a>
-            </li>
-            <li>
-              <a href='#'>Planning Tools</a>
-            </li>
-            <li>
-              <a href='#'>Latest</a>
-            </li>
-
-          </ul>
+            <ul>
+              <li>
+                <a href='#'>About Maevent</a>
+              </li>
+              <li>
+                <a href='#'>Rules for Vendor Placement</a>
+              </li>
+              <li>
+                <a href='#'>Maevent Blog</a>
+              </li>
+              <li>
+                <a href='#'>Maevent for Business</a>
+              </li>
+            </ul>
 
 
-        </Col>
-        <Col>
-          <h4>Legal Bits </h4>
+          </Col>
+          <Col>
+            <h4>Smart Nav </h4>
+
+            <ul>
+              <li>
+                <a href='#'>Vendors</a>
+              </li>
+              <li>
+                <a href='#'>Planning Tools</a>
+              </li>
+              <li>
+                <a href='#'>Latest</a>
+              </li>
+
+            </ul>
 
 
-          <ul>
-            <li>
-              <a href='#'>Terms of Use</a>
-            </li>
-            <li>
-              <a href='#'>Privacy Policy</a>
-            </li>
-            <li>
-              <a href='#'>Cookie Notice</a>
-            </li>
-            <li>
-              <a href='#'>Faq's</a>
-            </li>
-
-          </ul>
-        </Col>
-        <Col>
-          <h4>Tips & Help </h4>
-          <ul>
-            <li>
-              <a href='#'>Help & Contact Us</a>
-            </li>
-            <li>
-              <a href='#'>Stay Safe</a>
-            </li>
-
-          </ul>
-        </Col>
-        <Col>
-          <h2 className='mb-2'>Get our App</h2>
-          <ul className='appStoreSec'>
-            <li className='mb-3'>
-              <a href='#'>
-                <Image src={playStore} />
-              </a>
-            </li>
-            <li>
-              <a href='#'>
-                <Image src={appleStore} />
-              </a>
-            </li>
-
-          </ul>
-        </Col>
-
-      </Row>
+          </Col>
+          <Col>
+            <h4>Legal Bits </h4>
 
 
+            <ul>
+              <li>
+                <a href='#'>Terms of Use</a>
+              </li>
+              <li>
+                <a href='#'>Privacy Policy</a>
+              </li>
+              <li>
+                <a href='#'>Cookie Notice</a>
+              </li>
+              <li>
+                <a href='#'>Faq's</a>
+              </li>
 
-      <Row className="align-items-end">
+            </ul>
+          </Col>
+          <Col>
+            <h4>Tips & Help </h4>
+            <ul>
+              <li>
+                <a href='#'>Help & Contact Us</a>
+              </li>
+              <li>
+                <a href='#'>Stay Safe</a>
+              </li>
 
-        <Col xs={3}>
-          <ul className='social_links'>
+            </ul>
+          </Col>
+          <Col>
+            <h4 className='mb-2'>Get our App</h4>
+            <ul className='appStoreSec'>
+              <li className='mb-3'>
+                <a href='#'>
+                  <Image src={playStore} />
+                </a>
+              </li>
+              <li>
+                <a href='#'>
+                  <Image src={appleStore} />
+                </a>
+              </li>
+
+            </ul>
+          </Col>
+
+        </Row>
 
 
 
+        <Row className="align-items-end">
 
-            <li>
-              <a href="#">
-                <ImFacebook2 />
-              </a>
-            </li>
+          <Col xs={3}>
+            <ul className='social_links'>
 
-            <li>
-              <a href="#">
-                <FaInstagram />
-              </a>
-            </li>
 
-            <li>
-              <a href="#">
-                <FaTwitter />
-              </a>
-            </li>
 
-            <li>
-              <a href="#">
-                <FaWhatsapp />
-              </a>
-            </li>
 
-            <li>
-              <a href="#">
-                <FaYoutube />
-              </a>
-            </li>
+              <li>
+                <a href="#">
+                  <ImFacebook2 />
+                </a>
+              </li>
 
-          </ul>
-        </Col>
-        <Col xs={9}>
-          <div className='copyrightSec'>
-            <h6>Copyright © 2019-2020 | Urban Craft Media (Pty) Ltd | Aidah creative enterprise</h6>
-          </div>
-        </Col>
+              <li>
+                <a href="#">
+                  <FaInstagram />
+                </a>
+              </li>
 
-      </Row>
+              <li>
+                <a href="#">
+                  <FaTwitter />
+                </a>
+              </li>
 
+              <li>
+                <a href="#">
+                  <FaWhatsapp />
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <FaYoutube />
+                </a>
+              </li>
+
+            </ul>
+          </Col>
+          <Col xs={9}>
+            <div className='copyrightSec'>
+              <h6>Copyright © 2019-2020 | Urban Craft Media (Pty) Ltd | Aidah creative enterprise</h6>
+            </div>
+          </Col>
+
+        </Row>
+      </Container>
     </footer>
   )
 }
