@@ -8,7 +8,7 @@ const ListingVendors = () => {
         <>
             <Header />
                  <main className='main-section'>
-                    <ProductCard />
+                    {/* <ProductCard /> */}
                  </main>
             <Footer />
         </>

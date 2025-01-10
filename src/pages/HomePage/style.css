@@ -1,16 +1,3 @@
-:root{
-    --light-pink: #ead0dd;
-    --pink: #921f62;
-}
-
-
-h1,h2,h3,h4,h5,h6 {
-    margin-bottom: 0 !important;
-}
-
-.pink-text{
-    color: var(--pink);
-}
 
 .header{
     background-color: var(--light-pink);
@@ -177,6 +164,21 @@ body .dark-btn:hover {
 }
 
 
+body .gray-btn {
+    border: 1px solid #545454;
+    border-radius: 0;
+    background-color: #545454;
+    padding: 8px 10px;
+    min-width: 120px;
+}
+
+body .gray-btn:hover {
+    background-color: #fff;
+    color: #545454;
+    border: 1px solid #545454;
+}
+
+
 
 .cardSec img {
     height: 300px;
@@ -189,11 +191,6 @@ input:focus,select:focus,input:focus-visible,select:focus-visible {
     box-shadow: unset !important;
 }
 
-.custom-container {
-    padding: 0 15px;
-    max-width: 1480px;
-    margin: 0 auto;
-}
 
 .carousel-item img {
     height: 70vh;
