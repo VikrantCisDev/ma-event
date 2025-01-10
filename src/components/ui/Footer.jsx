@@ -6,7 +6,7 @@ import Image from 'react-bootstrap/Image';
 import footerLogo from '../../assets/Images/footer-logo.png'
 import ListGroup from 'react-bootstrap/ListGroup';
 import { ImFacebook2 } from "react-icons/im";
-import { FaInstagram, FaTwitter, FaYoutube,FaWhatsapp  } from "react-icons/fa";
+import { FaInstagram, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import playStore from '../../assets/Images/play-store.png'
 import appleStore from '../../assets/Images/apple-store.png'
 
@@ -102,7 +102,7 @@ const Footer = () => {
             </li>
             <li>
               <a href='#'>
-              <Image src={appleStore} />
+                <Image src={appleStore} />
               </a>
             </li>
 
@@ -141,7 +141,7 @@ const Footer = () => {
 
             <li>
               <a href="#">
-                <FaWhatsapp  />
+                <FaWhatsapp />
               </a>
             </li>
 

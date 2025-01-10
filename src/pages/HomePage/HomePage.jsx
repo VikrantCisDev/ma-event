@@ -11,7 +11,7 @@ import image5 from "../../assets/Images/card5.jpg"
 import image6 from "../../assets/Images/card6.jpg"
 import image7 from "../../assets/Images/card7.jpg"
 import image8 from "../../assets/Images/card8.jpg"
-import Header from '../../components/ui/header';
+import Header from '../../components/ui/Header';
 import Banner from '../../components/ui/Banner';
 import Footer from '../../components/ui/Footer';
 import { AiOutlineFileSearch } from "react-icons/ai";
@@ -63,31 +63,31 @@ const HomePage = () => {
 
   let cardData2 = [
     {
-      img: <AiOutlineFileSearch className='icon'/>,
+      img: <AiOutlineFileSearch className='icon' />,
       title: "Search for a service provider",
     },
     {
-      img: <BsShopWindow className='icon'/>,
+      img: <BsShopWindow className='icon' />,
       title: "Connect with the best vendor",
     },
     {
-      img: <IoLogoWechat className='icon'/>,
+      img: <IoLogoWechat className='icon' />,
       title: "Easy communication with vendor",
     },
     {
-      img: <FaRegHandshake className='icon'/>,
+      img: <FaRegHandshake className='icon' />,
       title: "Satisfied with the vendors Product / service",
     },
     {
-      img: <FaTruckFast className='icon'/>,
+      img: <FaTruckFast className='icon' />,
       title: "Vendor delivers on time for event",
     },
     {
-      img: <GiPartyPopper className='icon'/>,
+      img: <GiPartyPopper className='icon' />,
       title: "Enjoy the party with your friends",
     }
   ]
-  
+
 
   return (
     <>
@@ -157,19 +157,18 @@ const HomePage = () => {
             </Row>
           </div>
         </div>
-
       </section>
 
 
       <section className='pb-5 twoBtnSec'>
-            <ul className='list-style-none m-0'>
-              <li>
-                <Button className='dark-btn'>Latest Events</Button>
-              </li>
-              <li>
-                <Button className='dark-btn'>Gallry</Button>
-              </li>
-            </ul>
+        <ul className='list-style-none m-0'>
+          <li>
+            <Button className='dark-btn'>Latest Events</Button>
+          </li>
+          <li>
+            <Button className='dark-btn'>Gallry</Button>
+          </li>
+        </ul>
       </section>
 
       <Footer />
