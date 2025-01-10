@@ -20,7 +20,10 @@ body .custom-container {
     margin: 0 auto;
 }
 
-
+header .nav-link:focus-visible {
+    outline: 0;
+    box-shadow: unset;
+}
 
 h1,h2,h3,h4,h5,h6 {
     margin-bottom: 0 !important;
