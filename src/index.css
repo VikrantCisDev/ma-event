@@ -51,8 +51,17 @@ header .dropdown-menu[data-bs-popper] {
 }
 
 
-
-
+.bannerCaption {
+    box-shadow: 0 5px 50px rgb(255 255 255 / 5%);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    background: #00000033;
+    border-radius: 15px;
+}
 
 /* BreadcrumbSection */
 
