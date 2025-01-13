@@ -16,14 +16,9 @@ const Footer = () => {
     <footer className='footer'>
       <Container className='custom-container'>
         <Row>
+
           <Col>
-            <div className="ft-logo-sec">
-              <Image src={footerLogo} rounded />
-              <h6 >Interact with us Socially</h6>
-            </div>
-          </Col>
-          <Col>
-            <h4>Get to Know Us</h4>
+            <h4>Account</h4>
 
             <ul>
               <li>
@@ -43,7 +38,7 @@ const Footer = () => {
 
           </Col>
           <Col>
-            <h4>Smart Nav </h4>
+            <h4>About</h4>
 
             <ul>
               <li>
@@ -61,7 +56,7 @@ const Footer = () => {
 
           </Col>
           <Col>
-            <h4>Legal Bits </h4>
+            <h4>Support</h4>
 
 
             <ul>
@@ -80,47 +75,37 @@ const Footer = () => {
 
             </ul>
           </Col>
+
           <Col>
-            <h4>Tips & Help </h4>
+
+
+            <h4>Contact</h4>
+
+
             <ul>
               <li>
-                <a href='#'>Help & Contact Us</a>
+                <a href="#">Help & Contact Us</a>
               </li>
-              <li>
-                <a href='#'>Stay Safe</a>
-              </li>
-
             </ul>
-          </Col>
-          <Col>
-            <h4 className='mb-2'>Get our App</h4>
-            <ul className='appStoreSec'>
-              <li className='mb-3'>
-                <a href='#'>
-                  <Image src={playStore} />
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <Image src={appleStore} />
-                </a>
-              </li>
 
-            </ul>
+            <div className="ft-logo-sec my-2">
+              <Image src={footerLogo} rounded />
+            </div>
           </Col>
 
         </Row>
 
 
-
         <Row className="align-items-end">
+
+          <Col xs={9} >
+            <div className='copyrightSec text-center'>
+              <h6>Copyright © 2019-2021 | Maeventmyway (Pty) Ltd | All Rights reserved.</h6>
+            </div>
+          </Col>
 
           <Col xs={3}>
             <ul className='social_links'>
-
-
-
-
               <li>
                 <a href="#">
                   <ImFacebook2 />
@@ -141,25 +126,24 @@ const Footer = () => {
 
               <li>
                 <a href="#">
-                  <FaWhatsapp />
+                  <FaYoutube />
                 </a>
               </li>
 
+
               <li>
                 <a href="#">
-                  <FaYoutube />
+                  <FaWhatsapp />
                 </a>
               </li>
 
             </ul>
           </Col>
-          <Col xs={9}>
-            <div className='copyrightSec'>
-              <h6>Copyright © 2019-2020 | Urban Craft Media (Pty) Ltd | Aidah creative enterprise</h6>
-            </div>
-          </Col>
+
 
         </Row>
+
+
       </Container>
     </footer>
   )
