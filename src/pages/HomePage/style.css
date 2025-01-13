@@ -213,7 +213,7 @@ input:focus,select:focus,input:focus-visible,select:focus-visible {
     text-decoration: none;
 }
 .twoBtnSec button.dark-btn {
-    min-width: 200px;
+    min-width: 180px;
     font-weight: 700;
 }
 
