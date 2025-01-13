@@ -18,8 +18,32 @@
     padding-bottom: 30px;
     transition: unset;
     font-weight: 500;
+    height: 100%;
 }
-.header .navbar .nav-link:hover::before{
+.nav-mega {
+    position: relative;
+}
+
+.megamenu-wrapper {
+    top: 100%;
+    left: 0;
+    margin-top: var(--bs-dropdown-spacer);
+    width: 100%;
+    min-width: 800px;
+    background: var(--light-pink);
+    border: unset;
+    border-radius: 0;
+    padding: 15px;
+    position: absolute;
+    z-index: 1;
+    border-top: 11px solid var(--pink);
+    display: none;
+}
+.nav-mega:hover .megamenu-wrapper {
+    display: block;
+}
+.header .navbar .nav-link:hover::before,
+.header .navbar .nav-mega:hover .nav-link::before{
     content: "";
     position: absolute;
     bottom: 100%;
@@ -28,7 +52,8 @@
     height: 100%;
     background-color: var(--pink);
 }
-.header .navbar .nav-link:hover{
+.header .navbar .nav-link:hover,
+.header .navbar .nav-mega:hover .nav-link{
     background-color: var(--pink);
     color: var(--light-pink);
     position: relative;
@@ -218,8 +243,9 @@ input:focus,select:focus,input:focus-visible,select:focus-visible {
 }
 
 
-.bannerTxt h2 span{
+.bannerTxt h2 span {
     color: var(--pink);
+    -webkit-text-stroke: 0.015em #ead0dd;
 }
 
 
@@ -393,3 +419,5 @@ footer.footer ul li a:hover {
 .cardSec .card img {
     transition: all 0.5s;
 }
+
+

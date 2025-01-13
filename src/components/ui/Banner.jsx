@@ -12,7 +12,7 @@ import Button from 'react-bootstrap/Button';
 const Banner = () => {
     return (
         <div className="carouselMain position-relative">
-        <Carousel pause={false} interval={1500}>
+        <Carousel pause={false} interval={null}>
             <Carousel.Item className='BannerImgs'>
                 <Image src={BannerImg}  />
             </Carousel.Item>

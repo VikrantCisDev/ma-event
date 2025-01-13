@@ -12,6 +12,8 @@ import { ImFacebook2 } from "react-icons/im";
 import { FaUserCircle, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import MegaMenu from './MegaMenu';
 import { Container } from 'react-bootstrap';
+import { IoMdArrowDropdown } from "react-icons/io";
+
 
 const Header = () => {
     return (
@@ -25,12 +27,18 @@ const Header = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className=" center-links text-uppercase">
                         <Nav.Link href="#home">About ma-event</Nav.Link>
-                        <NavDropdown title="Planning tools" id="basic-nav-dropdown">
-                            {/* Add planning tools items here */}
-                        </NavDropdown>
-                        <NavDropdown title="Vendors" id="basic-nav-dropdown">
-                            <MegaMenu />
-                        </NavDropdown>
+                        <div className="nav-mega">
+                            <Nav.Link href="javascript:void(0)">Planning tools <IoMdArrowDropdown /> </Nav.Link>
+                            <div className="megamenu-wrapper">
+                                <MegaMenu />
+                            </div>
+                        </div>
+                        <div className="nav-mega">
+                            <Nav.Link href="javascript:void(0)">Vendors <IoMdArrowDropdown /> </Nav.Link>
+                            <div className="megamenu-wrapper">
+                                <MegaMenu />
+                            </div>
+                        </div>
                         <Nav.Link href="#link">Latest events</Nav.Link>
                         <Nav.Link href="#link">Images</Nav.Link>
                         <Nav.Link href="#link">Blog</Nav.Link>
