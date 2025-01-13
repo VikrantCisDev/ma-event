@@ -35,8 +35,12 @@ const Header = () => {
                         <Nav.Link href="#link">Images</Nav.Link>
                         <Nav.Link href="#link">Blog</Nav.Link>
                         <Nav.Link href="#link">Faq's</Nav.Link>
+                        <div className='user-wrapper text-uppercase d-flex gap-3'>
+                            <Nav.Link href="#link"><span className='d-flex'><FaUserCircle /></span> Register</Nav.Link>
+                            <Nav.Link href="#link">Login</Nav.Link>
+                        </div>
                     </Nav>
-                    <div className="nav-right">
+                    {/* <div className="nav-right">
                         <div className='social-icons d-flex gap-3'>
                             <a href='#'><ImFacebook2 /></a>
                             <a href='#'><FaInstagram /></a>
@@ -61,7 +65,7 @@ const Header = () => {
                                 </Form>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </Navbar.Collapse>
             </Navbar>
             </Container>

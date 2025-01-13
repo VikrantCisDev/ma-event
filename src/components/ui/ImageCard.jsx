@@ -15,7 +15,7 @@ const ImageCard = ({ data, cardStyle }) => {
       ) : (
         <Card.Img variant="top" src={data.img} className='img-fluid' />
       )}
-      <Card.Body className={styleOptions[cardStyle] ? styleOptions[cardStyle] : styleOptions[secondary]}>
+      <Card.Body className={`${styleOptions[cardStyle] ? styleOptions[cardStyle] : styleOptions[secondary]} pb-0`}>
         <Card.Title>{data.title}</Card.Title>
         <Card.Text>{data.text}</Card.Text>
       </Card.Body>
