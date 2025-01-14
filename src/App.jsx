@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/listingvendors" element={<Layout><ListingVendors /></Layout>}></Route>
           <Route path="/vendorpage" element={<Layout><VendorsPage /></Layout>}></Route>
           <Route path="/vendor-categories" element={<Layout><VendorCategory /></Layout>}></Route>
+          <Route path="*" element={<h1>Error 404 page not found!!</h1>}></Route>
         </Routes>
       </BrowserRouter>
     </>
