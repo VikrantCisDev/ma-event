@@ -21,6 +21,7 @@ import { TiHeartFullOutline } from "react-icons/ti";
 import { FaCommentDots } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { FaStar } from 'react-icons/fa'
+import MultiMenus from '../../components/ui/MultiMenus';
 
 
 
@@ -33,7 +34,7 @@ const VendorsPage = () => {
     return (
         <>
     
-            <main className='main-section'>
+            {/* <main className='main-section'>
                 <div className='vendorPage'>
                     <section className="vptopSec">
                         <Container className='custom-container'>
@@ -708,7 +709,9 @@ const VendorsPage = () => {
                         </Container>
                     </section>
                 </div>
-            </main>
+            </main> */}
+
+            <MultiMenus />
          
         </>
     );
