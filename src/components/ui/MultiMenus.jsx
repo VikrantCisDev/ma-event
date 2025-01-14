@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
+
 
 import { RxCross2 } from "react-icons/rx";
 
@@ -145,7 +147,7 @@ const MultilevelMenu = () => {
 
     return (
       <li onClick={toggleSubMenu} style={{ cursor: "pointer" }}>
-        {item.label}
+        <a href="#">{item.label}{item.subItems && (<IoMdArrowDropdown />)}</a>
         {item.subItems && (
           <ul style={{ display: isOpen ? "block" : "none", listStyle: "none" }}>
             {item.subItems.map((subItem, index) => (
@@ -161,7 +163,7 @@ const MultilevelMenu = () => {
     <>
 
       <div className="close-btn">
-        <RxCross2 />
+        <RxCross2 size={25} />
       </div>
       <ul style={{ listStyle: "none", padding: "0" }}>
         {menuData.map((item, index) => (
