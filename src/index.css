@@ -1,4 +1,4 @@
-:root{
+:root {
     --light-pink: #ead0dd;
     --pink: #921f62;
 }
@@ -25,11 +25,16 @@ header .nav-link:focus-visible {
     box-shadow: unset;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: 0 !important;
 }
 
-.pink-text{
+.pink-text {
     color: var(--pink);
 }
 
@@ -69,7 +74,8 @@ ol.breadcrumb {
     align-items: center;
 }
 
-ol.breadcrumb .breadcrumb-item a,ol.breadcrumb .breadcrumb-item {
+ol.breadcrumb .breadcrumb-item a,
+ol.breadcrumb .breadcrumb-item {
     font-size: 20px;
     text-decoration: none;
     color: #000000;
@@ -85,3 +91,45 @@ ol.breadcrumb .breadcrumb-item.active {
 /* BreadcrumbSection */
 
 
+@media (max-width: 1199px) {
+
+   body  footer.footer {
+        padding: 40px 15px  10px;
+    }
+
+    body .copyRightRow {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .copyRightRow ul.social_links {
+        justify-content: center;
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    body .footer-link-row ul li a {
+        font-size: 16px !important;
+    }
+
+    .footer-link-row .col {
+        max-width: 50%;
+        flex: 50%;
+        margin-top: 20px;
+    }
+
+    body .copyrightSec h6 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-link-row .col {
+        max-width: 50%;
+        flex: 50%;
+        margin-top: 20px;
+    }  
+}

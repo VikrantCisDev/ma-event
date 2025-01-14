@@ -473,7 +473,6 @@ const VendorsPage = () => {
                                                             ))}
 
 
-
                                                         </div>
                                                     </ListGroupItem>
                                                     <ListGroupItem className='fw-semibold border-0 starRating p-0'>

@@ -15,7 +15,16 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <Container className='custom-container'>
-        <Row>
+        <Row className='footer-link-row'>
+
+          <Col className='d-md-none' xs="12">
+
+
+            <div className="ft-logo-sec my-2">
+              <Image src={footerLogo} rounded className='img-fluid' />
+            </div>
+
+          </Col>
 
           <Col>
             <h4>Account</h4>
@@ -88,23 +97,23 @@ const Footer = () => {
               </li>
             </ul>
 
-            <div className="ft-logo-sec my-2">
-              <Image src={footerLogo} rounded />
+            <div className="ft-logo-sec my-2 d-md-block d-none">
+              <Image src={footerLogo} rounded className='img-fluid' />
             </div>
           </Col>
 
         </Row>
 
 
-        <Row className="align-items-end">
+        <Row className="align-items-end copyRightRow">
 
-          <Col xs={9} >
+          <Col xl={9} >
             <div className='copyrightSec text-center'>
               <h6>Copyright © 2019-2021 | Maeventmyway (Pty) Ltd | All Rights reserved.</h6>
             </div>
           </Col>
 
-          <Col xs={3}>
+          <Col xl={3}>
             <ul className='social_links'>
               <li>
                 <a href="#">

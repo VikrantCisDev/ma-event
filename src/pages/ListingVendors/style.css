@@ -1,0 +1,87 @@
+.itemTopSec {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.itemTopSec .itsRightSec {display: flex;gap: 10px;}
+
+.itsRightBtn {
+    display: flex;
+    gap: 10px;
+}
+
+
+.itsRightBtn button {
+    background: unset;
+    border: 1px solid #787878;
+    color: #787878;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.itsRightBtn button.active {
+    color: var(--pink);
+}
+
+
+body .btn:focus-visible,body .btn:focus {
+    color: unset !important;
+    background-color: unset !important;
+    border-color: unset !important;
+    outline: 0;
+    box-shadow: unset !important;
+}
+
+.itsRightBtn button:hover {
+    border: 1px solid #787878;
+    background-color: #787878;
+}
+
+.product-list.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+
+
+.ListingVendorsPage .pdTitle h2 {
+    font-size: 18px;
+}
+
+
+body .ListingVendorsPage .list-group-item svg {
+    width: 18px;
+    height: 18px;
+}
+
+body .ListingVendorsPage  .pdLocation h4 {
+    font-size: 18px;
+}
+
+body .ListingVendorsPage  .pdLocation h6 {
+    font-size: 16px;
+}
+
+button.active-items,button.active-items:focus {
+    background: var(--pink) !important;
+    color: #fff !important;
+    border-color: var(--pink) !important;
+}
+
+.product-list.list .ProductImg img {
+    width: 100%;
+    height: 100%;
+    max-height: 480px;
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    margin-bottom: 0;
+}
