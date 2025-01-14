@@ -17,13 +17,18 @@ import { FaPlus } from "react-icons/fa";
 import { HiOutlineUser } from "react-icons/hi2";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
+import MultilevelMenu from './MultiMenus';
 
 const Header = () => {
     const [active, setActive] = useState(false);
 
     const handleClick = () => {
-        setActive(!active);
-    }
+      setActive(!active);
+    };
+  
+    const handleClose = () => {
+      setActive(false); // Ensure the menu is closed
+    };
 
     return (
         <header className='header'>
@@ -54,7 +59,7 @@ const Header = () => {
                         </Navbar.Toggle>
                     </div>
                     <Navbar className={`responsiveNav ${active ? 'active' : ''}`} id="basic-navbar-nav">
-                        <Nav className="center-links text-uppercase">
+                        <Nav className="center-links text-uppercase d-lg-flex d-none">
                             <Nav.Link href="#home">About ma-event</Nav.Link>
                             <div className="nav-mega">
                                 <Nav.Link href="javascript:void(0)">Vendors <IoMdArrowDropdown /></Nav.Link>
@@ -88,6 +93,11 @@ const Header = () => {
                                 <a href="javascript:void(0)" className='rightNavLink postYourAd'><FaPlus /> Post <span className='postSpan'> your</span> AD</a>
                             </div>
                         </Nav>
+
+
+                        <div className='d-lg-none mobileMultiMenu'>
+                            <MultilevelMenu />
+                        </div>
                     </Navbar>
                 </Navbar>
             </Container>

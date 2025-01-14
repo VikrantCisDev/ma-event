@@ -1,182 +1,61 @@
 import React, { useState } from "react";
 
+const MultilevelMenu = () => {
+    const menuData = [
+      {
+        label: "Item 1",
+        subItems: [
+          { label: "Subitem 1.1" },
+          { label: "Subitem 1.2" },
+        ],
+      },
+      {
+        label: "Item 2",
+        subItems: [
+          {
+            label: "Subitem 2.1",
+          },
+          {
+            label: "Subitem 2.2",
+            subItems: [
+              { label: "Subsubitem 2.2.1" },
+              { label: "Subsubitem 2.2.2" },
+            ],
+          },
+        ],
+      },
+      { label: "Item 3" },
+    ];
 
+  const MenuItem = ({ item }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-
-
-const MultiMenus = () => {
-
-
-
-    const menus = [
-        {
-          label: "Menu 1"
-        },
-        {
-          label: "Menu 2",
-          submenu: [
-            {
-              label: "Sub Menu 1"
-            },
-            {
-              label: "Sub Menu 2"
-            }
-          ]
-        },
-        {
-          label: "Menu 3",
-          submenu: [
-            {
-              label: "Sub Menu 1",
-              submenu: [
-                {
-                  label: "Boom 1"
-                },
-                {
-                  label: "Boom 2"
-                }
-              ]
-            },
-            {
-              label: "Sub Menu 2",
-              submenu: [
-                {
-                  label: "Deep 1"
-                },
-                {
-                  label: "Deep 2",
-                  submenu: [
-                    {
-                      label: "Lorem 1"
-                    },
-                    {
-                      label: "Lorem 2",
-                      submenu: [
-                        {
-                          label: "Super Deep"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              label: "Sub Menu 3"
-            },
-            {
-              label: "Sub Menu 4",
-              submenu: [
-                {
-                  label: "Last 1"
-                },
-                {
-                  label: "Last 2"
-                },
-                {
-                  label: "Last 3"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          label: "Menu 4"
-        }
-      ];
-
-
-
-
-  const [activeMenus, setActiveMenus] = useState([]);
-
-  const handleMenuClick = data => {
-    console.log(data);
-  };
-
-  const handleArrowClick = menuName => {
-    let newActiveMenus = [...activeMenus];
-
-    if (newActiveMenus.includes(menuName)) {
-      var index = newActiveMenus.indexOf(menuName);
-      if (index > -1) {
-        newActiveMenus.splice(index, 1);
-      }
-    } else {
-      newActiveMenus.push(menuName);
-    }
-
-    setActiveMenus(newActiveMenus);
-  };
-
-  const ListMenu = ({ dept, data, hasSubMenu, menuName, menuIndex }) => (
-    <li>
-      <div className="item" style={{ paddingLeft: `${dept * 18}px` }}>
-        <span className="label" onClick={() => handleMenuClick(data)}>{data.label} </span>
-        {hasSubMenu && (
-          <span
-            className={`arrow ${activeMenus.includes(menuName) ? 'toggle' : ''}`}
-            onClick={() => handleArrowClick(menuName)}
-          />
-        )}
-      </div>
-      {hasSubMenu && (
-        <SubMenu
-          dept={dept}
-          data={data.submenu}
-          toggle={activeMenus.includes(menuName)}
-          menuIndex={menuIndex}
-        />
-      )}
-    </li>
-  );
-
-  const SubMenu = ({ dept, data, toggle, menuIndex }) => {
-    if (!toggle) {
-      return null;
-    }
-
-    dept = dept + 1;
+    const toggleSubMenu = (e) => {
+      e.stopPropagation();
+      setIsOpen(!isOpen);
+    };
 
     return (
-      <ul>
-        {data.map((menu, index) => {
-          const menuName = `sidebar-submenu-${dept}-${menuIndex}-${index}`;
-
-          return (
-            <ListMenu
-              dept={dept}
-              data={menu}
-              hasSubMenu={menu.submenu}
-              menuName={menuName}
-              key={menuName}
-              menuIndex={index}
-            />
-          );
-        })}
-      </ul>
+      <li onClick={toggleSubMenu} style={{ cursor: "pointer", margin: "5px 0" }}>
+        {item.label}
+        {item.subItems && (
+          <ul style={{ display: isOpen ? "block" : "none", marginLeft: "20px", listStyle: "none" }}>
+            {item.subItems.map((subItem, index) => (
+              <MenuItem key={index} item={subItem} />
+            ))}
+          </ul>
+        )}
+      </li>
     );
   };
 
   return (
-    <ul>
-      {menus.map((menu, index) => {
-        const dept = 1;
-        const menuName = `sidebar-menu-${dept}-${index}`;
-
-        return (
-          <ListMenu
-            dept={dept}
-            data={menu}
-            hasSubMenu={menu.submenu}
-            menuName={menuName}
-            key={menuName}
-            menuIndex={index}
-          />
-        );
-      })}
+    <ul style={{ listStyle: "none", padding: "0" }}>
+      {menuData.map((item, index) => (
+        <MenuItem key={index} item={item} />
+      ))}
     </ul>
   );
 };
 
-export default MultiMenus;
+export default MultilevelMenu;
