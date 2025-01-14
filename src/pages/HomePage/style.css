@@ -166,6 +166,16 @@ header .navbar-nav .nav-link.active,
     font-size: 24px;
 }
 
+
+.headerNavbar {
+    align-items: end;
+}
+
+
+.responsiveNav {
+    align-self: flex-end;
+}  
+
 .user-wrapper .nav-link {
     display: flex;
     align-items: center;
@@ -529,13 +539,122 @@ footer.footer ul li a:hover {
 
 @media (max-width: 1400px) {
 
-    .header .nav-link {
+    .header .nav-link,
+    .header .rightNavLink {
         font-size: 14px;
         padding-bottom: 30px;
     }
 
     .header .logo {
         max-width: 120px;
+    }
+
+
+    .megamenu-wrapper {
+        min-width: 680px;
+    }
+}
+
+
+@media (max-width: 1199px) {
+    .navbar-brand {
+        margin: 0 !important;
+        padding-right: 10px;
+    }
+
+    .header .navbar-expand-lg .navbar-nav {
+        gap: 5px;
+    }
+
+    span.postSpan {
+        display: none;
+    }
+
+    body .header .nav-link,
+    .header .rightNavLink {
+        font-size: 13px;
+        padding-bottom: 25px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    button.navbar-toggler {
+        padding: 0;
+        border: unset;
+    }
+
+    .postYourAd {
+        padding: 5px 12px !important;
+    }
+
+    .header {
+        border: unset;
+        background: #fff;
+    }
+
+
+    .myAccount.dropdown #basic-nav-dropdown {
+        padding: 0;
+    }
+
+
+    .myAccount.dropdown .dropdown-toggle::after {
+        display: none;
+    }
+
+    .header .navbar .nav-link:hover::before,
+    .header .navbar .nav-mega:hover .nav-link::before {
+        display: none;
+    }
+
+    .header .navbar .nav-link:hover,
+    .header .navbar .nav-mega:hover .nav-link {
+        background-color: unset;
+    }
+
+    .myAccount.dropdown .dropdown-menu.show {
+        left: auto !important;
+        right: 0;
+        top: 40px;
+    }
+
+
+    .responsiveNav {
+        transform:translate(-150% , 0);
+        position: fixed !important;
+        transition: all 0.5s;
+        width: 100%;
+        height: 100%;
+        max-width: 350px;
+        top: 0;
+        left: 0;
+        
+        z-index: 99999;
+        background: #fff;
+    }
+
+    .responsiveNav.active {
+        transform: translate(0%);
+       
+       
+      
+        
+        transition: all 0.5s;
+    }
+
+
+    .headerNavbar {
+        align-items: center;
+    }
+    
+    .header .center-links {
+        flex-direction: column !important;
+        flex: unset;
+        align-self: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        padding:0;
     }
 
 }
