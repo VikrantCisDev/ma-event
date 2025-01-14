@@ -46,7 +46,7 @@ const Banner = () => {
                             <Form.Control type="text" placeholder="Easterncape" className='rounded-0 border-0' />
                         </div>
                     </div>
-                    <div className='BannerBtn ms-2'>
+                    <div className='BannerBtn ms-lg-2'>
                         <Button className='rounded-0 border-0 d-flex align-items-center gap-2 text-white btn btn-primary'>
                             <GoSearch />Search
                         </Button>
