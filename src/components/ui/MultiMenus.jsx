@@ -1,31 +1,139 @@
 import React, { useState } from "react";
 
+import { RxCross2 } from "react-icons/rx";
+
 const MultilevelMenu = () => {
-    const menuData = [
-      {
-        label: "Item 1",
-        subItems: [
-          { label: "Subitem 1.1" },
-          { label: "Subitem 1.2" },
-        ],
-      },
-      {
-        label: "Item 2",
-        subItems: [
-          {
-            label: "Subitem 2.1",
-          },
-          {
-            label: "Subitem 2.2",
-            subItems: [
-              { label: "Subsubitem 2.2.1" },
-              { label: "Subsubitem 2.2.2" },
-            ],
-          },
-        ],
-      },
-      { label: "Item 3" },
-    ];
+  const menuData = [
+    {
+      label: "ABOUT MA-EVENT",
+    },
+    {
+      label: "VENDORS",
+      subItems: [
+        {
+          label: "POPULAR CATEGORIES",
+          subItems: [
+            { label: "Events Venues" },
+            { label: "Decorators / Decor" },
+            { label: "Photographers" },
+            { label: "Car Hires" },
+            { label: "Beauty Salon" },
+            { label: "Honeymoon Destinations" },
+            { label: "Accommodation" },
+            { label: "Wedding Planners" },
+            { label: "Cakes" },
+            { label: "Catering" },
+            { label: "Videographers" },
+            { label: "Florists" },
+            { label: "Event Loans" },
+            { label: "Wedding Websites" },
+          ],
+        },
+        {
+          label: "BRIDE & GROOM FAVOURITES",
+          subItems: [
+            { label: "Wedding Dress" },
+            { label: "Tuxed Outfits" },
+            { label: "Bridal Wear" },
+            { label: "Groom's Wear" },
+            { label: "Gifts & Packaging" },
+            { label: "Bridal Accessories" },
+            { label: "Bridal Shoes" },
+          ],
+        },
+        {
+          label: "ENTERTAINMENT",
+          subItems: [
+            { label: "Cultural Dance Groups" },
+            { label: "Dance Bands" },
+            { label: "Live Bands" },
+            { label: "Ceremony Musicians" },
+            { label: "DJs" },
+            { label: "Choirs" },
+          ],
+        },
+        {
+          label: "ACCESSORIES",
+          subItems: [{ label: "Jewellery" }, { label: "Wedding Rings" }],
+        },
+        {
+          label: "EVENT RENTALS",
+          subItems: [
+            { label: "PA Systems" },
+            { label: "Tents & Chairs" },
+            { label: "Warming Dishes" },
+            { label: "Wedding Fonts" },
+            { label: "Toast Master or MC" },
+          ],
+        },
+      ],
+    },
+    { label: "EVENT PING" },
+    {
+      label: "PLANNING TOOLS",
+      subItems: [
+        {
+          label: "POPULAR CATEGORIES",
+          subItems: [
+            { label: "Events Venues" },
+            { label: "Decorators / Decor" },
+            { label: "Photographers" },
+            { label: "Car Hires" },
+            { label: "Beauty Salon" },
+            { label: "Honeymoon Destinations" },
+            { label: "Accommodation" },
+            { label: "Wedding Planners" },
+            { label: "Cakes" },
+            { label: "Catering" },
+            { label: "Videographers" },
+            { label: "Florists" },
+            { label: "Event Loans" },
+            { label: "Wedding Websites" },
+          ],
+        },
+        {
+          label: "BRIDE & GROOM FAVOURITES",
+          subItems: [
+            { label: "Wedding Dress" },
+            { label: "Tuxed Outfits" },
+            { label: "Bridal Wear" },
+            { label: "Groom's Wear" },
+            { label: "Gifts & Packaging" },
+            { label: "Bridal Accessories" },
+            { label: "Bridal Shoes" },
+          ],
+        },
+        {
+          label: "ENTERTAINMENT",
+          subItems: [
+            { label: "Cultural Dance Groups" },
+            { label: "Dance Bands" },
+            { label: "Live Bands" },
+            { label: "Ceremony Musicians" },
+            { label: "DJs" },
+            { label: "Choirs" },
+          ],
+        },
+        {
+          label: "ACCESSORIES",
+          subItems: [{ label: "Jewellery" }, { label: "Wedding Rings" }],
+        },
+        {
+          label: "EVENT RENTALS",
+          subItems: [
+            { label: "PA Systems" },
+            { label: "Tents & Chairs" },
+            { label: "Warming Dishes" },
+            { label: "Wedding Fonts" },
+            { label: "Toast Master or MC" },
+          ],
+        },
+      ],
+    },
+    { label: "BLOG" },
+    { label: "HELP" }
+  ];
+
 
   const MenuItem = ({ item }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,10 +144,10 @@ const MultilevelMenu = () => {
     };
 
     return (
-      <li onClick={toggleSubMenu} style={{ cursor: "pointer", margin: "5px 0" }}>
+      <li onClick={toggleSubMenu} style={{ cursor: "pointer" }}>
         {item.label}
         {item.subItems && (
-          <ul style={{ display: isOpen ? "block" : "none", marginLeft: "20px", listStyle: "none" }}>
+          <ul style={{ display: isOpen ? "block" : "none", listStyle: "none" }}>
             {item.subItems.map((subItem, index) => (
               <MenuItem key={index} item={subItem} />
             ))}
@@ -50,11 +158,17 @@ const MultilevelMenu = () => {
   };
 
   return (
-    <ul style={{ listStyle: "none", padding: "0" }}>
-      {menuData.map((item, index) => (
-        <MenuItem key={index} item={item} />
-      ))}
-    </ul>
+    <>
+
+      <div className="close-btn">
+        <RxCross2 />
+      </div>
+      <ul style={{ listStyle: "none", padding: "0" }}>
+        {menuData.map((item, index) => (
+          <MenuItem key={index} item={item} />
+        ))}
+      </ul>
+    </>
   );
 };
 

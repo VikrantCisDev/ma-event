@@ -101,7 +101,11 @@ const Header = () => {
                     </Navbar>
                 </Navbar>
             </Container>
+
+            <div className={`${active ? 'fade show' : ''}  offcanvas-backdrops `} onClick={handleClose}></div>
         </header>
+
+
     );
 }
 

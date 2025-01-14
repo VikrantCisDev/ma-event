@@ -636,11 +636,8 @@ footer.footer ul li a:hover {
 
     .responsiveNav.active {
         transform: translate(0%);
-       
-       
-      
-        
         transition: all 0.5s;
+        align-items: flex-start;
     }
 
 
