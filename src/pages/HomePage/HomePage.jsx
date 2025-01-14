@@ -91,7 +91,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Header />
+    
 
 
       <main className='main-section'>
@@ -135,7 +135,7 @@ const HomePage = () => {
                     return (
                       <Col lg={2} md={4} sm={6} key={index}>
                         <a href='#'>
-                        <ImageCard data={item} cardStyle={"secondary"} />
+                          <ImageCard data={item} cardStyle={"secondary"} />
                         </a>
                       </Col>
                     )
@@ -147,7 +147,7 @@ const HomePage = () => {
         </section>
 
         <section className='pb-5 twoBtnSec'>
-          <ul className='list-style-none m-0'>
+          <ul className='list-style-none m-0 flex-wrap p-0'>
             <li>
               <Button className='dark-btn'>Latest Events</Button>
             </li>
@@ -158,8 +158,7 @@ const HomePage = () => {
         </section>
 
       </main>
-      <Footer />
-
+ 
 
     </>
   )

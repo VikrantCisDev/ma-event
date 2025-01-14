@@ -132,4 +132,7 @@ ol.breadcrumb .breadcrumb-item.active {
         flex: 50%;
         margin-top: 20px;
     }  
+    .twoBtnSec ul {
+        gap: 20px;
+    }
 }

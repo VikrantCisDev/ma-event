@@ -41,7 +41,7 @@ const ListingVendors = () => {
 
     return (
         <>
-            <Header />
+          
             <main className='main-section'>
                 <div className="ListingVendorsPage">
                     <Container className="custom-container">
@@ -131,7 +131,7 @@ const ListingVendors = () => {
                     </Container>
                 </div>
             </main>
-            <Footer />
+          
         </>
     )
 }

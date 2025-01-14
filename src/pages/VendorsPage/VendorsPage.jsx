@@ -32,7 +32,7 @@ const VendorsPage = () => {
 
     return (
         <>
-            <Header />
+    
             <main className='main-section'>
                 <div className='vendorPage'>
                     <section className="vptopSec">
@@ -709,7 +709,7 @@ const VendorsPage = () => {
                     </section>
                 </div>
             </main>
-            <Footer />
+         
         </>
     );
 }
