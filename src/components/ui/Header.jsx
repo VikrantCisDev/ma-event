@@ -13,69 +13,72 @@ import { FaUserCircle, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 import MegaMenu from './MegaMenu';
 import { Container } from 'react-bootstrap';
 import { IoMdArrowDropdown } from "react-icons/io";
+import { FaPlus } from "react-icons/fa";
+
 
 
 const Header = () => {
     return (
         <header className='header'>
             <Container className="custom-container">
-            <Navbar expand="lg" className="">
-                <Navbar.Brand className='pe-4' href="#home">
-                    <img className='img-fluid logo' src={logo} alt="Ma-event" />
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className=" center-links text-uppercase">
-                        <Nav.Link href="#home">About ma-event</Nav.Link>
-                        <div className="nav-mega">
-                            <Nav.Link href="javascript:void(0)">Planning tools <IoMdArrowDropdown /> </Nav.Link>
-                            <div className="megamenu-wrapper">
-                                <MegaMenu />
+                <Navbar expand="lg" className="">
+                    <Navbar.Brand  href="#home">
+                        <img className='img-fluid logo' src={logo} alt="Ma-event" />
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className=" center-links text-uppercase">
+                            <Nav.Link href="#home">About ma-event</Nav.Link>
+
+                            <div className="nav-mega">
+                                <Nav.Link href="javascript:void(0)">Vendors <IoMdArrowDropdown /> </Nav.Link>
+                                <div className="megamenu-wrapper">
+                                    <MegaMenu />
+                                </div>
                             </div>
-                        </div>
-                        <div className="nav-mega">
-                            <Nav.Link href="javascript:void(0)">Vendors <IoMdArrowDropdown /> </Nav.Link>
-                            <div className="megamenu-wrapper">
-                                <MegaMenu />
+
+                            <Nav.Link href="#link">Events ping</Nav.Link>
+
+                            <div className="nav-mega">
+                                <Nav.Link href="javascript:void(0)">Planning tools <IoMdArrowDropdown /> </Nav.Link>
+                                <div className="megamenu-wrapper">
+                                    <MegaMenu />
+                                </div>
                             </div>
-                        </div>
-                        <Nav.Link href="#link">Latest events</Nav.Link>
-                        <Nav.Link href="#link">Images</Nav.Link>
-                        <Nav.Link href="#link">Blog</Nav.Link>
-                        <Nav.Link href="#link">Faq's</Nav.Link>
-                        <div className='user-wrapper text-uppercase d-flex gap-3'>
-                            <Nav.Link href="#link"><span className='d-flex'><FaUserCircle /></span> Register</Nav.Link>
-                            <Nav.Link href="#link">Login</Nav.Link>
-                        </div>
-                    </Nav>
-                    {/* <div className="nav-right">
-                        <div className='social-icons d-flex gap-3'>
-                            <a href='#'><ImFacebook2 /></a>
-                            <a href='#'><FaInstagram /></a>
-                            <a href='#'><FaTwitter /></a>
-                            <a href='#'><FaYoutube /></a>
-                        </div>
-                        <div className='d-flex gap-5 align-items-center'>
-                            <div className='user-wrapper text-uppercase d-flex gap-3'>
-                                <Nav.Link href="#link"><span className='d-flex'><FaUserCircle /></span> Register</Nav.Link>
-                                <Nav.Link href="#link">Login</Nav.Link>
+
+
+
+                            <Nav.Link href="#link">Blog</Nav.Link>
+                            <Nav.Link href="#link">Help</Nav.Link>
+                            
+
+
+                            <div className="nav-mega">
+                               
+                                <a href="javascript:void(0)" className='rightNavLink' ><FaUserCircle size={30} color='black' /> My Account </a>
+                                <div className="megamenu-wrapper menu-list">
+                                    <ul className='m-0 p-0 list-style-none '>
+                                        <li><a href="">Login</a></li>
+                                        <li><a href="">Register</a></li>
+                                        <li><a href="">My Ads</a></li>
+                                        <li><a href="">Favourites</a></li>
+                                        <li><a href="">Profile</a></li>
+                                        <li><a href="">Messages</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div className='nav-search'>
-                                <Form inline>
-                                    <Row>
-                                        <Col xs="auto" className='p-0'>
-                                            <Form.Control type="text" placeholder="Search..." className=" " />
-                                        </Col>
-                                        <Col xs="auto" className='p-0'>
-                                            <Button type="submit" className='d-flex'><HiMagnifyingGlass /></Button>
-                                        </Col>
-                                    </Row>
-                                </Form>
+
+
+                            <div className="nav-mega">
+                                <a href="javascript:void(0)" className='rightNavLink postYourAd'><FaPlus /> Post your AD</a>
                             </div>
-                        </div>
-                    </div> */}
-                </Navbar.Collapse>
-            </Navbar>
+
+
+
+                        </Nav>
+
+                    </Navbar.Collapse>
+                </Navbar>
             </Container>
         </header>
     );

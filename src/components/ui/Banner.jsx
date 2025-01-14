@@ -47,7 +47,7 @@ const Banner = () => {
                         </div>
                     </div>
                     <div className='BannerBtn ms-2'>
-                        <Button className='rounded-0 border-0 text-white'>
+                        <Button className='rounded-0 border-0 d-flex align-items-center gap-2 text-white btn btn-primary'>
                             <GoSearch />Search
                         </Button>
                     </div>

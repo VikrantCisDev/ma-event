@@ -43,7 +43,7 @@ main.main-section {
     min-height: 60vh;
 }
 
-header .dropdown-menu[data-bs-popper] {
+/* header .dropdown-menu[data-bs-popper] {
     top: calc(100% + 8px);
     left: 0;
     margin-top: var(--bs-dropdown-spacer);
@@ -53,7 +53,7 @@ header .dropdown-menu[data-bs-popper] {
     border: unset;
     border-radius: 0;
     padding: 15px;
-}
+} */
 
 
 .bannerCaption {
