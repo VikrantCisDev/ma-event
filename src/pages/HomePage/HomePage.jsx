@@ -22,6 +22,7 @@ import { FaTruckFast } from "react-icons/fa6";
 import { GiPartyPopper } from "react-icons/gi";
 import Button from 'react-bootstrap/Button';
 import './style.css'
+import BottomBar from '../../components/ui/BottomBar';
 
 const HomePage = () => {
 
@@ -158,6 +159,8 @@ const HomePage = () => {
         </section>
 
       </main>
+
+      <BottomBar/>
  
 
     </>

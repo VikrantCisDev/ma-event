@@ -22,3 +22,51 @@
     color: #848484;
     font-weight: 400;
 }
+
+
+/* bottom fixed bar css  */
+
+.bottomBarMain {
+    display: none;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 10px 15px;
+    background: #ffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid var(--pink);
+    z-index: 999;
+}
+
+.bottomBarMain .icontext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink);
+    filter: grayscale(1) brightness(0.0) invert(0.45) invert(1);
+}
+
+.bottomBarMain .icontext:hover,
+.bottomBarMain .icontext.active {
+    filter: none;
+}
+
+.bottomBarMain .icontext img {
+    width: 100%;
+    max-width: 30px;
+}
+
+.bottomBarMain .icontext p {
+    font-size: 11px;
+    margin: 0;
+}
+
+
+@media (max-width:992px){
+    .bottomBarMain{
+        display: flex;
+    }
+}
