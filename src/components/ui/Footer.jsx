@@ -9,6 +9,8 @@ import { ImFacebook2 } from "react-icons/im";
 import { FaInstagram, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import playStore from '../../assets/Images/play-store.png'
 import appleStore from '../../assets/Images/apple-store.png'
+import { Link } from 'react-router-dom';
+
 
 
 const Footer = () => {
@@ -21,7 +23,7 @@ const Footer = () => {
 
 
             <div className="ft-logo-sec my-2">
-              <Image src={footerLogo} rounded className='img-fluid' />
+              <Link to='/'><Image src={footerLogo} rounded className='img-fluid' /></Link>
             </div>
 
           </Col>
@@ -98,7 +100,7 @@ const Footer = () => {
             </ul>
 
             <div className="ft-logo-sec my-2 d-md-block d-none">
-              <Image src={footerLogo} rounded className='img-fluid' />
+              <Link to='/'><Image src={footerLogo} rounded className='img-fluid' /></Link>
             </div>
           </Col>
 

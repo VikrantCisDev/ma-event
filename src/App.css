@@ -39,6 +39,7 @@
     width: 100%;
     border-top: 2px solid var(--pink);
     z-index: 999;
+    height: 70px;
 }
 
 .bottomBarMain .icontext {
@@ -66,13 +67,38 @@
 }
 
 
-@media (max-width:992px){
+@media (max-width:991px){
     .bottomBarMain{
         display: flex;
     }
+    body  footer.footer {
+        margin-bottom: 70px;
+    }
+    .bottomForm {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .bottomFormLeft {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        background: transparent;
+    }
+    
+    .BannerInput {
+        width: 100%;
+        background: #fff;
+    }
+    
+    .BannerBtn,.BannerBtn button {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 !important;
+    }
 }
 
-@media (max-width:992px){
+@media (max-width:575px){
     .bottomBarMain{
         justify-content: space-between;
     }

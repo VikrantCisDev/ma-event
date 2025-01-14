@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -18,6 +18,7 @@ import { HiOutlineUser } from "react-icons/hi2";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import MultilevelMenu from './MultiMenus';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [active, setActive] = useState(false);
@@ -30,20 +31,34 @@ const Header = () => {
       setActive(false); // Ensure the menu is closed
     };
 
+    
+    useEffect(() => {
+        if (active) {
+          document.body.style.overflow = "hidden"; // Disable scroll
+        } else {
+          document.body.style.overflow = ""; // Re-enable scroll
+        }
+    
+        // Cleanup function to reset overflow when component unmounts
+        return () => {
+          document.body.style.overflow = "";
+        };
+      }, [active]);
+
     return (
         <header className='header'>
             <Container className="custom-container">
                 <Navbar expand="lg" className={` headerNavbar`}>
                     <Navbar.Brand href="#home">
-                        <img className='img-fluid logo' src={logo} alt="Ma-event" />
+                        <Link to='/'><img className='img-fluid logo' src={logo} alt="Ma-event" /></Link>
                     </Navbar.Brand>
                     <div className='d-flex align-items-center gap-2'>
                         <div className="nav-mega d-lg-none d-flex gap-2 align-items-center">
                             <div className="nav-mega">
-                                <a href="javascript:void(0)" className='rightNavLink postYourAd '><FaPlus /> Post <span className='postSpan'> your</span> AD</a>
+                                <a href="#" className='rightNavLink postYourAd '><FaPlus /> Post <span className='postSpan'> your</span> AD</a>
                             </div>
                             <div>
-                                <a href="javascript:void(0)" className='rightNavLink p-0'><IoChatbubblesOutline color='#921f62' size={30} /></a>
+                                <a href="#" className='rightNavLink p-0'><IoChatbubblesOutline color='#921f62' size={30} /></a>
                             </div>
                             <NavDropdown title={<><HiOutlineUser color='#921f62' size={30} /></>} className='myAccount' id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.3">Login</NavDropdown.Item>
@@ -62,14 +77,14 @@ const Header = () => {
                         <Nav className="center-links text-uppercase d-lg-flex d-none">
                             <Nav.Link href="#home">About ma-event</Nav.Link>
                             <div className="nav-mega">
-                                <Nav.Link href="javascript:void(0)">Vendors <IoMdArrowDropdown /></Nav.Link>
+                                <Nav.Link href="#">Vendors <IoMdArrowDropdown /></Nav.Link>
                                 <div className="megamenu-wrapper">
                                     <MegaMenu />
                                 </div>
                             </div>
                             <Nav.Link href="#link">Events ping</Nav.Link>
                             <div className="nav-mega">
-                                <Nav.Link href="javascript:void(0)">Planning tools <IoMdArrowDropdown /></Nav.Link>
+                                <Nav.Link href="#">Planning tools <IoMdArrowDropdown /></Nav.Link>
                                 <div className="megamenu-wrapper">
                                     <MegaMenu />
                                 </div>
@@ -77,7 +92,7 @@ const Header = () => {
                             <Nav.Link href="#link">Blog</Nav.Link>
                             <Nav.Link href="#link">Help</Nav.Link>
                             <div className="nav-mega">
-                                <a href="javascript:void(0)" className='rightNavLink'><FaUserCircle size={30} color='black' /> My Account</a>
+                                <a href="#" className='rightNavLink'><FaUserCircle size={30} color='black' /> My Account</a>
                                 <div className="megamenu-wrapper menu-list">
                                     <ul className='m-0 p-0 list-style-none'>
                                         <li><a href="">Login</a></li>
@@ -90,7 +105,7 @@ const Header = () => {
                                 </div>
                             </div>
                             <div className="nav-mega">
-                                <a href="javascript:void(0)" className='rightNavLink postYourAd'><FaPlus /> Post <span className='postSpan'> your</span> AD</a>
+                                <a href="#" className='rightNavLink postYourAd'><FaPlus /> Post <span className='postSpan'> your</span> AD</a>
                             </div>
                         </Nav>
 
