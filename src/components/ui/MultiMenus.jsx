@@ -146,10 +146,10 @@ const MultilevelMenu = () => {
     };
 
     return (
-      <li onClick={toggleSubMenu} style={{ cursor: "pointer" }}>
+      <li onClick={toggleSubMenu} className={`${isOpen ? "nav-active" : ""}`}>
         <a href="#">{item.label}{item.subItems && (<IoMdArrowDropdown />)}</a>
         {item.subItems && (
-          <ul style={{ display: isOpen ? "block" : "none", listStyle: "none" }}>
+          <ul className={`d-${isOpen ? "block" : "none"} submenu ${isOpen ? "submenu-open" : ""}`}>
             {item.subItems.map((subItem, index) => (
               <MenuItem key={index} item={subItem} />
             ))}
