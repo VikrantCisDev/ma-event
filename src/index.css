@@ -76,14 +76,14 @@ ol.breadcrumb {
 
 ol.breadcrumb .breadcrumb-item a,
 ol.breadcrumb .breadcrumb-item {
-    font-size: 20px;
+    font-size: 25px;
     text-decoration: none;
     color: #000000;
 }
 
 ol.breadcrumb .breadcrumb-item.active {
     color: var(--pink);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 

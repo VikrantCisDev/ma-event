@@ -28,6 +28,11 @@ span.verified {
     letter-spacing: 2px;
 }
 
+.vpBottomSec span.verified {
+    font-size: 12px;
+    padding: 5px 20px;
+}
+
 .ProductImg {
     position: relative;
 }
@@ -36,6 +41,7 @@ span.verified {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 6px;
 }
 
 
@@ -97,7 +103,7 @@ span.verified {
 
 
 .vpForm {
-    border: 1px solid #dee2e6;
+    border: 1px solid #d9d9d9;
 }
 
 .vpFormTop {
@@ -107,18 +113,19 @@ span.verified {
 }
 
 .vpFormBottom {
+    padding: 25px 30px;
+}
+
+.vpContactDetailsForm {
     padding: 20px;
+    background: #f8f8f8;
 }
 
 .vpContactDetailsForm {
     background: #f8f8f8;
-    padding: 20px;
-}
-
-.vpContactDetailsForm {
-    background: #f8f8f8;
-    padding: 20px;
-}
+    padding: 20px 0;
+    border-top: 1px solid;
+} 
 
 
 section.vpBottomSec .pdTitle h2 {
