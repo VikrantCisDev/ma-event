@@ -28,9 +28,9 @@ const ListingVendors = () => {
         { id: 7, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
         { id: 8, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
         { id: 9, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 10, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
+        { id: 10, name: 'Golden Spa', rating: 1, location: 'Johannesburg / Gauteng', img: Image1 },
         { id: 11, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 12, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
+        { id: 12, name: 'Golden Spa', rating: 5, location: 'Johannesburg / Gauteng', img: Image1 },
     ]);
 
     const handleClick = (view) => {
