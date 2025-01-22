@@ -77,7 +77,7 @@ const Header = () => {
                         <Nav className="center-links text-uppercase d-lg-flex d-none">
                             <Nav.Link href="#home">About ma-event</Nav.Link>
                             <div className="nav-mega">
-                                <Nav.Link href="#">Vendors <IoMdArrowDropdown /></Nav.Link>
+                                <Link to="/vendorpage" className='nav-link'>Vendors <IoMdArrowDropdown /></Link>
                                 <div className="megamenu-wrapper">
                                     <MegaMenu />
                                 </div>
