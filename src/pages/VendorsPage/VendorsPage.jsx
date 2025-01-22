@@ -21,6 +21,9 @@ import { TiHeartFullOutline } from "react-icons/ti";
 import { FaCommentDots } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import IconWrapper from "../../components/ui/IconWrapper";
+
+
 
 const VendorsPage = () => {
   const newrating = 3;
@@ -461,7 +464,7 @@ const VendorsPage = () => {
             </Container>
           </section>
 
-          <section className="vpBottomSec mt-5 pt-5">
+          <section className="vpBottomSec mt-md-5 pt-md-5">
             <Container className="custom-container">
               <Row>
                 <Col>
@@ -803,6 +806,8 @@ const VendorsPage = () => {
               </Row>
             </Container>
           </section>
+
+          <IconWrapper/>
         </div>
       </main>
     </>
