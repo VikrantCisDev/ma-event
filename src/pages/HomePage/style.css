@@ -414,7 +414,7 @@ select:focus-visible {
 
 
 .howitworkbg {
-    background: url(../src/assets/Images/hiworks.jpg);
+    background: url('../../assets/Images/hiworks.jpg');
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
