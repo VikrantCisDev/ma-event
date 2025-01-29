@@ -85,3 +85,38 @@ button.active-items,button.active-items:focus {
 .carousel-indicators {
     margin-bottom: 0;
 }
+
+
+.cartType ,.cartType h6 {
+    font-size: 20px;
+    color: #2c81a7;
+}
+
+.cartType  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.priceDetail h2 {
+    display: inline-block;
+    padding: 5px 20px;
+    background: #921f62;
+    color: #ffff;
+}
+
+
+.timeAndView {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 7px 0;
+}
+
+
+
+.timeAndView span {
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}

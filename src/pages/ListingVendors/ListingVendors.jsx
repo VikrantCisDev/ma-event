@@ -14,23 +14,29 @@ import { FaStar } from 'react-icons/fa'
 import { FaRegStar } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import Image1 from '../../assets/Images/card6.jpg'
+import IconWrapper from '../../components/ui/IconWrapper';
+import { RiBookmarkFill } from "react-icons/ri";
+import { IoTimeOutline } from "react-icons/io5";
+import { IoEyeSharp } from "react-icons/io5";
+
+
 
 const ListingVendors = () => {
 
     const [activeButton, setActiveButton] = useState('grid'); // Default to list view
     const [data, setData] = useState([
-        { id: 1, name: "Jail's Catering Services", rating: 3, location: 'East London / Easterncape', img: Image1 },
-        { id: 2, name: 'Sunshine Bakery', rating: 4, location: 'Cape Town / Westerncape', img: Image1 },
-        { id: 3, name: 'Rainbow Florist', rating: 5, location: 'Durban / KZN', img: Image1 },
-        { id: 4, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 5, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 6, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 7, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 8, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 9, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 10, name: 'Golden Spa', rating: 1, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 11, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1 },
-        { id: 12, name: 'Golden Spa', rating: 5, location: 'Johannesburg / Gauteng', img: Image1 },
+        { id: 1, name: "Jail's Catering Services", rating: 3, location: 'East London / Easterncape', img: Image1, price: 'R3,000', time: '1 Year ago', views: '896', bookMarkType: 'Photography' },
+        { id: 2, name: 'Sunshine Bakery', rating: 4, location: 'Cape Town / Westerncape', img: Image1, price: 'On Call', time: '1 Year ago', views: '896', bookMarkType: 'Decor' },
+        { id: 3, name: 'Rainbow Florist', rating: 5, location: 'Durban / KZN', img: Image1, price: 'R3,000', time: '1 Year ago', views: '896', bookMarkType: 'Professional Makeup' },
+        { id: 4, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'Negotiable', time: '1 Year ago', views: '896', bookMarkType: 'Cakes' },
+        { id: 5, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'R1,200', time: '1 Year ago', views: '896', bookMarkType: 'Photography' },
+        { id: 6, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'R10,000', time: '1 Year ago', views: '896', bookMarkType: 'Decor' },
+        { id: 7, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'R10,000', time: '1 Year ago', views: '896', bookMarkType: 'Professional Makeup' },
+        { id: 8, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'R3,000', time: '1 Year ago', views: '896', bookMarkType: 'Cakes' },
+        { id: 9, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'On Call', time: '1 Year ago', views: '896', bookMarkType: 'Photography' },
+        { id: 10, name: 'Golden Spa', rating: 1, location: 'Johannesburg / Gauteng', img: Image1, price: 'R3,000', time: '1 Year ago', views: '896', bookMarkType: 'Decor' },
+        { id: 11, name: 'Golden Spa', rating: 2, location: 'Johannesburg / Gauteng', img: Image1, price: 'On Call', time: '1 Year ago', views: '896', bookMarkType: 'Professional Makeup' },
+        { id: 12, name: 'Golden Spa', rating: 5, location: 'Johannesburg / Gauteng', img: Image1, price: 'R3,000', time: '1 Year ago', views: '896', bookMarkType: 'Cakes' },
     ]);
 
     const handleClick = (view) => {
@@ -41,7 +47,7 @@ const ListingVendors = () => {
 
     return (
         <>
-          
+
             <main className='main-section'>
                 <div className="ListingVendorsPage">
                     <Container className="custom-container">
@@ -86,7 +92,12 @@ const ListingVendors = () => {
                                                 <span className="verified">VERIFIED</span>
                                             </div>
 
-                                            <div className="pdRow">
+                                            <div className="pt-2">
+                                                <div className="cartType">
+                                                    <RiBookmarkFill />
+                                                    <h6>{item.bookMarkType}</h6>
+
+                                                </div>
                                                 <div className="pdLeft">
                                                     <div className="pdTitle">
                                                         <h2 className="pink-text">{item.name}</h2>
@@ -103,9 +114,31 @@ const ListingVendors = () => {
                                                                 ))}
                                                             </div>
                                                         </ListGroupItem>
-                                                        
+
                                                     </ListGroup>
                                                 </div>
+
+                                                <div className="priceDetail">
+
+                                                    <h2 className="pink-text">{item.price}</h2>
+
+                                                </div>
+
+
+
+                                                <div className='timeAndView'>
+                                                    <div className='postTime'>
+                                                        <IoTimeOutline color='#921f62' />
+                                                        <span>{item.time}</span>
+                                                    </div>
+                                                    <div className='postView'>
+                                                        <IoEyeSharp  color='#921f62' />
+                                                        <span>{item.views}</span>
+
+                                                    </div>
+                                                </div>
+
+
                                             </div>
 
                                             <div className="pdRow mb-4">
@@ -130,8 +163,10 @@ const ListingVendors = () => {
                         </Row>
                     </Container>
                 </div>
+
+                <IconWrapper />
             </main>
-          
+
         </>
     )
 }

@@ -162,7 +162,7 @@ const MultilevelMenu = () => {
   return (
     <>
 
-      <div className="close-btn">
+      <div className  >
         <RxCross2 size={25} />
       </div>
       <ul style={{ listStyle: "none", padding: "0" }}>
