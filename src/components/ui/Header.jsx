@@ -34,12 +34,11 @@ const Header = () => {
     
     useEffect(() => {
         if (active) {
-          document.body.style.overflow = "hidden"; // Disable scroll
+          document.body.style.overflow = "hidden"; 
         } else {
-          document.body.style.overflow = ""; // Re-enable scroll
+          document.body.style.overflow = "";
         }
-    
-        // Cleanup function to reset overflow when component unmounts
+
         return () => {
           document.body.style.overflow = "";
         };

@@ -108,7 +108,7 @@ const HomePage = () => {
               {
                 cardData.map((item, index) => {
                   return (
-                    <Col lg={3} md={4} sm={6} key={index}>
+                    <Col lg={3} md={4} xs={6} className='px-1 px-md-2.5 ' key={index}>
                       <a href='#'>
                         <ImageCard data={item} cardStyle={"primary"} />
                       </a>
@@ -130,11 +130,11 @@ const HomePage = () => {
           <div className="howitworkbg">
             <div className='custom-container'>
 
-              <Row className='py-5 '>
+              <Row className='py-5 howitworkbgRow'>
                 {
                   cardData2.map((item, index) => {
                     return (
-                      <Col lg={2} md={4} sm={6} key={index}>
+                      <Col xl={2} md={4} sm={6}  key={index}>
                         <a href='#'>
                           <ImageCard data={item} cardStyle={"secondary"} />
                         </a>

@@ -327,7 +327,7 @@ select:focus-visible {
 }
 
 
-.howitworkbg .col-lg-2>a {
+.howitworkbg  .howitworkbgRow div>a {
     text-decoration: none;
 }
 
@@ -406,6 +406,8 @@ select:focus-visible {
     display: flex;
     font-size: 22px;
     align-items: center;
+    max-width: 24px;
+    width: 100%;
 }
 
 .BannerSelect {
@@ -436,6 +438,7 @@ select:focus-visible {
 
 
 .howitworkbg .card {
+    margin-bottom: 15px;
     background: unset;
 }
 
@@ -528,7 +531,13 @@ footer.footer ul li a:hover {
 }
 
 
+.carousel-control-prev, .carousel-control-next {
+    width: 30px;
+}
 
+.howitworkbg .card-title {
+    font-size: 18px;
+}
 
 @media (max-width: 1600px) {
     .header {
@@ -575,6 +584,10 @@ footer.footer ul li a:hover {
         font-size: 13px;
         padding-bottom: 25px;
     }
+
+    section.banner-sec .carousel-control-next,section.banner-sec .carousel-control-prev {
+        width: 40px;
+     }
 }
 
 
@@ -582,6 +595,36 @@ footer.footer ul li a:hover {
     button.navbar-toggler {
         padding: 0;
         border: unset;
+    }
+
+    .bannerTxt h2 {
+        font-size: 28px;
+    }
+
+    .bannerTxt h6 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .bannerCaption.carousel-caption {
+        width: 100%;
+        max-width: calc(100% - 15px);
+        left: 50%;
+        top: 50%;
+        right: auto;
+        transform: translate(-50% , -50%);
+    }
+    .bottomForm {
+        max-width: 100%;
+    }
+
+    .BannerInput span {
+        padding: 5px 10px;
+        min-width: 40px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+       display: none;
     }
 
     .postYourAd {
@@ -593,11 +636,14 @@ footer.footer ul li a:hover {
         background: #fff;
     }
 
+    .bannerTxt h2 span {
+        color: #ffffff;
+        -webkit-text-stroke: unset;
+    }
 
     .myAccount.dropdown #basic-nav-dropdown {
         padding: 0;
     }
-
 
     .myAccount.dropdown .dropdown-toggle::after {
         display: none;
@@ -619,7 +665,6 @@ footer.footer ul li a:hover {
         top: 40px;
     }
 
-
     .responsiveNav {
         transform:translate(-150% , 0);
         position: fixed !important;
@@ -640,7 +685,6 @@ footer.footer ul li a:hover {
         align-items: flex-start;
     }
 
-
     .headerNavbar {
         align-items: center;
     }
@@ -653,5 +697,62 @@ footer.footer ul li a:hover {
         width: 100%;
         padding:0;
     }
+
+    .cardSec .card-title.h5 {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+    .header .logo {
+        max-width: 80px;
+    }  
+
+    .bannerTxt h2 {
+        font-size: 28px;
+    }
+    
+    .bannerTxt h2 span {
+        color: #ffffff;
+    }
+    
+    .nav-mega a svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    button.navbar-toggler svg {
+        width: 24px;
+    }
+
+    .bottomBarMain .icontext img {
+        width: 100%;
+        max-width: 24px;
+    }
+
+    .roundPinkImg {
+        
+        width: 120px;
+        height: 120px;
+    }
+    .twoBtnSec ul {
+        gap: 15px;
+    }
+    .BannerSelect select, .BannerInput input,.BannerInput input::placeholder, .BannerBtn button {
+        height: 40px;
+        font-size: 16px;
+        line-height: 1;
+        padding: 5px 10px;
+    }
+}
+
+
+@media (max-width: 575px) {
+.cardSec img {
+    height: 150px;
+    object-fit: cover;
+}
 
 }

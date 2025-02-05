@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import VendorsPage from "./pages/VendorsPage/VendorsPage";
 import VendorCategory from "./pages/VendorCategory/VendorCategory";
 import Layout from "./components/ui/Layout";
+import Test from "./pages/Test/Test";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/listingvendors" element={<Layout><ListingVendors /></Layout>}></Route>
           <Route path="/vendorpage" element={<Layout><VendorsPage /></Layout>}></Route>
           <Route path="/vendor-categories" element={<Layout><VendorCategory /></Layout>}></Route>
+          <Route path="/test" element={<Test />}></Route>
           <Route path="*" element={<h1>Error 404 page not found!!</h1>}></Route>
         </Routes>
       </BrowserRouter>
