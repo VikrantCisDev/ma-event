@@ -44,10 +44,14 @@ const Header = () => {
     <header className='header'>
       <Container className="custom-container">
         <Navbar expand="lg" className="headerNavbar">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleClick}>
+              <GiHamburgerMenu color='#921f62' size={30} />
+            </Navbar.Toggle>
           <Navbar.Brand>
             <Link to='/'><img className='img-fluid logo' src={logo} alt="Ma-event" /></Link>
           </Navbar.Brand>
           <div className='d-flex align-items-center gap-2'>
+          
             <div className="nav-mega d-lg-none d-flex gap-2 align-items-center">
               <div className="nav-mega">
                 <a href="#" className='rightNavLink postYourAd'>
@@ -79,9 +83,7 @@ const Header = () => {
               </NavDropdown>
 
             </div>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={handleClick}>
-              <GiHamburgerMenu color='#921f62' size={30} />
-            </Navbar.Toggle>
+          
           </div>
           <Navbar className={`responsiveNav ${active ? 'active' : ''}`} id="basic-navbar-nav">
             <Nav className="center-links text-uppercase d-lg-flex d-none">
