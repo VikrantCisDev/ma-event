@@ -1,0 +1,105 @@
+.category-cardWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 40px 30px;
+}
+
+.category-cardWrapper .category-card {
+    text-align: center;
+    box-shadow: 3px 3px 9px 2px #00000040;
+}
+
+.default-cardStyle {
+    padding: 30px 20px 15px;
+}
+
+.default-cardStyle img {
+    max-height: 100px;
+    margin: auto;
+    object-fit: contain;
+}
+
+.default-cardStyle .card-title {
+    color: #848484;
+    font-weight: 400;
+}
+
+
+/* bottom fixed bar css  */
+
+.bottomBarMain {
+    display: none;
+    justify-content: space-evenly;
+    gap: 5px;
+    padding: 10px 15px;
+    background: #ffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid var(--pink);
+    z-index: 999;
+    height: 70px;
+}
+
+.bottomBarMain .icontext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--pink);
+    filter: grayscale(1) brightness(0.0) invert(0.45) invert(1);
+}
+
+.bottomBarMain .icontext:hover,
+.bottomBarMain .icontext.active {
+    filter: none;
+}
+
+.bottomBarMain .icontext img {
+    width: 100%;
+    max-width: 30px;
+}
+
+.bottomBarMain .icontext p {
+    font-size: 11px;
+    margin: 0;
+}
+
+
+@media (max-width:992px){
+    .bottomBarMain{
+        display: flex;
+    }
+    body  footer.footer {
+        margin-bottom: 70px;
+    }
+    .bottomForm {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .bottomFormLeft {
+        width: 100% !important;
+        flex-direction: column;
+        gap: 8px;
+        background: transparent !important;
+    }
+    
+    .BannerInput {
+        width: 100%;
+        background: #fff;
+    }
+    
+    .BannerBtn,.BannerBtn button {
+        width: 100%;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width:575px){
+    .bottomBarMain{
+        justify-content: space-between;
+    }
+}
