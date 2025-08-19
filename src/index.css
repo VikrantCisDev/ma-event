@@ -302,4 +302,41 @@ ol.breadcrumb .breadcrumb-item.active {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 /******************** SideBar Css *******************/
+=======
+/******************** SideBar Css *******************/
+
+/* Theme buttons */
+.btn-theme {
+    background-color: var(--pink) !important;
+    border-color: var(--pink) !important;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 999px;
+}
+
+.btn-theme:hover,
+.btn-theme:focus {
+    background-color: #7a1853 !important;
+    border-color: #7a1853 !important;
+    color: #fff !important;
+}
+
+.btn-theme:disabled,
+.btn-theme.disabled {
+    background-color: #a23a78 !important;
+    border-color: #a23a78 !important;
+    color: #fff !important;
+}
+
+/* Link buttons use theme color */
+.btn-link {
+    color: var(--pink) !important;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    color: #7a1853 !important;
+}
+>>>>>>> bc51ddb (login and signup page)
