@@ -35,7 +35,7 @@ h6 {
 }
 
 .pink-text {
-    color: var(--pink);
+    color: var(--pink) !important;
 }
 
 
@@ -302,9 +302,6 @@ ol.breadcrumb .breadcrumb-item.active {
   justify-content: space-between;
 }
 
-<<<<<<< HEAD
-/******************** SideBar Css *******************/
-=======
 /******************** SideBar Css *******************/
 
 /* Theme buttons */
@@ -339,4 +336,3 @@ ol.breadcrumb .breadcrumb-item.active {
 .btn-link:focus {
     color: #7a1853 !important;
 }
->>>>>>> bc51ddb (login and signup page)

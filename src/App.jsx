@@ -8,11 +8,8 @@ import VendorsPage from "./pages/VendorsPage/VendorsPage";
 import VendorCategory from "./pages/VendorCategory/VendorCategory";
 import Layout from "./components/ui/Layout";
 import Test from "./pages/Test/Test";
-<<<<<<< HEAD
-=======
-import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
->>>>>>> bc51ddb (login and signup page)
+import Login from "./pages/AuthPages/Login";
+import Signup from "./pages/AuthPages/Signup";
 
 const App = () => {
   return (
@@ -20,11 +17,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout><HomePage /></Layout>}></Route>
-<<<<<<< HEAD
-=======
           <Route path="/login" element={<><Login /></>}></Route>
           <Route path="/signup" element={<><Signup /></>}></Route>
->>>>>>> bc51ddb (login and signup page)
           <Route path="/listingvendors" element={<Layout><ListingVendors /></Layout>}></Route>
           <Route path="/vendorpage" element={<Layout><VendorsPage /></Layout>}></Route>
           <Route path="/vendor-categories" element={<Layout><VendorCategory /></Layout>}></Route>

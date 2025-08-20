@@ -19,8 +19,17 @@ const Login = () => {
     <section className="auth-page">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-12 col-sm-10 col-md-7 col-lg-5">
-            <div className="auth-card shadow-sm">
+          <div className="col-lg-6 col-12 authLeft py-5 px-lg-5 px-4">
+            <div className="auth-left-image mb-5">
+              <img class="img-fluid logo" src="/src/assets/Images/logo.svg" alt="Ma-event"/>
+            </div>
+            <div className="auth-left-content">
+              <h1 className=" mb-2 fs-1 pink-text">Welcome Back!</h1>
+              <p className="fs-5 pink-text">Please sign in to continue to your account.</p>
+            </div>
+          </div>
+          <div className="col-lg-6 col-12">
+            <div className="auth-card ">
               <h1 className="h4 text-center mb-3 pink-text">Sign in to your account</h1>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
