@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import Logo from "/src/assets/Images/logo.svg";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const Login = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6 col-12 authLeft py-5 px-lg-5 px-4">
             <div className="auth-left-image mb-5">
-              <img class="img-fluid logo" src="/src/assets/Images/logo.svg" alt="Ma-event"/>
+              <img class="img-fluid logo" src={Logo} alt="Ma-event"/>
             </div>
             <div className="auth-left-content">
               <h1 className=" mb-2 fs-1 pink-text">Welcome Back!</h1>
