@@ -10,6 +10,7 @@ import Layout from "./components/ui/Layout";
 import Test from "./pages/Test/Test";
 import Login from "./pages/AuthPages/Login";
 import Signup from "./pages/AuthPages/Signup";
+import ForgotPassword from "./pages/AuthPages/ForgotPass";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/" element={<Layout><HomePage /></Layout>}></Route>
           <Route path="/login" element={<><Login /></>}></Route>
           <Route path="/signup" element={<><Signup /></>}></Route>
+          <Route path="/forgot-password" element={<><ForgotPassword /></>}></Route>
           <Route path="/listingvendors" element={<Layout><ListingVendors /></Layout>}></Route>
           <Route path="/vendorpage" element={<Layout><VendorsPage /></Layout>}></Route>
           <Route path="/vendor-categories" element={<Layout><VendorCategory /></Layout>}></Route>

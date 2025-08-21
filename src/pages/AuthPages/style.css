@@ -25,7 +25,7 @@
 }
 
 .auth-card {
-  padding: 48px 24px;
+  /* padding: 48px 24px; */
 }
 
 .auth-link {
@@ -41,6 +41,12 @@
 
 .auth-left-content h1 {
   font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+.auth-left-content p {
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
 
 /* Inputs */
@@ -70,4 +76,19 @@
 .auth-card .form-control:focus {
   border: 1px solid var(--pink) !important;
   box-shadow: 0 0px 8px #921f626b !important;
+}
+
+@media (max-width: 600px){
+  .auth-left-content h1 {
+    font-size: 1.4rem;
+  }
+  .auth-left-content p {
+    font-size: 1rem;
+  }
+  .auth-left-image {
+    max-width: 100px;
+  }
+  .form-label {
+    margin-bottom: .25rem;
+  }
 }
