@@ -39,16 +39,35 @@
   text-decoration: underline;
 }
 
+.auth-left-content h1 {
+  font-weight: 700;
+}
+
 /* Inputs */
 .auth-card .form-control {
-  border-radius: 10px;
+  border-radius: 5px;
 } 
 
 .authLeft {
   background: var(--light-pink);
+  text-align: center;
 }
 
 .auth-left-image {
   width: 100%;
   max-width: 200px;
+  margin: 0 auto;
+}
+.auth-card .btn-link{
+  border: none;
+  text-decoration: none;
+}
+.auth-card .btn-link:focus {
+  color: var(--pink) !important;
+  border: none;
+  text-decoration: underline;
+}
+.auth-card .form-control:focus {
+  border: 1px solid var(--pink) !important;
+  box-shadow: 0 0px 8px #921f626b !important;
 }
