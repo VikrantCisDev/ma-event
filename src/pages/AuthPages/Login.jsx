@@ -62,7 +62,7 @@ const Login = () => {
                     <input className="form-check-input" type="checkbox" id="remember" />
                     <label className="form-check-label" htmlFor="remember">Remember me</label>
                   </div>
-                  <button type="button" className="btn btn-link p-0">Forgot password?</button>
+                  <a href="#" className="btn btn-link p-0">Forgot password?</a>
                 </div>
                 <button type="submit" className="btn btn-theme w-100 mt-3" disabled={loading}>
                   {loading ? "Signing in..." : "Sign In"}
