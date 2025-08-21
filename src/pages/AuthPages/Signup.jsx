@@ -28,17 +28,17 @@ const Signup = () => {
     <section className="auth-page">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-6 col-12 authLeft py-5 px-lg-5 px-4">
-            <div className="auth-left-image mb-5">
+          <div className="col-lg-6 col-12 authLeft py-lg-5 py-3 px-lg-5 px-2">
+            <div className="auth-left-image mb-lg-5 mb-3">
               <img className="img-fluid logo" src={Logo} alt="Ma-event" />
             </div>
             <div className="auth-left-content">
-              <h1 className="mb-2 fs-1 pink-text">Welcome!</h1>
-              <p className="fs-5 pink-text">Create your account to get started with Ma-event.</p>
+              <h1 className="mb-2 pink-text">Welcome!</h1>
+              <p className="pink-text m-sm-0 mb-1">Create your account to get started with Ma-event.</p>
             </div>
           </div>
           <div className="col-lg-6 col-12">
-            <div className="auth-card">
+            <div className="auth-card py-lg-5 py-4 px-lg-4 px-2">
               <h1 className="h4 text-center mb-3 pink-text">Create your account</h1>
               {error && (
                 <div className="alert alert-danger py-2" role="alert">{error}</div>

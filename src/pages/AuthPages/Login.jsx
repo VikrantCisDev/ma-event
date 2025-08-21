@@ -20,17 +20,17 @@ const Login = () => {
     <section className="auth-page">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-6 col-12 authLeft py-5 px-lg-5 px-4">
-            <div className="auth-left-image mb-5">
+          <div className="col-lg-6 col-12 authLeft py-lg-5 py-3 px-lg-5 px-2">
+            <div className="auth-left-image mb-lg-5 mb-sm-3 mb-2">
               <img class="img-fluid logo" src={Logo} alt="Ma-event"/>
             </div>
             <div className="auth-left-content">
-              <h1 className=" mb-2 fs-1 pink-text">Welcome Back!</h1>
-              <p className="fs-5 pink-text">Please sign in to continue to your account.</p>
+              <h1 className=" mb-sm-2 pink-text">Welcome Back!</h1>
+              <p className=" pink-text m-sm-0 mb-1">Please sign in to continue to your account.</p>
             </div>
           </div>
           <div className="col-lg-6 col-12">
-            <div className="auth-card ">
+            <div className="auth-card py-lg-5 py-4 px-lg-4 px-2">
               <h1 className="h4 text-center mb-3 pink-text">Sign in to your account</h1>
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
@@ -62,7 +62,7 @@ const Login = () => {
                     <input className="form-check-input" type="checkbox" id="remember" />
                     <label className="form-check-label" htmlFor="remember">Remember me</label>
                   </div>
-                  <a href="#" className="btn btn-link p-0">Forgot password?</a>
+                  <Link to="/forgot-password" className="btn btn-link p-0">Forgot password?</Link>
                 </div>
                 <button type="submit" className="btn btn-theme w-100 mt-3" disabled={loading}>
                   {loading ? "Signing in..." : "Sign In"}
