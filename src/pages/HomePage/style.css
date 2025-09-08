@@ -82,8 +82,14 @@ header .navbar-nav .nav-link.active,
     padding: 15px;
     position: absolute;
     z-index: 9;
-    border-top: 11px solid var(--pink);
+    /* border-top: 11px solid var(--pink); */
+    border-top: 10px solid var(--pink);
     display: none;
+}
+
+.nav-mega:has(.rightNavLink):hover .megamenu-wrapper {
+    top: 50%;
+    border: 0;
 }
 
 .menu-list {
