@@ -25,7 +25,7 @@ const ForgotPassword = () => {
     <section className="auth-page">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-6 col-12 authLeft py-lg-5 py-3 px-lg-5 px-2">
+          {/* <div className="col-lg-6 col-12 authLeft py-lg-5 py-3 px-lg-5 px-2">
             <div className="auth-left-image mb-lg-5 mb-3">
               <img className="img-fluid logo" src={Logo} alt="Ma-event" />
             </div>
@@ -33,7 +33,7 @@ const ForgotPassword = () => {
               <h1 className="mb-2 pink-text">Forgot Password?</h1>
               <p className="pink-text m-sm-0 mb-1">Enter your email to reset your password.</p>
             </div>
-          </div>
+          </div> */}
           <div className="col-lg-6 col-12">
             <div className="auth-card py-lg-5 py-4 px-lg-4 px-2">
               <h1 className="h4 text-center mb-3 pink-text">Reset your password</h1>
@@ -45,7 +45,6 @@ const ForgotPassword = () => {
               )}
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email</label>
                   <input
                     id="email"
                     type="email"

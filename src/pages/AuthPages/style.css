@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.auth-page *{
+.auth-page * {
   transition: all 0.3s linear;
 }
 
@@ -17,12 +17,12 @@
   padding: 0 20px;
 }
 
-.auth-page .container>.row {
+/* .auth-page .container>.row {
   background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 20px #921f6230;
-}
+} */
 
 .auth-card {
   /* padding: 48px 24px; */
@@ -44,6 +44,7 @@
   font-size: 2.2rem;
   line-height: 1.2;
 }
+
 .auth-left-content p {
   font-size: 1.25rem;
   line-height: 1.2;
@@ -52,7 +53,7 @@
 /* Inputs */
 .auth-card .form-control {
   border-radius: 5px;
-} 
+}
 
 .authLeft {
   background: var(--light-pink);
@@ -64,31 +65,87 @@
   max-width: 200px;
   margin: 0 auto;
 }
-.auth-card .btn-link{
+
+.auth-card .btn-link {
   border: none;
   text-decoration: none;
 }
+
 .auth-card .btn-link:focus {
   color: var(--pink) !important;
   border: none;
   text-decoration: underline;
 }
-.auth-card .form-control:focus {
+
+/* .auth-card .form-control:focus {
   border: 1px solid var(--pink) !important;
   box-shadow: 0 0px 8px #921f626b !important;
+} */
+
+.auth-card .form-control:focus {
+  border-color: var(--bs-border-color) !important;
 }
 
-@media (max-width: 600px){
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  border: none;
+  width: 100%;
+}
+
+.google-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+}
+
+.tabTitle {
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.activeTab {
+  border-color: var(--pink);
+}
+
+.input-group svg{
+  cursor: pointer; 
+}
+
+
+@media (max-width: 600px) {
   .auth-left-content h1 {
     font-size: 1.4rem;
   }
+
   .auth-left-content p {
     font-size: 1rem;
   }
+
   .auth-left-image {
     max-width: 100px;
   }
+
   .form-label {
     margin-bottom: .25rem;
+  }
+  .auth-page{
+    padding-top: 0;
   }
 }

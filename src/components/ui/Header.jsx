@@ -94,17 +94,22 @@ const Header = () => {
                   <MegaMenu />
                 </div>
               </div>
-              <Nav.Link href="#link">Events ping</Nav.Link>
               <div className="nav-mega">
                 <Nav.Link href="#">Planning tools <IoMdArrowDropdown /></Nav.Link>
                 <div className="megamenu-wrapper">
                   <MegaMenu />
                 </div>
               </div>
+              <Nav.Link href="#link">Latest Events</Nav.Link>
+              <Nav.Link href="#link">Images</Nav.Link>
               <Nav.Link href="#link">Blog</Nav.Link>
-              <Nav.Link href="#link">Help</Nav.Link>
+              <Nav.Link href="#link">FAQ'S</Nav.Link>
+
+              <Nav.Link href="/login" className='fw-bold '>Log in</Nav.Link>
+              <Nav.Link href="/signup" className='fw-bold'>Sign up</Nav.Link>
+
               <div className="nav-mega">
-                <a href="#" className='rightNavLink'>
+                <a href="#" className='rightNavLink fw-bold'>
                   <FaUserCircle size={30} color='black' /> My Account
                 </a>
                 <div className="megamenu-wrapper menu-list">
@@ -119,7 +124,7 @@ const Header = () => {
                 </div>
               </div>
               <div className="nav-mega">
-                <a href="#" className='rightNavLink postYourAd'>
+                <a href="#" className='rightNavLink postYourAd fw-bold'>
                   <FaPlus /> Post <span className='postSpan'> your</span> AD
                 </a>
               </div>
