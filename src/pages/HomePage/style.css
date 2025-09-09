@@ -87,6 +87,10 @@ header .navbar-nav .nav-link.active,
     display: none;
 }
 
+.mini-mega-menu{
+    min-width: 400px;
+}
+
 .nav-mega:has(.rightNavLink):hover .megamenu-wrapper {
     top: 50%;
     border: 0;
@@ -140,7 +144,7 @@ header .navbar-nav .nav-link.active,
 }
 
 .header .navbar-expand-lg .navbar-nav {
-    gap: 15px;
+    gap: 0.5rem;
 }
 
 .header .center-links {
@@ -549,6 +553,9 @@ footer.footer ul li a:hover {
     .header {
         padding: 0;
     }
+    .header .nav-link {
+        font-size: 14px;
+    }
 }
 
 
@@ -567,6 +574,12 @@ footer.footer ul li a:hover {
 
     .megamenu-wrapper {
         min-width: 680px;
+    }
+}
+
+@media (max-width: 1360px) {
+    .header .navbar-expand-lg .navbar-nav {
+        gap: 0;
     }
 }
 
@@ -596,41 +609,10 @@ footer.footer ul li a:hover {
      }
 }
 
-
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
     button.navbar-toggler {
         padding: 0;
         border: unset;
-    }
-
-    .bannerTxt h2 {
-        font-size: 28px;
-    }
-
-    .bannerTxt h6 {
-        font-size: 16px;
-        margin-top: 5px;
-    }
-
-    .bannerCaption.carousel-caption {
-        width: 100%;
-        max-width: calc(100% - 15px);
-        left: 50%;
-        top: 50%;
-        right: auto;
-        transform: translate(-50% , -50%);
-    }
-    .bottomForm {
-        max-width: 100%;
-    }
-
-    .BannerInput span {
-        padding: 5px 10px;
-        min-width: 40px;
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-       display: none;
     }
 
     .postYourAd {
@@ -641,12 +623,6 @@ footer.footer ul li a:hover {
         border: unset;
         background: #fff;
     }
-
-    .bannerTxt h2 span {
-        color: #ffffff;
-        -webkit-text-stroke: unset;
-    }
-
     .myAccount.dropdown #basic-nav-dropdown {
         padding: 0;
     }
@@ -702,6 +678,45 @@ footer.footer ul li a:hover {
         justify-content: flex-start;
         width: 100%;
         padding:0;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    button.navbar-toggler {
+        padding: 0;
+        border: unset;
+    }
+
+    .bannerTxt h2 {
+        font-size: 28px;
+    }
+
+    .bannerTxt h6 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .bannerCaption.carousel-caption {
+        width: 100%;
+        max-width: calc(100% - 15px);
+        left: 50%;
+        top: 50%;
+        right: auto;
+        transform: translate(-50% , -50%);
+    }
+    .bottomForm {
+        max-width: 100%;
+    }
+
+    .BannerInput span {
+        padding: 5px 10px;
+        min-width: 40px;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+       display: none;
     }
 
     .cardSec .card-title.h5 {

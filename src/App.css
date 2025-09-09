@@ -75,6 +75,69 @@
 }
 
 
+/* header mega menu css  */
+
+
+.mega-menu .list-group {
+    --bs-list-group-bg: transparent;
+    --bs-list-group-border-color: transparent;
+    --bs-list-group-border-radius: 10px;
+    --bs-list-group-active-bg: var(--pink);
+    --bs-list-group-active-border-color: var(--pink);
+    --bs-list-group-item-padding-y: 0;
+}
+.mega-menu .list-group-item{
+    margin-bottom: 1px;
+}
+.mega-menu .list-group-item:hover{
+    background: var(--pink);
+    color: #fff;
+    cursor: pointer;
+    border-radius: var( --bs-list-group-border-radius);
+}
+.mega-menu .list-group-item.active,
+.mega-menu .list-group-item:last-child,
+.mega-menu .list-group-item:first-child {
+    border-radius: var( --bs-list-group-border-radius);
+}
+
+.square-list{
+    list-style: square;
+}
+.square-list li::marker{
+    color: var(--pink);
+}
+
+.mega-menu-title {
+    font-size: 18px;
+}
+.single-list .list-group-item{
+    font-size: 20px;
+    margin-bottom: 6px;
+    padding: 0;
+}
+.single-list .list-group-item:hover{
+    background: transparent;
+    color: var(--pink);
+}
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid var(--pink);
+    padding: 0.08rem 0.2rem 0.2rem;
+}
+.menu-icon img {
+    width: 100%;
+    object-fit: contain;
+    max-width: 20px;
+}
+
+
 
 @media (min-width: 992px){
     .newsletterRow input {
