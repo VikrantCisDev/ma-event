@@ -50,11 +50,6 @@
   line-height: 1.2;
 }
 
-/* Inputs */
-.auth-card .form-control {
-  border-radius: 5px;
-}
-
 .authLeft {
   background: var(--light-pink);
   text-align: center;
@@ -104,14 +99,20 @@
 }
 
 .btn-white {
-  background-color: #fff;
+  background-color: #fdfdfd;
   color: #000;
   border: 1px solid #ccc;
+  width: auto;
+  margin: auto;
 }
 
 .btn-black {
   background-color: #000;
   color: #fff;
+  margin: auto;
+  max-width: 300px;
+  justify-content: flex-start;
+  gap: 2.4rem;
 }
 
 .tabTitle {

@@ -2,101 +2,309 @@ import React, { useState } from "react";
 import { LiaAngleRightSolid } from "react-icons/lia";
 import { LiaAngleLeftSolid } from "react-icons/lia";
 import { IoMdClose } from "react-icons/io";
+import {
+  FaUsers,
+  FaStore,
+  FaCalendarCheck,
+  FaRegNewspaper,
+  FaHeadset,
+  FaConciergeBell,
+  FaSquareFull,
+  FaSearch,
+} from "react-icons/fa";
+import { MdEventAvailable } from "react-icons/md";
+import footerLogo from "../../assets/Images/footer-logo.png";
+import { ImFacebook2 } from "react-icons/im";
+import { FaInstagram, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import Image from "react-bootstrap/Image";
 
-// Options structure with the icons uncommented
-const options = [
+export const options = [
   {
     id: 1,
-    name: "POPULAR CATEGORIES",
-    icon: <LiaAngleRightSolid />,
-    children: [
-      { id: 1.1, name: "Events Venues" },
-      { id: 1.2, name: "Decorators / Decor" },
-      { id: 1.3, name: "Photographers" },
-      { id: 1.4, name: "Car Hires" },
-      { id: 1.5, name: "Beauty Salon" },
-      { id: 1.6, name: "Honeymoon Destinations" },
-      { id: 1.7, name: "Accommodation" },
-      { id: 1.8, name: "Wedding Planners" },
-      { id: 1.9, name: "Cakes" },
-      { id: 1.10, name: "Catering" },
-      { id: 1.11, name: "Videographers" },
-      { id: 1.12, name: "Florists" },
-      { id: 1.13, name: "Event Loans" },
-      { id: 1.14, name: "Wedding Websites" },
-    ],
+    name: "ABOUT MA-EVENT",
+    icon: <FaUsers />,
+    children: [],
+    link: "/about",
   },
   {
     id: 2,
-    name: "BRIDE & GROOM FAVOURITES",
-    icon: <LiaAngleRightSolid />,
+    name: "VENDORS CATEGORIES",
+    icon: <FaStore />,
     children: [
-      { id: 2.1, name: "Wedding Dress" },
-      { id: 2.2, name: "Tuxed Outfits" },
-      { id: 2.3, name: "Bridal Wear" },
-      { id: 2.4, name: "Groom's Wear" },
-      { id: 2.5, name: "Gifts & Packaging" },
-      { id: 2.6, name: "Bridal Accessories" },
-      { id: 2.7, name: "Bridal Shoes" },
+      {
+        id: "2.1",
+        name: "Events Venues",
+        children: [],
+        link: "/vendors/events-venues",
+      },
+      {
+        id: "2.2",
+        name: "Decorators / Decor",
+        children: [],
+        link: "/vendors/decorators",
+      },
+      {
+        id: "2.3",
+        name: "Photographers",
+        children: [],
+        link: "/vendors/photographers",
+      },
+      {
+        id: "2.4",
+        name: "Car Hires",
+        children: [],
+        link: "/vendors/car-hires",
+      },
+      {
+        id: "2.5",
+        name: "Beauty Salon",
+        children: [],
+        link: "/vendors/beauty-salon",
+      },
+      {
+        id: "2.6",
+        name: "Honeymoon Destinations",
+        children: [],
+        link: "/vendors/honeymoon",
+      },
+      {
+        id: "2.7",
+        name: "Accommodation",
+        children: [],
+        link: "/vendors/accommodation",
+      },
+      {
+        id: "2.8",
+        name: "Wedding Planners",
+        children: [],
+        link: "/vendors/wedding-planners",
+      },
+      { id: "2.9", name: "Cakes", children: [], link: "/vendors/cakes" },
+      { id: "2.10", name: "Catering", children: [], link: "/vendors/catering" },
+      {
+        id: "2.11",
+        name: "Videographers",
+        children: [],
+        link: "/vendors/videographers",
+      },
+      { id: "2.12", name: "Florists", children: [], link: "/vendors/florists" },
+      {
+        id: "2.13",
+        name: "Event Loans",
+        children: [],
+        link: "/vendors/event-loans",
+      },
+      {
+        id: "2.14",
+        name: "Wedding Websites",
+        children: [],
+        link: "/vendors/wedding-websites",
+      },
+      {
+        id: "2.15",
+        name: "Services",
+        children: [
+          {
+            id: "2.15.1",
+            icon: <FaSquareFull size={7} />,
+            name: "Events Venues",
+            children: [],
+            link: "/services/events-venues",
+          },
+          {
+            id: "2.15.2",
+            icon: <FaSquareFull size={7} />,
+            name: "Beauty Spa’s",
+            children: [],
+            link: "/services/beauty-spas",
+          },
+          {
+            id: "2.15.3",
+            icon: <FaSquareFull size={7} />,
+            name: "Security",
+            children: [],
+            link: "/services/security",
+          },
+          {
+            id: "2.15.4",
+            icon: <FaSquareFull size={7} />,
+            name: "Event Ushers",
+            children: [],
+            link: "/services/event-ushers",
+          },
+          {
+            id: "2.15.5",
+            icon: <FaSquareFull size={7} />,
+            name: "Professional Makeup",
+            children: [],
+            link: "/services/makeup",
+          },
+          {
+            id: "2.15.6",
+            icon: <FaSquareFull size={7} />,
+            name: "Nail Technician",
+            children: [],
+            link: "/services/nail-technician",
+          },
+          {
+            id: "2.15.7",
+            icon: <FaSquareFull size={7} />,
+            name: "Cakes",
+            children: [],
+            link: "/services/cakes",
+          },
+          {
+            id: "2.15.8",
+            icon: <FaSquareFull size={7} />,
+            name: "Catering",
+            children: [],
+            link: "/services/catering",
+          },
+          {
+            id: "2.15.9",
+            icon: <FaSquareFull size={7} />,
+            name: "Photographers",
+            children: [],
+            link: "/services/photographers",
+          },
+          {
+            id: "2.15.10",
+            icon: <FaSquareFull size={7} />,
+            name: "Videography",
+            children: [],
+            link: "/services/videography",
+          },
+          {
+            id: "2.15.11",
+            icon: <FaSquareFull size={7} />,
+            name: "Events Cleaners",
+            children: [],
+            link: "/services/cleaners",
+          },
+          {
+            id: "2.15.12",
+            icon: <FaSquareFull size={7} />,
+            name: "Tailored Outfits",
+            children: [],
+            link: "/services/tailored-outfits",
+          },
+          {
+            id: "2.15.13",
+            icon: <FaSquareFull size={7} />,
+            name: "Graduation Outfits",
+            children: [],
+            link: "/services/graduation-outfits",
+          },
+          {
+            id: "2.15.14",
+            icon: <FaSquareFull size={7} />,
+            name: "Matric Dance Outfits",
+            children: [],
+            link: "/services/matric-dance-outfits",
+          },
+          {
+            id: "2.15.15",
+            icon: <FaSquareFull size={7} />,
+            name: "Events Planners",
+            children: [],
+            link: "/services/events-planners",
+          },
+        ],
+      },
     ],
   },
   {
     id: 3,
-    name: "ENTERTAINMENT",
-    icon: <LiaAngleRightSolid />,
-    children: [
-      { id: 3.1, name: "Cultural Dance Groups" },
-      { id: 3.2, name: "Dance Bands" },
-      { id: 3.3, name: "Live Bands" },
-      { id: 3.4, name: "Ceremony Musicians" },
-      { id: 3.5, name: "DJs" },
-      { id: 3.6, name: "Choirs" },
-    ],
+    name: "PLANNING TOOLS",
+    icon: <FaCalendarCheck />,
+    children: [],
+    link: "/planning-tools",
   },
   {
     id: 4,
-    name: "ACCESSORIES",
-    icon: <LiaAngleRightSolid />,
-    children: [
-      { id: 4.1, name: "Jewellery" },
-      { id: 4.2, name: "Wedding Rings" },
-    ],
+    name: "LATEST EVENTS",
+    icon: <MdEventAvailable />,
+    children: [],
+    link: "/latest-events",
   },
   {
     id: 5,
-    name: "EVENT RENTALS",
-    icon: <LiaAngleRightSolid />,
-    children: [
-      { id: 5.1, name: "PA Systems" },
-      { id: 5.2, name: "Tents & Chairs" },
-      { id: 5.3, name: "Warming Dishes" },
-      { id: 5.4, name: "Wedding Fonts" },
-      { id: 5.5, name: "Toast Master or MC" },
-    ],
+    name: "BLOG",
+    icon: <FaRegNewspaper />,
+    children: [],
+    link: "/blog",
+  },
+  {
+    id: 6,
+    name: "HELP",
+    icon: <FaHeadset />,
+    children: [],
+    link: "/help",
   },
 ];
 
 const MultiMenus = ({ open, handleSidebarToggle, handleClose }) => {
-  const [currentMenu, setCurrentMenu] = useState(null); // State to handle current menu
- 
+  const [menuStack, setMenuStack] = useState([]); // Stack to track navigation
+  const [search, setSearch] = useState("");
 
-  // Handle parent menu click
+  const currentMenu = menuStack[menuStack.length - 1]; // Top of the stack
+
   const handleMenuClick = (menu) => {
-    setCurrentMenu(menu); // Set currentMenu to the clicked menu
+    if (menu.children && menu.children.length > 0) {
+      setMenuStack((prev) => [...prev, menu]); // Push to stack
+    }
   };
 
-  // Handle back button click (go to the previous level)
   const handleBack = () => {
-    setCurrentMenu(null); // Set currentMenu to null to go back to the root menu
+    setMenuStack((prev) => prev.slice(0, -1)); // Pop from stack
   };
 
+  const renderMenuItems = (items) => (
+    <>
+      {!menuStack.length && (
+        <div className="input-group mobileSearchBar p-1 mb-2">
+          <span className="input-group-text pink-text bg-transparent border-0">
+            <FaSearch size={20} />
+          </span>
+          <input
+            id="search"
+            type="text"
+            className="form-control bg-transparent border-0"
+            placeholder=" "
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            required
+          />
+        </div>
+      )}
+      <ul className="main-navList">
+        {items.map((item) => (
+          <li
+            key={item.id}
+            className="fw-medium"
+            onClick={() => handleMenuClick(item)}
+          >
+            <LiaAngleRightSolid />
+            <div className="d-flex gap-2 align-items-center">
+              {item.icon && <>{item.icon}</>}
+              <span>{item.name}</span>
+            </div>
+            {/* {item.children && item.children.length > 0 && (
+              <LiaAngleRightSolid />
+              )} */}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 
   return (
-    <div className={`sidebar ${open ? "open" : ""}`}>
+    <div className={`sidebar d-flex flex-column  ${open ? "open" : ""}`}>
       <div className="sidebar-header">
-        {currentMenu ? (
+        {menuStack.length > 0 ? (
           <button className="back-btn p-0" onClick={handleBack}>
-            <LiaAngleLeftSolid /> Back
+            <LiaAngleLeftSolid /> {currentMenu.name}
           </button>
         ) : (
           <button className="close-btn p-0" onClick={handleClose}>
@@ -105,30 +313,49 @@ const MultiMenus = ({ open, handleSidebarToggle, handleClose }) => {
         )}
       </div>
 
-      <div className="sidebar-content">
-        {currentMenu ? (
-          // Rendering child items of the current menu
-          <div>
-            <ul>
-              {currentMenu.children.map((child) => (
-                <li key={child.id}>
-                  {child.name}
-                 
-                </li>
-              ))}
-            </ul>
+      <div className="sidebar-content h-100">
+        {menuStack.length > 0
+          ? renderMenuItems(currentMenu.children)
+          : renderMenuItems(options)}
+      </div>
 
-          </div>
-        ) : (
-          // Rendering the parent menus
-          <ul className="main-navList">
-            {options.map((menu) => (
-              <li key={menu.id} onClick={() => handleMenuClick(menu)}>
-                {menu.icon} {menu.name}
-              </li>
-            ))}
-          </ul>
-        )}
+      <div className="sidebar-ftr mt-auto px-4 mx-2 pb-4">
+        <div className="ftr-logo my-2 text-center">
+          <Link to="/">
+            <Image src={footerLogo} rounded className="img-fluid" />
+          </Link>
+        </div>
+        <ul className="social_links list-unstyled d-flex gap-3 justify-content-center mb-0">
+          <li>
+            <a href="#">
+              <ImFacebook2 size={24} className="text-white" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <FaInstagram size={24} className="text-white" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <FaTwitter size={24} className="text-white" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <FaYoutube size={24} className="text-white" />
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <FaWhatsapp size={24} className="text-white" />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );

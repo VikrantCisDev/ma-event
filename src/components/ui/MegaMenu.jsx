@@ -1,65 +1,42 @@
-import React from 'react';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col, Form, ListGroup, Image } from "react-bootstrap";
+import Guestlist from "../../assets/Images/pt-icon1.png";
+import Checklist from "../../assets/Images/pt-icon2.png";
+import BudgetCalculator from "../../assets/Images/pt-icon3.png";
+import Shortlist from "../../assets/Images/pt-icon4.png";
 
 const MegaMenu = () => {
   return (
     <section className="mega-menu">
-      <Container>
-        <Row>
-          <Col>
-            <h5>POPULAR CATEGORIES</h5>
-            <Form.Check type="checkbox" label="Events Venues" />
-            <Form.Check type="checkbox" label="Decorators / Decor" />
-            <Form.Check type="checkbox" label="Photographers" />
-            <Form.Check type="checkbox" label="Car Hires" />
-            <Form.Check type="checkbox" label="Beauty Salon" />
-            <Form.Check type="checkbox" label="Honeymoon Destinations" />
-            <Form.Check type="checkbox" label="Accommodation" />
-            <Form.Check type="checkbox" label="Wedding Planners" />
-            <Form.Check type="checkbox" label="Cakes" />
-            <Form.Check type="checkbox" label="Catering" />
-            <Form.Check type="checkbox" label="Videographers" />
-            <Form.Check type="checkbox" label="Florists" />
-            <Form.Check type="checkbox" label="Event Loans" />
-            <Form.Check type="checkbox" label="Wedding Websites" />
-          </Col>
-          <Col>
-            <h5>BRIDE & GROOM FAVOURITES</h5>
-            <Form.Check type="checkbox" label="Wedding Dress" />
-            <Form.Check type="checkbox" label="Tuxed Outfits" />
-            <Form.Check type="checkbox" label="Bridal Wear" />
-            <Form.Check type="checkbox" label="Groom's Wear" />
-            <Form.Check type="checkbox" label="Gifts & Packaging" />
-            <Form.Check type="checkbox" label="Bridal Accessories" />
-            <Form.Check type="checkbox" label="Bridal Shoes" />
-            <div className='mt-2'>
-              <h5>ENTERTAINMENT</h5>
-              <Form.Check type="checkbox" label="Cultural Dance Groups" />
-              <Form.Check type="checkbox" label="Dance Bands" />
-              <Form.Check type="checkbox" label="Live Bands" />
-              <Form.Check type="checkbox" label="Ceremony Musicians" />
-              <Form.Check type="checkbox" label="DJs" />
-              <Form.Check type="checkbox" label="Choirs" />
-            </div>
-          </Col>
-
-          <Col>
-            <h5>ACCESSORIES</h5>
-            <Form.Check type="checkbox" label="Jewellery" />
-            <Form.Check type="checkbox" label="Wedding Rings" />
-
-            <div className='mt-2'>
-              
-            <h5>EVENT RENTALS</h5>
-            <Form.Check type="checkbox" label="PA Systems" />
-            <Form.Check type="checkbox" label="Tents & Chairs" />
-            <Form.Check type="checkbox" label="Warming Dishes" />
-            <Form.Check type="checkbox" label="Wedding Fonts" />
-            <Form.Check type="checkbox" label="Toast Master or MC" />
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <h4 className="h5 mega-menu-title mb-2 fw-bold">
+        PLANNING TOOLS <span className="fw-normal">(SELECT APPLICABLE)</span>
+      </h4>
+      <ListGroup className="single-list fw-medium">
+        <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
+          <div className="menu-icon">
+            <Image src={Guestlist} fluid />
+          </div>
+          Guestlist
+        </ListGroup.Item>
+        <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
+          <div className="menu-icon">
+            <Image src={Checklist} fluid />
+          </div>
+          Checklist
+        </ListGroup.Item>
+        <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
+          <div className="menu-icon">
+            <Image src={BudgetCalculator} fluid />
+          </div>
+          Budget Calculator
+        </ListGroup.Item>
+        <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
+          <div className="menu-icon">
+            <Image src={Shortlist} fluid />
+          </div>
+          Shortlist
+        </ListGroup.Item>
+      </ListGroup>
     </section>
   );
 };
