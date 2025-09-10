@@ -1,4 +1,11 @@
 import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+
 import "./style.css";
 import playStore from "../../assets/Images/play-store.png";
 import appleStore from "../../assets/Images/apple-store.png";
@@ -9,8 +16,13 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import BreadcrumbSection from "../../components/ui/BreadcrumbSection";
-import ProductImg from "../../assets/Images/card6.jpg";
-import { Form, ListGroup, ListGroupItem, Button } from "react-bootstrap";
+import {
+  Form,
+  ListGroup,
+  ListGroupItem,
+  Button,
+  Carousel,
+} from "react-bootstrap";
 import { FaRegStar } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { ImFacebook2 } from "react-icons/im";
@@ -22,792 +34,370 @@ import { FaCommentDots } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
 import IconWrapper from "../../components/ui/IconWrapper";
-
-
+import ProductImg from "../../assets/Images/card6.jpg";
+import ViewProfile from "../../assets/Images/view-profile.png";
+import { FaUserCircle } from "react-icons/fa";
+import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io";
+import { MdFormatListBulletedAdd } from "react-icons/md";
+import { FaEye } from "react-icons/fa";
+import { MdAccessTime } from "react-icons/md";
+import { GrChatOption } from "react-icons/gr";
+import { FaShareAlt } from "react-icons/fa";
+import SimiliarProducts from "../../components/ui/SimiliarProducts";
 
 const VendorsPage = () => {
   const newrating = 3;
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(null);
+  const [fav, setfav] = useState(true);
+
+  const [thumbsSwiper, setThumbsSwiper] = React.useState(null);
+
+  const images = [
+    ProductImg,
+    ProductImg,
+    ProductImg,
+    ProductImg,
+    ProductImg,
+    ProductImg,
+  ];
 
   return (
     <>
       <main className="main-section">
-        <div className="vendorPage">
-          <section className="vptopSec">
+        <div className="vendorPage pt-lg-5 pt-4">
+          <section className="vpMidSec ">
             <Container className="custom-container">
-              <Row>
-                <Col>
-                  <ul className="topStoreList">
-                    <li>
-                      <a href="#">
-                        <Image src={playStore} />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image src={appleStore} />
-                      </a>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </Container>
-          </section>
+              <div className="px-lg-5">
+                <Row className="justify-content-between">
+                  <Col lg="7" sm="12">
+                    <div className="vpLeftSec">
+                      <BreadcrumbSection
+                        FirstBredItem="Home"
+                        SecondBredItem="Vendors"
+                        ThirdBredItem="Catering"
+                        ActiveBredItem="Jail's Catering Services"
+                      />
 
-          <section className="vpMidSec">
-            <Container className="custom-container">
-              <Row className="justify-content-between">
-                <Col lg="6" sm="12">
-                  <div className="vpLeftSec">
-                    <BreadcrumbSection
-                      FirstBredItem="Home"
-                      SecondBredItem="Vendors"
-                      ThirdBredItem="Catering"
-                      ActiveBredItem="Jail's Catering Services"
-                    />
-
-                    <div className="vpItemSec">
-                      <div className="ProductImg">
-                        <Image
-                          src={ProductImg}
-                          className="img-fluid w-100 object-fit-cover"
-                        />
-                        <span className="verified">VERIFIED</span>
-                      </div>
-                      <div className="ProductDetails">
-                        <div className="pdRow">
-                          <div className="pdLeft">
-                            <div className="pdTitle">
-                              <h2 className="pink-text fs-1 fw-bold">
-                                Jail's Catering Services
-                              </h2>
-                            </div>
-                          </div>
-                          <div className="pdRight">
-                            <ListGroup variant="flush">
-                              <ListGroupItem className="border-0 pt-2 p-0">
-                                <div className="d-flex align-items-center  justify-content-end">
-                                  {Array.from({ length: 5 }, (_, i) => (
-                                    <span
-                                      key={i}
-                                      className={
-                                        i < newrating ? "rated" : "unrated"
-                                      }
-                                    >
-                                      <FaRegStar />
-                                    </span>
-                                  ))}
+                      <div className="vpItemSec">
+                        <div>
+                          {/* Main Product Slider */}
+                          <Swiper
+                            spaceBetween={10}
+                            thumbs={{ swiper: thumbsSwiper }}
+                            modules={[FreeMode, Navigation, Thumbs]}
+                            className="main-slider mb-2"
+                          >
+                            {images.map((src, idx) => (
+                              <SwiperSlide key={idx} className="ProductImg">
+                                <img src={src} alt={`Product ${idx}`} />
+                                <span className="verified">VERIFIED</span>
+                                <div
+                                  className="addToFav"
+                                  onClick={() => setfav(!fav)}
+                                >
+                                  <span className="text-white">
+                                    Add to Favourites
+                                  </span>
+                                  <span className="fav-icon ms-2 pink-text">
+                                    {fav ? (
+                                      <IoMdHeart size={34} />
+                                    ) : (
+                                      <IoMdHeartEmpty
+                                        className="text-white"
+                                        size={34}
+                                      />
+                                    )}
+                                  </span>
                                 </div>
-                              </ListGroupItem>
-                              <ListGroupItem className="fw-semibold text-end border-0 pt-2 p-0">
-                                STAR RATING
-                              </ListGroupItem>
-                            </ListGroup>
-                          </div>
+                              </SwiperSlide>
+                            ))}
+                          </Swiper>
+
+                          {/* Thumbnails */}
+                          <Swiper
+                            onSwiper={setThumbsSwiper}
+                            spaceBetween={10}
+                            slidesPerView={4}
+                            freeMode={true}
+                            watchSlidesProgress={true}
+                            modules={[FreeMode, Navigation, Thumbs]}
+                            className="thumbs-slider"
+                          >
+                            {images.map((src, idx) => (
+                              <SwiperSlide key={idx}>
+                                <img src={src} alt={`Thumbnail ${idx}`} />
+                              </SwiperSlide>
+                            ))}
+                          </Swiper>
                         </div>
 
-                        <div className="pdRow mb-4">
-                          <div className="pdLeft">
-                            <div className="pdLocation">
-                              <h4 className="d-flex align-items-center">
-                                <span className="pink-text">
-                                  <IoLocationSharp />
-                                </span>{" "}
-                                East London / Easterncape
-                              </h4>
-                              <h6 className="pink-text text-uppercase fw-bold mb-3">
-                                &#40; Map Location &#41;
-                              </h6>
-
-                              <h6 className="pink-text text-uppercase fw-bold">
-                                Interact with us
-                              </h6>
-
-                              <ul className="social_links">
-                                <li>
-                                  <a href="#">
-                                    <ImFacebook2 />
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a href="#">
-                                    <FaInstagram />
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a href="#">
-                                    <FaTwitter />
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a href="#">
-                                    <FaYoutube />
-                                  </a>
-                                </li>
-                                <li>
-                                  <a href="#">
-                                    <FaWhatsapp />
-                                  </a>
-                                </li>
-
-                                <li>
-                                  <a href="#">
-                                    <TbWorldSearch />
-                                  </a>
-                                </li>
-                              </ul>
+                        <div className="ProductDetails">
+                          <div className="d-flex justify-content-between align-items-center py-2 flex-wrap">
+                            <div className="icon-text ">
+                              <MdAccessTime size={30} className="pink-text" />{" "}
+                              <span className="fw-regular h5 mb-0">
+                                3 days ago
+                              </span>
+                            </div>
+                            <div className="icon-text ">
+                              <FaEye size={30} className="pink-text" />{" "}
+                              <span className="fw-regular h5 mb-0">
+                                792 views
+                              </span>
+                            </div>
+                            <div className="icon-text ">
+                              <FaShareAlt size={30} className="pink-text" />{" "}
+                              <span className="fw-regular h5 mb-0">
+                                Share this <b>Ad</b>
+                              </span>
+                            </div>
+                            <div className="icon-text ">
+                              <GrChatOption size={30} className="pink-text" />{" "}
+                              <span className="fw-regular h5 mb-0">
+                                Leave a Review
+                              </span>
                             </div>
                           </div>
-                          <div className="pdRight">
-                            <div className="reviewBoxes mb-4">
-                              <div className="reviewBox">
-                                <span>
-                                  <MdCameraAlt /> 0
-                                </span>
-                                <p className="text-body-secondary text-uppercase">Albums</p>
-                              </div>
-                              <div className="reviewBox">
-                                <span>
-                                  <TiHeartFullOutline /> 21
-                                </span>
-                                <p className="text-body-secondary text-uppercase">Loves</p>
-                              </div>
-                              <div className="reviewBox">
-                                <span>
-                                  <FaCommentDots /> 3
-                                </span>
-                                <p className="text-body-secondary text-uppercase">Reviews</p>
-                              </div>
-                              <div className="reviewBox">
-                                <span>
-                                  <FaCheck />
-                                </span>
-                                <p className="text-body-secondary text-uppercase">shortlist</p>
+                          <div className="pdRow">
+                            <div className="pdLeft">
+                              <div className="pdTitle">
+                                <h2 className="pink-text fs-1 fw-bold">
+                                  Jail's Catering Services
+                                </h2>
                               </div>
                             </div>
-                            <p className="text-end text-uppercase mb-0 fw-medium">
-                              Write a Reviews
+                            <div className="pdRight">
+                              <ListGroup variant="flush">
+                                <ListGroupItem className="border-0 pt-2 p-0">
+                                  <div className="d-flex align-items-center  justify-content-end">
+                                    {Array.from({ length: 5 }, (_, i) => (
+                                      <span
+                                        key={i}
+                                        className={
+                                          i < newrating ? "rated" : "unrated"
+                                        }
+                                      >
+                                        <FaRegStar />
+                                      </span>
+                                    ))}
+                                  </div>
+                                </ListGroupItem>
+                              </ListGroup>
+                            </div>
+                          </div>
+                          <div className="pdRow lh-1 m-0">
+                            <h4 className="d-flex align-items-center">
+                              <span className="pink-text">
+                                <IoLocationSharp />
+                              </span>{" "}
+                              East London / Easterncape
+                            </h4>
+                            <p className="fw-bold text-end border-0 pt-2 p-0">
+                              STAR RATING
+                            </p>
+                          </div>
+                          <div className="pdRow ">
+                            <div className="price-box px-3 text-white">
+                              <span className="fw-bold h2">R3,000.00</span>
+                            </div>
+                            <div className="report-btn lh-1 h5 fw-normal px-3">
+                              Report abuse
+                            </div>
+                          </div>
+
+                          <div className="pdRow my-4">
+                            <h3 className="h3 pink-text mb-2 fw-bold">
+                              Description
+                            </h3>
+                            <p className="fs-5">
+                              Cakes and Sweets Galore is a bakery that makes
+                              cakes and sweets of all prices for different
+                              occasions, Birthdays, weddings, parties we have
+                              all cakes at affordbale prices and flavours… Cakes
+                              and Sweets Galore is a bakery that makes cakes and
+                              sweets of all prices for different occasions,
+                              Birthdays, weddings, parties we have all cakes at
+                              affordbale prices and flavours…
                             </p>
                           </div>
                         </div>
-
-                        <div className="productGallery">
-                          <div className="pdRow mb-1">
-                            <div className="pdLeft">
-                              <h4>Gallery</h4>
-                            </div>
-                            <div className="pdRight">
-                              <a
-                                href="#"
-                                className="text-uppercase pink-text fs-5 fw-bold"
-                              >
-                                View All
-                              </a>
-                            </div>
-                          </div>
-
-                          <div className="productGalleryBoxes">
-                            <div className="proGalleryBox">
-                              <Image src={ProductImg} className="img-fluid" />
-                            </div>
-                            <div className="proGalleryBox">
-                              <Image src={ProductImg} className="img-fluid" />
-                            </div>
-                            <div className="proGalleryBox">
-                              <Image src={ProductImg} className="img-fluid" />
-                            </div>
-                            <div className="proGalleryBox">
-                              <Image src={ProductImg} className="img-fluid" />
-                            </div>
-                            <div className="proGalleryBox">
-                              <Image src={ProductImg} className="img-fluid" />
-                            </div>
-                            <div className="proGalleryBox">
-                              <Image src={ProductImg} className="img-fluid" />
-                            </div>
-                          </div>
-
-                          <Form className="mt-4">
-                            <h5 className="border-bottom pb-1">
-                              Be the first to Write a Review on Jali’s Catering
-                              Services
-                            </h5>
-                            <div className="px-md-4 px-2">
-                            <Form.Group as={Row} className="my-3">
-                              <Form.Label column sm="2">
-                                Your rating:
-                              </Form.Label>
-                              <Col sm="8">
-                                {[...Array(5)].map((star, index) => {
-                                  const ratingValue = index + 1;
-                                  return (
-                                    <label key={index}>
-                                      <input
-                                        type="radio"
-                                        name="rating"
-                                        value={ratingValue}
-                                        onClick={() => setRating(ratingValue)}
-                                        style={{ display: "none" }}
-                                      />
-                                      <FaRegStar
-                                        size={30}
-                                        color={
-                                          ratingValue <= (hover || rating)
-                                            ? "#ff841e"
-                                            : "#7a7a7a"
-                                        }
-                                        onMouseEnter={() =>
-                                          setHover(ratingValue)
-                                        }
-                                        onMouseLeave={() => setHover(null)}
-                                      />
-                                    </label>
-                                  );
-                                })}
-                              </Col>
-                              <Col sm="2">
-                                <span>
-                                  {rating === 0
-                                    ? "Not Rated"
-                                    : `${rating} Star${rating > 1 ? "s" : ""}`}
+                      </div>
+                    </div>
+                  </Col>
+                  <Col lg="5" md="6" sm="12">
+                    <div className="vpRightSec ps-lg-5">
+                      <div className="vpForm border-0">
+                        <div className="vpFormTop d-flex align-items-center gap-xxl-3 gap-2">
+                          <FaUserCircle size={46} className="lightpink-text" />
+                          <h3 className="text-white">Catering 501 (Pty) Ltd</h3>
+                        </div>
+                        <div className="border-bottom border-dark pt-2 pb-3 pink-text text-center tracking-wide-xl">
+                          <p className="m-0 h4 fw-normal">
+                            Member for{" "}
+                            <span className="fw-bold text-black">
+                              {" "}
+                              1+ years
+                            </span>{" "}
+                            | Active Ads{" "}
+                            <span className="fw-bold text-black">8</span>
+                          </p>
+                        </div>
+                        <div className="vpFormBottom border-0 px-0">
+                          <Row>
+                            <Col>
+                              <h4 className="fw-bold mb-2">Member Stats</h4>
+                              <div className="icon-text mb-2">
+                                <MdFormatListBulletedAdd
+                                  size={30}
+                                  className="pink-text"
+                                />{" "}
+                                <span className="fw-bold h5 mb-0">
+                                  50 Total Listings
                                 </span>
-                              </Col>
-                            </Form.Group>
-                            <Form.Group className="mb-3">
-                              <Form.Control
-                                type="text"
-                                placeholder="Enter Review title"
-                              />
-                            </Form.Group>
-                            <Form.Group className="mb-3">
-                              <Form.Control
-                                as="textarea"
-                                rows={3}
-                                placeholder="Tell us about your experience..."
-                              />
-                            </Form.Group>
-                            <Form.Group className="mb-3 d-flex">
-                              <Form.Control
-                                className="border-end-0 rounded-end-0"
-                                type="text"
-                                placeholder="How much did you spend on this vendor? (optional)"
-                              />
+                              </div>
+                              <div className="icon-text ">
+                                <FaEye size={30} className="pink-text" />{" "}
+                                <span className="fw-bold h5 mb-0">
+                                  378.10K Total Views
+                                </span>
+                              </div>
+                            </Col>
+
+                            <Col>
+                              <div className="d-flex flex-column align-items-center mt-auto ms-auto w-fit">
+                                <Image
+                                  src={ViewProfile}
+                                  className="viewProfileIcon"
+                                />
+                                <p className="fw-semibold fs-5 m-0">
+                                  View Profile
+                                </p>
+                                <ul className="social_links gap-2">
+                                  <li>
+                                    <a href="#">
+                                      <ImFacebook2 />
+                                    </a>
+                                  </li>
+
+                                  <li>
+                                    <a href="#">
+                                      <FaInstagram />
+                                    </a>
+                                  </li>
+
+                                  <li>
+                                    <a href="#">
+                                      <FaTwitter />
+                                    </a>
+                                  </li>
+
+                                  <li>
+                                    <a href="#">
+                                      <FaYoutube />
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#">
+                                      <FaWhatsapp />
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </Col>
+
+                            <Col sm={12} className="d-flex gap-2 my-4">
                               <Button
                                 variant="primary"
-                                className=" rounded-start-0 dark-btn"
-                                type="submit"
+                                className="w-100 dark-btn fs-4 fw-bold"
                               >
-                                Submit
+                                Message Seller
                               </Button>
+                              <Button
+                                variant="secondary"
+                                className="w-100 gray-btn blue-bg fs-4 fw-bold"
+                              >
+                                Phone Number
+                              </Button>
+                            </Col>
+                          </Row>
+
+                          <Form>
+                            <Form.Group
+                              as={Row}
+                              className="mb-3"
+                              controlId="formFirstName"
+                            >
+                              <Col>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="First name"
+                                />
+                              </Col>
+                              <Col>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Last name"
+                                />
+                              </Col>
                             </Form.Group>
-                            </div>
+
+                            <Form.Group controlId="formEmail" className="mb-3">
+                              <Form.Control
+                                type="email"
+                                placeholder="Email Address"
+                              />
+                            </Form.Group>
+
+                            <Form.Group
+                              as={Row}
+                              className="mb-3"
+                              controlId="formFirstName"
+                            >
+                              <Col>
+                                <Form.Control
+                                  type="tel"
+                                  placeholder="Phone number"
+                                />
+                              </Col>
+                              <Col>
+                                <Form.Control type="date" />
+                              </Col>
+                            </Form.Group>
+
+                            <Form.Group
+                              className="mb-3"
+                              controlId="formMessage"
+                            >
+                              <Form.Control
+                                as="textarea"
+                                rows={4}
+                                placeholder="Write your message..."
+                              />
+                            </Form.Group>
+
+                            <Button
+                              type="submit"
+                              className="dark-btn rounded-0 w-100 fs-4 fw-bold"
+                              block
+                            >
+                              Send Message
+                            </Button>
                           </Form>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </Col>
-                <Col lg="5" md="6" sm="12">
-                  <div className="vpRightSec ">
-                    <div className="vpForm shadow">
-                      <div className="vpFormTop">
-                        <h6 className="text-white">
-                          Share Jail's Catering Services
-                        </h6>
-                        <ul className="social_links">
-                          <li>
-                            <a href="#">
-                              <ImFacebook2 />
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="#">
-                              <FaInstagram />
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="#">
-                              <FaTwitter />
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="#">
-                              <FaYoutube />
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#">
-                              <FaWhatsapp />
-                            </a>
-                          </li>
-
-                          <li>
-                            <a href="#">
-                              <TbWorldSearch />
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div className="vpFormBottom">
-                        <h2 className="fw-normal mb-3">Contact Vendor</h2>
-                        <Form>
-                          <Form.Group
-                            as={Row}
-                            className="mb-3"
-                            controlId="formFirstName"
-                          >
-                            <Col>
-                              <Form.Control
-                                type="text"
-                                placeholder="Enter your first name"
-                              />
-                            </Col>
-                            <Col>
-                              <Form.Control
-                                type="text"
-                                placeholder="Enter your last name"
-                              />
-                            </Col>
-                          </Form.Group>
-
-                          <Form.Group controlId="formEmail" className="mb-3">
-                            <Form.Control
-                              type="email"
-                              placeholder="Enter your email"
-                            />
-                          </Form.Group>
-
-                          <Form.Group
-                            as={Row}
-                            className="mb-3"
-                            controlId="formFirstName"
-                          >
-                            <Col>
-                              <Form.Control
-                                type="tel"
-                                placeholder="Enter your phone number"
-                              />
-                            </Col>
-                            <Col>
-                              <Form.Control type="date" />
-                            </Col>
-                          </Form.Group>
-
-                          <Form.Group className="mb-3" controlId="formMessage">
-                            <Form.Control
-                              as="textarea"
-                              rows={4}
-                              placeholder="Write your message"
-                            />
-                          </Form.Group>
-
-                          <Button
-                            type="submit"
-                            className="dark-btn rounded w-100"
-                            block
-                          >
-                            Send Message
-                          </Button>
-                        </Form>
-                      </div>
-                    </div>
-                    <div className="vpContactDetailsForm mt-4 text-center">
-                      <Row>
-                        <Col>
-                          <h4 className="mb-4 col-md-7 sol-12 mx-auto px-3">
-                            {" "}
-                            Shortlist Jali’s Catering Services or Ask for a
-                            Quotation for their services
-                          </h4>
-                          <Button variant="primary" className="m-2 dark-btn">
-                            Request Price
-                          </Button>
-                          <Button variant="secondary" className="m-2 gray-btn">
-                            Shortlist Vendor
-                          </Button>
-                        </Col>
-                      </Row>
-                      <Row className="mt-5">
-                        <Col className="mt-lg-2">
-                          <div
-                            style={{
-                              backgroundColor: "#8B1E64",
-                              color: "white",
-                              padding: "10px",
-                            }}
-                          >
-                            <h4 className="fw-normal fs-1">CONTACT DETAILS</h4>
-                          </div>
-                          <div
-                            style={{
-                              backgroundColor: "#F8F8F8",
-                              padding: "10px",
-                            }}
-                          >
-                            <h5 className="fs-1 fw-normal mt-2">
-                              +277 (0) 45 678 9064
-                            </h5>
-                          </div>
-                        </Col>
-                      </Row>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
+                  </Col>
+                </Row>
+              </div>
             </Container>
           </section>
 
-          <section className="vpBottomSec mt-md-5 pt-md-5">
-            <Container className="custom-container">
-              <Row>
-                <Col>
-                  <div className="vpItemSec">
-                    <div className="ProductImg">
-                      <Image src={ProductImg} className="img-fluid" />
-                      <span className="verified">VERIFIED</span>
-                    </div>
+          {/* similiar vendors section  */}
 
-                    <div className="pdRow">
-                      <div className="pdLeft">
-                        <div className="pdTitle">
-                          <h2 className="pink-text">
-                            Jail's Catering Services
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="pdRight w-100">
-                        <ListGroup
-                          variant="flush"
-                          className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                        >
-                          <ListGroupItem className="border-0 pb-2 p-0">
-                            <div className="d-flex align-items-center">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={
-                                    i < newrating ? "rated" : "unrated"
-                                  }
-                                >
-                                  <FaRegStar />
-                                </span>
-                              ))}
-                            </div>
-                          </ListGroupItem>
-                          <ListGroupItem className="fw-semibold border-0 starRating p-0">
-                            STAR RATING
-                          </ListGroupItem>
-                        </ListGroup>
-                      </div>
-                    </div>
+          <SimiliarProducts />
 
-                    <div className="pdRow mb-4">
-                      <div className="pdLocation">
-                        <h4 className="d-flex align-items-center">
-                          <span className="pink-text">
-                            <IoLocationSharp />
-                          </span>{" "}
-                          East London / Easterncape
-                        </h4>
-                        <h6 className="pink-text text-uppercase fw-bold mb-3">
-                          &#40; Map Location &#41;
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="vpItemSec">
-                    <div className="ProductImg">
-                      <Image src={ProductImg} className="img-fluid" />
-                      <span className="verified">VERIFIED</span>
-                    </div>
-
-                    <div className="pdRow">
-                      <div className="pdLeft">
-                        <div className="pdTitle">
-                          <h2 className="pink-text">
-                            Jail's Catering Services
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="pdRight w-100">
-                        <ListGroup
-                          variant="flush"
-                          className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                        >
-                          <ListGroupItem className="border-0 pb-2 p-0">
-                            <div className="d-flex align-items-center">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={
-                                    i < newrating ? "rated" : "unrated"
-                                  }
-                                >
-                                  <FaRegStar />
-                                </span>
-                              ))}
-                            </div>
-                          </ListGroupItem>
-                          <ListGroupItem className="fw-semibold border-0 starRating p-0">
-                            STAR RATING
-                          </ListGroupItem>
-                        </ListGroup>
-                      </div>
-                    </div>
-
-                    <div className="pdRow mb-4">
-                      <div className="pdLocation">
-                        <h4 className="d-flex align-items-center">
-                          <span className="pink-text">
-                            <IoLocationSharp />
-                          </span>{" "}
-                          East London / Easterncape
-                        </h4>
-                        <h6 className="pink-text text-uppercase fw-bold mb-3">
-                          &#40; Map Location &#41;
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="vpItemSec">
-                    <div className="ProductImg">
-                      <Image src={ProductImg} className="img-fluid" />
-                      <span className="verified">VERIFIED</span>
-                    </div>
-
-                    <div className="pdRow">
-                      <div className="pdLeft">
-                        <div className="pdTitle">
-                          <h2 className="pink-text">
-                            Jail's Catering Services
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="pdRight w-100">
-                        <ListGroup
-                          variant="flush"
-                          className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                        >
-                          <ListGroupItem className="border-0 pb-2 p-0">
-                            <div className="d-flex align-items-center">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={
-                                    i < newrating ? "rated" : "unrated"
-                                  }
-                                >
-                                  <FaRegStar />
-                                </span>
-                              ))}
-                            </div>
-                          </ListGroupItem>
-                          <ListGroupItem className="fw-semibold border-0 starRating p-0">
-                            STAR RATING
-                          </ListGroupItem>
-                        </ListGroup>
-                      </div>
-                    </div>
-
-                    <div className="pdRow mb-4">
-                      <div className="pdLocation">
-                        <h4 className="d-flex align-items-center">
-                          <span className="pink-text">
-                            <IoLocationSharp />
-                          </span>{" "}
-                          East London / Easterncape
-                        </h4>
-                        <h6 className="pink-text text-uppercase fw-bold mb-3">
-                          &#40; Map Location &#41;
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="vpItemSec">
-                    <div className="ProductImg">
-                      <Image src={ProductImg} className="img-fluid" />
-                      <span className="verified">VERIFIED</span>
-                    </div>
-
-                    <div className="pdRow">
-                      <div className="pdLeft">
-                        <div className="pdTitle">
-                          <h2 className="pink-text">
-                            Jail's Catering Services
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="pdRight w-100">
-                        <ListGroup
-                          variant="flush"
-                          className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                        >
-                          <ListGroupItem className="border-0 pb-2 p-0">
-                            <div className="d-flex align-items-center">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={
-                                    i < newrating ? "rated" : "unrated"
-                                  }
-                                >
-                                  <FaRegStar />
-                                </span>
-                              ))}
-                            </div>
-                          </ListGroupItem>
-                          <ListGroupItem className="fw-semibold border-0 starRating p-0">
-                            STAR RATING
-                          </ListGroupItem>
-                        </ListGroup>
-                      </div>
-                    </div>
-
-                    <div className="pdRow mb-4">
-                      <div className="pdLocation">
-                        <h4 className="d-flex align-items-center">
-                          <span className="pink-text">
-                            <IoLocationSharp />
-                          </span>{" "}
-                          East London / Easterncape
-                        </h4>
-                        <h6 className="pink-text text-uppercase fw-bold mb-3">
-                          &#40; Map Location &#41;
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="vpItemSec">
-                    <div className="ProductImg">
-                      <Image src={ProductImg} className="img-fluid" />
-                      <span className="verified">VERIFIED</span>
-                    </div>
-
-                    <div className="pdRow">
-                      <div className="pdLeft">
-                        <div className="pdTitle">
-                          <h2 className="pink-text">
-                            Jail's Catering Services
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="pdRight w-100">
-                        <ListGroup
-                          variant="flush"
-                          className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                        >
-                          <ListGroupItem className="border-0 pb-2 p-0">
-                            <div className="d-flex align-items-center">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={
-                                    i < newrating ? "rated" : "unrated"
-                                  }
-                                >
-                                  <FaRegStar />
-                                </span>
-                              ))}
-                            </div>
-                          </ListGroupItem>
-                          <ListGroupItem className="fw-semibold border-0 starRating p-0">
-                            STAR RATING
-                          </ListGroupItem>
-                        </ListGroup>
-                      </div>
-                    </div>
-
-                    <div className="pdRow mb-4">
-                      <div className="pdLocation">
-                        <h4 className="d-flex align-items-center">
-                          <span className="pink-text">
-                            <IoLocationSharp />
-                          </span>{" "}
-                          East London / Easterncape
-                        </h4>
-                        <h6 className="pink-text text-uppercase fw-bold mb-3">
-                          &#40; Map Location &#41;
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-                <Col>
-                  <div className="vpItemSec">
-                    <div className="ProductImg">
-                      <Image src={ProductImg} className="img-fluid" />
-                      <span className="verified">VERIFIED</span>
-                    </div>
-
-                    <div className="pdRow">
-                      <div className="pdLeft">
-                        <div className="pdTitle">
-                          <h2 className="pink-text">
-                            Jail's Catering Services
-                          </h2>
-                        </div>
-                      </div>
-                      <div className="pdRight w-100">
-                        <ListGroup
-                          variant="flush"
-                          className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                        >
-                          <ListGroupItem className="border-0 pb-2 p-0">
-                            <div className="d-flex align-items-center">
-                              {Array.from({ length: 5 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={
-                                    i < newrating ? "rated" : "unrated"
-                                  }
-                                >
-                                  <FaRegStar />
-                                </span>
-                              ))}
-                            </div>
-                          </ListGroupItem>
-                          <ListGroupItem className="fw-semibold border-0 starRating p-0">
-                            STAR RATING
-                          </ListGroupItem>
-                        </ListGroup>
-                      </div>
-                    </div>
-
-                    <div className="pdRow mb-4">
-                      <div className="pdLocation">
-                        <h4 className="d-flex align-items-center">
-                          <span className="pink-text">
-                            <IoLocationSharp />
-                          </span>{" "}
-                          East London / Easterncape
-                        </h4>
-                        <h6 className="pink-text text-uppercase fw-bold mb-3">
-                          &#40; Map Location &#41;
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </section>
-
-          <IconWrapper/>
+          <IconWrapper />
         </div>
       </main>
     </>

@@ -138,7 +138,7 @@ const Login = () => {
               <Newsletter className="mt-5" />
       </div>
     </section>
-    <BottomBar />
+    {/* <BottomBar /> */}
     </>
   );
 };

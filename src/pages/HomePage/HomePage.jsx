@@ -160,7 +160,7 @@ const HomePage = () => {
 
       </main>
 
-      <BottomBar/>
+      {/* <BottomBar/> */}
  
 
     </>
