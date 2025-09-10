@@ -38,6 +38,28 @@ h6 {
     color: var(--pink) !important;
 }
 
+.lightpink-text{
+    color: var(--light-pink) !important;
+}
+
+.blue-bg{
+    background-color: #16123f !important;
+}
+
+.w-fit{
+    width: fit-content !important;
+}
+
+.tracking-tighter { letter-spacing: -0.05em; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0em; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wide-md { letter-spacing: 0.05em; }
+.tracking-wide-lg { letter-spacing: 0.1em; }
+.tracking-wide-xl { letter-spacing: 0.15em; }
+.tracking-wide-xxl { letter-spacing: 0.2em; }
+
+
 
 main.main-section {
     min-height: 60vh;
@@ -96,6 +118,16 @@ ol.breadcrumb .breadcrumb-item.active {
     border: 1px solid #888888 !important;
     border-radius: 0 !important;
 }
+
+.cursor-pointer{
+    cursor: pointer ;
+}
+
+
+.shadow1 {
+    box-shadow: 4px 5px 6px 0px #00000087;
+}
+
 
 
 

@@ -59,7 +59,7 @@ span.verified {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 .vendorPage ul.social_links a {
@@ -144,3 +144,61 @@ section.vpBottomSec  .pdLocation h4, section.vpBottomSec  .pdLocation h6 {
 section.vpBottomSec  .starRating {
     font-size: 10px;
 }
+
+
+
+
+/* new css  */
+
+.main-slider img{
+    width: 100%;
+}
+
+.thumbs-slider img{
+    width: 100%;
+}
+.swiper-slide-thumb-active {
+    border: 3px solid var(--pink);
+}
+
+.addToFav{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.price-box{
+    background: var(--pink);
+    height: fit-content;
+}
+
+.report-btn{
+    height: fit-content;
+    color: var(--pink);
+    border: 2px solid var(--pink);
+}
+.report-btn:hover{
+    background: var(--pink);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.price-box, .report-btn{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    transition: all 0.3s linear;
+}
+
+.vendorPage .form-control,
+.vendorPage .form-check-input,
+.vendorPage .input-group-text {
+    border: 1px solid #ced4da !important;
+    border-radius: 4px !important;
+}
+
+

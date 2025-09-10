@@ -1,4 +1,9 @@
-import React from 'react'
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/autoplay";
 
 import { AiFillBank } from "react-icons/ai";
 import { ImHeadphones } from "react-icons/im";
@@ -11,26 +16,71 @@ import { SiCakephp } from "react-icons/si";
 import { MdTableRestaurant } from "react-icons/md";
 import { PiBathtub } from "react-icons/pi";
 
+const icons = [
+  {
+    icon: <AiFillBank size={40} className="pink-text me-2" />,
+    label: "Event Venues",
+  },
+  {
+    icon: <ImHeadphones size={40} className="pink-text me-2" />,
+    label: "DJ's",
+  },
+  {
+    icon: <MdCarRental size={40} className="pink-text me-2" />,
+    label: "Car Hire",
+  },
+  { icon: <FaSpa size={40} className="pink-text me-2" />, label: "Beauty Spa" },
+  {
+    icon: <IoIosBed size={40} className="pink-text me-2" />,
+    label: "Accommodation",
+  },
+  {
+    icon: <GiFlowerPot size={40} className="pink-text me-2" />,
+    label: "Florists",
+  },
+  {
+    icon: <MdTableRestaurant size={40} className="pink-text me-2" />,
+    label: "Decorators",
+  },
+  {
+    icon: <FaPeopleGroup size={40} className="pink-text me-2" />,
+    label: "Choirs",
+  },
+  { icon: <SiCakephp size={40} className="pink-text me-2" />, label: "Cakes" },
+  { icon: <PiBathtub size={40} className="pink-text me-2" />, label: "Salons" },
+];
 
 const IconWrapper = () => {
   return (
-    <section className='marquee-sec'>
-        <marquee class="html-marquee" direction="left" behavior="scroll" scrollamount="12" loop="infinite">
-          <div className="icn-wrp">
-              <div className="icon-box"><AiFillBank /> <span>Event Venues</span></div>
-              <div className="icon-box"><ImHeadphones /> <span>DJ's</span></div>
-              <div className="icon-box"><MdCarRental /> <span>Car Hire</span></div>
-              <div className="icon-box"><FaSpa /> <span>Beauty Spa</span></div>
-              <div className="icon-box"><IoIosBed /> <span>Accomodation</span></div>
-              <div className="icon-box"><GiFlowerPot /> <span>Florists</span></div>
-              <div className="icon-box"><MdTableRestaurant /> <span>Decorstors</span></div>
-              <div className="icon-box"><FaPeopleGroup /> <span>Choirs</span></div>
-              <div className="icon-box"><SiCakephp /> <span>Cakes</span></div>
-              <div className="icon-box"><PiBathtub /> <span>Salons</span></div>
+    <section className="marquee-sec">
+      <Swiper
+        modules={[Autoplay]}
+        loop={true}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+        }}
+        speed={3000} // smooth scroll speed
+        slidesPerView={2}
+        breakpoints={{
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 5 },
+          1024: { slidesPerView: 8 }, // instead of icons.length
+        }}
+        spaceBetween={20}
+        allowTouchMove={false} // disable dragging (marquee style)
+      >
+        {icons.map((item, idx) => (
+          <SwiperSlide key={idx}>
+            <div className="icon-box">
+              {item.icon}
+              <span>{item.label}</span>
             </div>
-        </marquee>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
-  )
-}
+  );
+};
 
-export default IconWrapper
+export default IconWrapper;
