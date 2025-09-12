@@ -8,7 +8,6 @@ import {
   FaCalendarCheck,
   FaRegNewspaper,
   FaHeadset,
-  FaConciergeBell,
   FaSquareFull,
   FaSearch,
 } from "react-icons/fa";
@@ -19,192 +18,217 @@ import { FaInstagram, FaTwitter, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Image from "react-bootstrap/Image";
 
+import About from "../../assets/Images/about.png";
+import VendorCategory from "../../assets/Images/market-segment.png";
+import PlanningTools from "../../assets/Images/startegy.png";
+import Events from "../../assets/Images/people.png";
+import Blogs from "../../assets/Images/blogging.png";
+import Help from "../../assets/Images/customer-service.png";
+
+import Accessories from "../../assets/Images/m-accessories.png";
+import Decor from "../../assets/Images/m-decor.png";
+import Entertainment from "../../assets/Images/m-music.png";
+import Food from "../../assets/Images/m-food.png";
+import Hospitality from "../../assets/Images/m-hospitality.png";
+import Beach from "../../assets/Images/m-beach.png";
+import Raft from "../../assets/Images/m-raft.png";
+import Mail from "../../assets/Images/m-mail.png";
+import Rentals from "../../assets/Images/m-rentals.png";
+import Transport from "../../assets/Images/m-transport.png";
+import Service from "../../assets/Images/m-service.png";
+
+function MenuIcon(path) {
+  return <div className="menuIconWrapper"><img src={path} className="megaMenuIcon" /></div>;
+}
+
 export const options = [
   {
     id: 1,
     name: "ABOUT MA-EVENT",
-    icon: <FaUsers />,
+    icon: MenuIcon(About),
     children: [],
     link: "/about",
   },
   {
     id: 2,
     name: "VENDORS CATEGORIES",
-    icon: <FaStore />,
+    icon: MenuIcon(VendorCategory),
     children: [
       {
         id: "2.1",
-        name: "Events Venues",
+        name: "Accessories",
+        icon: MenuIcon(Accessories),
         children: [],
-        link: "/vendors/events-venues",
+        link: "/vendors/accessories",
       },
       {
         id: "2.2",
-        name: "Decorators / Decor",
+        name: "Food & Beverages",
+        icon: MenuIcon(Food),
         children: [],
-        link: "/vendors/decorators",
+        link: "/vendors/food-beverages",
       },
       {
         id: "2.3",
-        name: "Photographers",
+        name: "Decor",
+        icon: MenuIcon(Decor),
         children: [],
-        link: "/vendors/photographers",
+        link: "/vendors/decor",
       },
       {
         id: "2.4",
-        name: "Car Hires",
+        name: "Entertainment",
+        icon: MenuIcon(Entertainment),
         children: [],
-        link: "/vendors/car-hires",
+        link: "/vendors/entertainment",
       },
       {
         id: "2.5",
-        name: "Beauty Salon",
+        name: "Hospitality",
+        icon: MenuIcon(Hospitality),
         children: [],
-        link: "/vendors/beauty-salon",
+        link: "/vendors/hospitality",
       },
       {
         id: "2.6",
-        name: "Honeymoon Destinations",
+        name: "Leisure",
+        icon: MenuIcon(Beach),
         children: [],
-        link: "/vendors/honeymoon",
+        link: "/vendors/leisure",
       },
       {
         id: "2.7",
-        name: "Accommodation",
+        name: "Outdoor",
+        icon: MenuIcon(Raft),
         children: [],
-        link: "/vendors/accommodation",
+        link: "/vendors/outdoor",
       },
       {
         id: "2.8",
-        name: "Wedding Planners",
+        name: "Printed Materials",
+        icon: MenuIcon(Mail),
         children: [],
-        link: "/vendors/wedding-planners",
+        link: "/vendors/printed-materials",
       },
-      { id: "2.9", name: "Cakes", children: [], link: "/vendors/cakes" },
-      { id: "2.10", name: "Catering", children: [], link: "/vendors/catering" },
+      {
+        id: "2.9",
+        name: "Rentals / Book / Hire",
+        icon: MenuIcon(Rentals),
+        children: [],
+        link: "/vendors/rentals",
+      },
+      {
+        id: "2.10",
+        name: "Transportation",
+        icon: MenuIcon(Transport),
+        children: [],
+        link: "/vendors/transportation",
+      },
       {
         id: "2.11",
-        name: "Videographers",
-        children: [],
-        link: "/vendors/videographers",
-      },
-      { id: "2.12", name: "Florists", children: [], link: "/vendors/florists" },
-      {
-        id: "2.13",
-        name: "Event Loans",
-        children: [],
-        link: "/vendors/event-loans",
-      },
-      {
-        id: "2.14",
-        name: "Wedding Websites",
-        children: [],
-        link: "/vendors/wedding-websites",
-      },
-      {
-        id: "2.15",
         name: "Services",
+        icon: MenuIcon(Service),
         children: [
           {
-            id: "2.15.1",
+            id: "2.11.1",
             icon: <FaSquareFull size={7} />,
             name: "Events Venues",
             children: [],
             link: "/services/events-venues",
           },
           {
-            id: "2.15.2",
+            id: "2.11.2",
             icon: <FaSquareFull size={7} />,
-            name: "Beauty Spa’s",
+            name: "Beauty Spa's",
             children: [],
             link: "/services/beauty-spas",
           },
           {
-            id: "2.15.3",
+            id: "2.11.3",
             icon: <FaSquareFull size={7} />,
             name: "Security",
             children: [],
             link: "/services/security",
           },
           {
-            id: "2.15.4",
+            id: "2.11.4",
             icon: <FaSquareFull size={7} />,
             name: "Event Ushers",
             children: [],
             link: "/services/event-ushers",
           },
           {
-            id: "2.15.5",
+            id: "2.11.5",
             icon: <FaSquareFull size={7} />,
             name: "Professional Makeup",
             children: [],
             link: "/services/makeup",
           },
           {
-            id: "2.15.6",
+            id: "2.11.6",
             icon: <FaSquareFull size={7} />,
             name: "Nail Technician",
             children: [],
             link: "/services/nail-technician",
           },
           {
-            id: "2.15.7",
+            id: "2.11.7",
             icon: <FaSquareFull size={7} />,
             name: "Cakes",
             children: [],
             link: "/services/cakes",
           },
           {
-            id: "2.15.8",
+            id: "2.11.8",
             icon: <FaSquareFull size={7} />,
             name: "Catering",
             children: [],
             link: "/services/catering",
           },
           {
-            id: "2.15.9",
+            id: "2.11.9",
             icon: <FaSquareFull size={7} />,
             name: "Photographers",
             children: [],
             link: "/services/photographers",
           },
           {
-            id: "2.15.10",
+            id: "2.11.10",
             icon: <FaSquareFull size={7} />,
             name: "Videography",
             children: [],
             link: "/services/videography",
           },
           {
-            id: "2.15.11",
+            id: "2.11.11",
             icon: <FaSquareFull size={7} />,
             name: "Events Cleaners",
             children: [],
             link: "/services/cleaners",
           },
           {
-            id: "2.15.12",
+            id: "2.11.12",
             icon: <FaSquareFull size={7} />,
             name: "Tailored Outfits",
             children: [],
             link: "/services/tailored-outfits",
           },
           {
-            id: "2.15.13",
+            id: "2.11.13",
             icon: <FaSquareFull size={7} />,
             name: "Graduation Outfits",
             children: [],
             link: "/services/graduation-outfits",
           },
           {
-            id: "2.15.14",
+            id: "2.11.14",
             icon: <FaSquareFull size={7} />,
             name: "Matric Dance Outfits",
             children: [],
             link: "/services/matric-dance-outfits",
           },
           {
-            id: "2.15.15",
+            id: "2.11.15",
             icon: <FaSquareFull size={7} />,
             name: "Events Planners",
             children: [],
@@ -214,31 +238,32 @@ export const options = [
       },
     ],
   },
+
   {
     id: 3,
     name: "PLANNING TOOLS",
-    icon: <FaCalendarCheck />,
+    icon: MenuIcon(PlanningTools),
     children: [],
     link: "/planning-tools",
   },
   {
     id: 4,
     name: "LATEST EVENTS",
-    icon: <MdEventAvailable />,
+    icon: MenuIcon(Events),
     children: [],
     link: "/latest-events",
   },
   {
     id: 5,
     name: "BLOG",
-    icon: <FaRegNewspaper />,
+    icon: MenuIcon(Blogs),
     children: [],
     link: "/blog",
   },
   {
     id: 6,
     name: "HELP",
-    icon: <FaHeadset />,
+    icon: MenuIcon(Help),
     children: [],
     link: "/help",
   },
@@ -286,7 +311,7 @@ const MultiMenus = ({ open, handleSidebarToggle, handleClose }) => {
             onClick={() => handleMenuClick(item)}
           >
             <LiaAngleRightSolid />
-            <div className="d-flex gap-2 align-items-center">
+            <div className="d-flex gap-2 align-items-center firstLevelMenu">
               {item.icon && <>{item.icon}</>}
               <span>{item.name}</span>
             </div>

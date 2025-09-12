@@ -104,7 +104,7 @@ const Header = () => {
                 </div>
               </div>
               <div className="nav-mega">
-                <Nav.Link href="#">
+                <Nav.Link href="/planning-tools">
                   Planning tools <IoMdArrowDropdown />
                 </Nav.Link>
                 <div className="megamenu-wrapper mini-mega-menu">
@@ -132,32 +132,32 @@ const Header = () => {
                 <div className="megamenu-wrapper menu-list">
                   <ul className="m-0 p-0 list-style-none">
                     <li>
-                      <a href="">Login</a>
+                      <Link to="/login">Login</Link>
                     </li>
                     <li>
-                      <a href="">Register</a>
+                      <Link to="/register">Register</Link>
                     </li>
                     <li>
-                      <a href="">My Ads</a>
+                      <Link to="">My Ads</Link>
                     </li>
                     <li>
-                      <a href="">Favourites</a>
+                      <Link to="">Favourites</Link>
                     </li>
                     <li>
-                      <a href="">Profile</a>
+                      <Link to="">Profile</Link>
                     </li>
                     <li>
-                      <a href="">Messages</a>
+                      <Link to="">Messages</Link>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="nav-mega">
-                <a href="#" className="rightNavLink postYourAd ms-3 fw-bold">
+                <Link to="/add-vendor" className="rightNavLink postYourAd ms-3 fw-bold">
                   <FaPlus size={14} /> Post
                   <span className="postSpan"> your</span>
                   Ad
-                </a>
+                </Link>
               </div>
             </Nav>
 

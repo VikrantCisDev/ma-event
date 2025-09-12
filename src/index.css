@@ -46,6 +46,10 @@ h6 {
     background-color: #16123f !important;
 }
 
+.pink-bg{
+    background-color: var(--pink) !important;
+}
+
 .w-fit{
     width: fit-content !important;
 }
@@ -114,7 +118,7 @@ ol.breadcrumb .breadcrumb-item.active {
 /* Inputs */
 .form-control,
 .form-check-input,
-.input-group-text {
+.input-group-text, .form-select {
     border: 1px solid #888888 !important;
     border-radius: 0 !important;
 }
