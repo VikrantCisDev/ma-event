@@ -75,7 +75,7 @@ header .navbar-nav .nav-link.active,
     left: 0;
     margin-top: var(--bs-dropdown-spacer);
     width: 100%;
-    min-width: 800px;
+    min-width: 540px;
     background: var(--light-pink);
     border: unset;
     border-radius: 0;

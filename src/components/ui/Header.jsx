@@ -17,6 +17,7 @@ const Header = () => {
   const [active, setActive] = useState(false);
   // State for multi-level sidebar
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [vendorMenuOpen, setVendorMenuOpen] = useState(false);
 
   // Toggle mobile navigation
   const handleClick = () => {
@@ -32,6 +33,10 @@ const Header = () => {
   // Sidebar toggle handler
   const handleSidebarToggle = (isOpen) => {
     setSidebarOpen(isOpen);
+  };
+
+  const handleVendorMenu = (isOpen) => {
+    setVendorMenuOpen(isOpen);
   };
 
   useEffect(() => {
@@ -96,11 +101,11 @@ const Header = () => {
             <Nav className="center-links text-uppercase d-xl-flex d-none">
               <Nav.Link href="#home">About ma-event</Nav.Link>
               <div className="nav-mega">
-                <Link to="/vendorpage" className="nav-link">
+                <Link to="/vendorpage" className="nav-link" onMouseEnter={() => handleVendorMenu(true)} onMouseLeave={() => handleVendorMenu(false)}>
                   Vendors <IoMdArrowDropdown />
                 </Link>
                 <div className="megamenu-wrapper">
-                  <VendorsMegaMenu />
+                  <VendorsMegaMenu menuStatus={vendorMenuOpen} />
                 </div>
               </div>
               <div className="nav-mega">

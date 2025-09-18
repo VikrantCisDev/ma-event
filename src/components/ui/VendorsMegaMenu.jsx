@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, ListGroup, Card } from "react-bootstrap";
 
 import Accessories from "../../assets/Images/m-accessories.png"
@@ -12,25 +12,126 @@ import Mail from "../../assets/Images/m-mail.png"
 import Rentals from "../../assets/Images/m-rentals.png"
 import Transport from "../../assets/Images/m-transport.png"
 import Service from "../../assets/Images/m-service.png"
+import { Link } from "react-router-dom";
 
 function MenuIcon(path) {
   return <img src={path} className="megaMenuIcon" />
 }
 
 
-
-// Icon-enhanced category data
+// category data
 const categoryData = [
-  { name: "Accessories", icon: MenuIcon(Accessories), services: [] },
-  { name: "Food & Beverages", icon: MenuIcon(Food), services: [] },
-  { name: "Decor", icon: MenuIcon(Decor), services: [] },
-  { name: "Entertainment", icon: MenuIcon(Entertainment), services: [] },
-  { name: "Hospitality", icon: MenuIcon(Hospitality), services: [] },
-  { name: "Leisure", icon: MenuIcon(Beach), services: [] },
-  { name: "Outdoor", icon: MenuIcon(Raft), services: [] },
-  { name: "Printed Materials", icon: MenuIcon(Mail), services: [] },
-  { name: "Rentals / Book / Hire", icon: MenuIcon(Rentals), services: [] },
-  { name: "Transportation", icon: MenuIcon(Transport), services: [] },
+  { 
+    name: "Accessories", 
+    icon: MenuIcon(Accessories), 
+    services: [
+      "Jewellery",
+      "Wedding Rings",
+      "Traditional Jewelers",
+    ] 
+  },
+  { 
+    name: "Food & Beverages", 
+    icon: MenuIcon(Food), 
+    services: [
+      "Catering",
+      "Cakes",
+      "Bar",
+      "Wines & Spirits",
+      "Baristas",
+    ] 
+  },
+  { 
+    name: "Decor", 
+    icon: MenuIcon(Decor), 
+    services: [
+      "Draping",
+      "Stage Lighting",
+      "Florists",
+      "Audio Visual",
+    ] 
+  },
+  { 
+    name: "Entertainment", 
+    icon: MenuIcon(Entertainment), 
+    services: [
+      "Cultural Dance Groups",
+      "Music Bands",
+      "Events Musicians",
+      "DJ's",
+      "Choirs",
+      "Comedy",
+    ] 
+  },
+  { 
+    name: "Hospitality", 
+    icon: MenuIcon(Hospitality), 
+    services: [
+      "Hotels",
+      "Lodges",
+      "Guest House’s",
+      "BnB’s",
+      "Back Packers",
+    ] 
+  },
+  { 
+    name: "Leisure", 
+    icon: MenuIcon(Beach), 
+    services: [
+      "Beaches",
+      "Boat Cruises",
+      "Kayaking",
+      "Surfing",
+      "Air Gliding",
+      "Water Rafting",
+      "Bungee Jumping",
+    ] 
+  },
+  { 
+    name: "Outdoor", 
+    icon: MenuIcon(Raft), 
+    services: [
+      "Camp sites",
+      "Hiking",
+      "Farm land sites",
+      "Game Parks",
+    ] 
+  },
+  { 
+    name: "Printed Materials", 
+    icon: MenuIcon(Mail), 
+    services: [
+      "Invitation Cards",
+      "Back Drop/ Signage",
+      "Programs",
+      "Name Tags",
+    ] 
+  },
+  { 
+    name: "Rentals / Book / Hire", 
+    icon: MenuIcon(Rentals), 
+    services: [
+      "PA Systems",
+      "Tents & Chairs",
+      "Mobile Fridge",
+      "MC's",
+      "Car Hire",
+      "Mobile Toilets",
+    ] 
+  },
+  { 
+    name: "Transportation", 
+    icon: MenuIcon(Transport), 
+    services: [
+      "Taxis",
+      "Combi services",
+      "Buses",
+      "Limo services",
+      "Trains",
+      "Airlines",
+      "Wedding Horse Carriage",
+    ] 
+  },
   {
     name: "Services",
     icon: MenuIcon(Service),
@@ -54,8 +155,13 @@ const categoryData = [
   },
 ];
 
-const VendorsMegaMenu = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Services");
+
+const VendorsMegaMenu = ({menuStatus}) => {
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  useEffect(() => {
+    setSelectedCategory("");
+  }, [menuStatus]);
 
   return (
     <section className="mega-menu vendor-mega-menu">
@@ -63,13 +169,13 @@ const VendorsMegaMenu = () => {
       {/* <Container> */}
         <Row>
           {/* Sidebar */}
-          <Col md={5}>
+          <Col md={6}>
             <ListGroup>
               {categoryData.map(({ name, icon }) => (
                 <ListGroup.Item
                   key={name}
                   active={name === selectedCategory}
-                  onClick={() => setSelectedCategory(name)}
+                  onMouseEnter={() => setSelectedCategory(name)}
                   className="d-flex align-items-center gap-2 menu-category-item"
                 >
                   {icon}
@@ -80,7 +186,7 @@ const VendorsMegaMenu = () => {
           </Col>
 
           {/* Content Panel */}
-          <Col md={7}>
+          <Col md={6}>
               <h4 className="h6 d-flex align-items-center gap-2 menu-category-item">
                 {
                   categoryData.find(cat => cat.name === selectedCategory)?.icon
@@ -89,16 +195,16 @@ const VendorsMegaMenu = () => {
               </h4>
                 {categoryData.find((cat) => cat.name === selectedCategory)
                   ?.services.length > 0 ? (
-                  <ul className="square-list">
+                  <ul className="square-list menu-category-list">
                     {categoryData
                       .find((cat) => cat.name === selectedCategory)
                       .services.map((service, idx) => (
-                        <li key={idx}>{service}</li>
+                        <li key={idx}><Link>{service}</Link></li>
                       ))}
                   </ul>
                 ) : (
                   <p className="text-muted">
-                    No services listed under this category yet.
+                    {selectedCategory && <em>No services listed under this category yet.</em>}
                   </p>
                 )}
           </Col>

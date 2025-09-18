@@ -159,9 +159,7 @@ const AddVendorPage = () => {
                 </Form.Group>
 
                 {/* Category & Subcategory */}
-                <Row className="mb-4">
-                  <Col md={6}>
-                    <Form.Group>
+                    <Form.Group className="mb-4">
                       <Form.Label className="fw-medium d-flex align-items-center justify-content-between">
                         Category
                       </Form.Label>
@@ -175,9 +173,7 @@ const AddVendorPage = () => {
                         <option value="Products">Products</option>
                       </Form.Select>
                     </Form.Group>
-                  </Col>
-                  <Col md={6}>
-                    <Form.Group>
+                    <Form.Group className="mb-4">
                       <Form.Label className="fw-medium d-flex align-items-center justify-content-between">
                         Subcategory
                       </Form.Label>
@@ -191,8 +187,6 @@ const AddVendorPage = () => {
                         <option value="Design">Design</option>
                       </Form.Select>
                     </Form.Group>
-                  </Col>
-                </Row>
 
                 {/* Description */}
                 <Form.Group className="mb-4">
@@ -215,7 +209,7 @@ const AddVendorPage = () => {
                   <Form.Label className="fw-medium d-flex align-items-center justify-content-between">
                     Price
                   </Form.Label>
-                  <InputGroup>
+                  <div className="d-flex align-items-center">
                     <Form.Select
                       type="number"
                       name="price"
@@ -226,18 +220,22 @@ const AddVendorPage = () => {
                       <option value="amount">Amount</option>
                       <option value="month">Rate per month</option>
                     </Form.Select>
-                    <div className="px-3 pink-text fw-bold fs-4 lh-1 pt-1">
+                    <div className="px-3 pink-text fw-bold fs-4 ">
                       :
                     </div>
+                    <InputGroup>
+                    <InputGroup.Text className="bg-transparent border-end-0 pe-1 pink-text fw-bold">R</InputGroup.Text>
                     <Form.Select
                       name="rateType"
                       value={formData.rateType}
                       onChange={handleChange}
-                    >
-                      <option value="year">Rate per year</option>
-                      <option value="month">Rate per month</option>
+                      className="border-start-0"
+                      >
+                      <option value="type1">Type your price</option>
+                      <option value="type2">Type your price</option>
                     </Form.Select>
-                  </InputGroup>
+                      </InputGroup>
+                  </div>
                 </Form.Group>
 
                 {/* Location */}
@@ -280,6 +278,9 @@ const AddVendorPage = () => {
                         onChange={handleChange}
                         placeholder="123 456 7890"
                       />
+                      <p className="m-0 d-flex align-items-center text-muted gap-md-2 gap-1">
+                        Show this number on my listing
+                        <Form.Check type="switch" aria-label="showListingNumber" className="custom-switch" checked /></p>
                     </Form.Group>
                   </Col>
                   <Col md={6}>

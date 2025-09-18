@@ -206,70 +206,71 @@ const ListingVendors = () => {
                         <Image src={item.img} className="img-fluid" />
                         <span className="verified">VERIFIED</span>
                       </div>
+                      <div className="">
+                        <div className="pt-2">
+                          <div className="cartType">
+                            <RiBookmarkFill />
+                            <h6>{item.bookMarkType}</h6>
+                          </div>
+                          <div className="pdLeft">
+                            <div className="pdTitle">
+                              <h2 className="pink-text">{item.name}</h2>
+                            </div>
+                          </div>
+                          <div className="pdRight w-100">
+                            <ListGroup
+                              variant="flush"
+                              className="w-100 flex-row justify-content-between align-items-center flex-wrap"
+                            >
+                              <ListGroupItem className="border-0 pb-2 p-0">
+                                <div className="d-flex align-items-center">
+                                  {Array.from({ length: 5 }, (_, i) => (
+                                    <span
+                                      key={i}
+                                      className={
+                                        i < item.rating ? "rated" : "unrated"
+                                      }
+                                    >
+                                      {i < item.rating ? (
+                                        <FaStar />
+                                      ) : (
+                                        <FaRegStar />
+                                      )}
+                                    </span>
+                                  ))}
+                                </div>
+                              </ListGroupItem>
+                            </ListGroup>
+                          </div>
 
-                      <div className="pt-2">
-                        <div className="cartType">
-                          <RiBookmarkFill />
-                          <h6>{item.bookMarkType}</h6>
-                        </div>
-                        <div className="pdLeft">
-                          <div className="pdTitle">
-                            <h2 className="pink-text">{item.name}</h2>
+                          <div className="priceDetail">
+                            <h2 className="text-white">{item.price}</h2>
+                          </div>
+
+                          <div className="timeAndView">
+                            <div className="postTime">
+                              <IoTimeOutline color="#921f62" />
+                              <span>{item.time}</span>
+                            </div>
+                            <div className="postView">
+                              <IoEyeSharp color="#921f62" />
+                              <span>{item.views}</span>
+                            </div>
                           </div>
                         </div>
-                        <div className="pdRight w-100">
-                          <ListGroup
-                            variant="flush"
-                            className="w-100 flex-row justify-content-between align-items-center flex-wrap"
-                          >
-                            <ListGroupItem className="border-0 pb-2 p-0">
-                              <div className="d-flex align-items-center">
-                                {Array.from({ length: 5 }, (_, i) => (
-                                  <span
-                                    key={i}
-                                    className={
-                                      i < item.rating ? "rated" : "unrated"
-                                    }
-                                  >
-                                    {i < item.rating ? (
-                                      <FaStar />
-                                    ) : (
-                                      <FaRegStar />
-                                    )}
-                                  </span>
-                                ))}
-                              </div>
-                            </ListGroupItem>
-                          </ListGroup>
-                        </div>
 
-                        <div className="priceDetail">
-                          <h2 className="text-white">{item.price}</h2>
-                        </div>
-
-                        <div className="timeAndView">
-                          <div className="postTime">
-                            <IoTimeOutline color="#921f62" />
-                            <span>{item.time}</span>
+                        <div className="pdRow mb-4">
+                          <div className="pdLocation">
+                            <h4 className="d-flex align-items-center">
+                              <span className="pink-text">
+                                <IoLocationSharp />
+                              </span>{" "}
+                              {item.location}
+                            </h4>
+                            <h6 className="pink-text text-uppercase fw-bold mb-3">
+                              &#40; Map Location &#41;
+                            </h6>
                           </div>
-                          <div className="postView">
-                            <IoEyeSharp color="#921f62" />
-                            <span>{item.views}</span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="pdRow mb-4">
-                        <div className="pdLocation">
-                          <h4 className="d-flex align-items-center">
-                            <span className="pink-text">
-                              <IoLocationSharp />
-                            </span>{" "}
-                            {item.location}
-                          </h4>
-                          <h6 className="pink-text text-uppercase fw-bold mb-3">
-                            &#40; Map Location &#41;
-                          </h6>
                         </div>
                       </div>
                     </div>
