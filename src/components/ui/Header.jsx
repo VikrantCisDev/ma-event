@@ -119,7 +119,7 @@ const Header = () => {
               <Nav.Link href="#link">Latest Events</Nav.Link>
               <Nav.Link href="#link">Images</Nav.Link>
               <Nav.Link href="#link">Blog</Nav.Link>
-              <Nav.Link href="#link">FAQ'S</Nav.Link>
+              <Nav.Link href="/faq">FAQ'S</Nav.Link>
 
               <div className="d-xxl-flex d-none userLoginLinks">
                 <Nav.Link href="/login" className="fw-bold ">
