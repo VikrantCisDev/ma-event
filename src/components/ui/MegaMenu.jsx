@@ -4,6 +4,7 @@ import Guestlist from "../../assets/Images/pt-icon1.png";
 import Checklist from "../../assets/Images/pt-icon2.png";
 import BudgetCalculator from "../../assets/Images/pt-icon3.png";
 import Shortlist from "../../assets/Images/pt-icon4.png";
+import { Link } from "react-router-dom";
 
 const MegaMenu = () => {
   return (
@@ -16,7 +17,7 @@ const MegaMenu = () => {
           <div className="menu-icon">
             <Image src={Guestlist} fluid />
           </div>
-          Guestlist
+          <Link to="/">Guestlist</Link>
         </ListGroup.Item>
         <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
           <div className="menu-icon">
@@ -34,7 +35,7 @@ const MegaMenu = () => {
           <div className="menu-icon">
             <Image src={Shortlist} fluid />
           </div>
-          Shortlist
+          <Link to="/shortlist">Shortlist</Link>
         </ListGroup.Item>
       </ListGroup>
     </section>

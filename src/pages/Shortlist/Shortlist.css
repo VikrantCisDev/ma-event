@@ -1,0 +1,154 @@
+/* styles.css */
+
+.servicesWrapper {
+  background: #f9f9f9;
+}
+
+.servicesWrapper * {
+  transition: all 0.3s ease-in-out;
+}
+
+.sc-tabs-wrap .btn-check+.btn {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #555555;
+  --bs-btn-border-color: #555555;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #555555;
+  --bs-btn-active-border-color: #555555;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.65rem;
+  opacity: 0.6;
+}
+
+.sc-tabs-wrap .btn-check:checked+.btn {
+  opacity: 1;
+}
+
+.service-card {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #FFF;
+}
+
+.service-card .sc-icon {
+  border-right: 1px dashed #ccc;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-size: 24px;
+}
+
+.sc-subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #a7a7a7;
+}
+
+.service-card .action-btn {
+  padding: 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.service-card:is(.saved-card, .booked-card) {
+  border: 0;
+  border-left: 4px solid var(--color);
+  box-shadow: 0 0 10px 0px rgb(0 0 0 / 15%);
+}
+
+.service-card:hover {
+  box-shadow: 0 0 10px 0px rgb(0 0 0 / 15%);
+}
+
+.service-card:is(.saved-card, .booked-card) .sc-icon {
+  color: var(--color);
+}
+
+.service-card.saved-card .sc-subtitle {
+  color: var(--color);
+}
+
+.service-card.booked-card .action-btn {
+  color: var(--color);
+}
+
+.service-card.saved-card {
+  --color: #5947f3;
+}
+
+.service-card.booked-card {
+  --color: #2dbaa7;
+  background: color-mix(in srgb, var(--color) 10%, #fff);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+
+
+/* Shortlist search input */
+
+.shortlist-search {
+  flex: 1;
+}
+
+.shortlist-search .search-box {
+  max-width: 520px;
+  width: 100%;
+  /* border: 1px solid #cfcfcf;
+  border-radius: 2px; */
+  overflow: hidden;
+  background: #fff;
+}
+
+.shortlist-input {
+  border: 0;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  outline: none;
+  font-size: 14px;
+  border: 1px solid #cfcfcf;
+    height: 100%;
+  color: #808080;
+}
+
+.shortlist-input::placeholder {
+  color: #808080;
+}
+
+.search-btn {
+  background: #7a2356;
+  border: 0;
+  color: #fff;
+  padding: 0.8rem 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.search-btn svg {
+  font-size: 24px;
+}
+
+@media (max-width: 576px) {
+  .shortlist-search {
+    justify-content: stretch;
+  }
+
+  .shortlist-search .search-box {
+    max-width: 100%;
+  }
+}

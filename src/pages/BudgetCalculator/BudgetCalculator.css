@@ -1,0 +1,53 @@
+.budget-calculator {
+    /* max-width: 900px;
+    width: 100%;
+    padding: 2rem 1rem; */
+
+    .btn-group {
+        flex-wrap: wrap;
+    }
+
+}
+
+.est_budget_input {
+    border: 1px solid #888888 !important;
+    padding: 5px 20px;
+
+    strong {
+        font-size: 18px;
+    }
+
+    .form-control {
+        border: none !important;
+    }
+}
+
+.section_day {
+    margin-bottom: 30px;
+
+    .btn-primary {
+        background-color: var(--pink) !important;
+        border-color: var(--pink) !important;
+    }
+
+    .form-control,
+    .form-check-input,
+    .input-group-text,
+    .form-select {
+        border: 2px solid var(--pink) !important;
+        border-radius: 4px !important;
+
+    }
+}
+
+.budget-btnwrap .btn{
+    border-radius: 6px !important;
+}
+
+/* .budget-btnwrap .btn:is(:focus,:focus-visible){
+    color: inherit !important; 
+    background-color: inherit !important;
+    border-color: inherit !important;
+    outline: 0;
+    box-shadow: inherit !important;
+} */

@@ -1,0 +1,93 @@
+
+.shortlistGrid {
+  gap: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  /* max-width: 1200px;
+  margin: auto; */
+}
+
+.shortlistCard {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  text-align: center;
+  transition: all 0.2s linear;
+  gap: 0.5rem 0.25rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.shortlistCard img {
+  width: auto;
+  height: auto;
+  max-width: 35px;
+  object-fit: contain;
+}
+
+.shortlistCard p {
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.shortlistCard .sc-subtitle {
+  font-size: 14px;
+  line-height: 1;
+  color: #fff;
+  grid-column: span 2;
+}
+
+.shortlistCard .sc-title {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.shortlistCard.card-blue {
+  background: #3186af;
+  color: #fff;
+}
+
+.shortlistCard.card-orange {
+  background: #f5993a;
+  color: #fff;
+}
+
+.shortlistCard.card-pink {
+  background: var(--pink);
+  color: #fff;
+}
+
+.shortlistCard.card-lightPink {
+  background: var(--light-pink);
+}
+
+.shortlistCard.card-lightPink .sc-title {
+  color: var(--pink);
+}
+
+.shortlistCard.card-lightPink .sc-subtitle {
+  color: #000;
+}
+
+.shortlistCard.card-green {
+  background: #35b6a0;
+}
+
+.shortlistCard.card-dark {
+  background: #161240;
+  color: #fff;
+}
+
+.shortlistCard:hover {
+  /* box-shadow: 0 0 10px 4px #00000036; */
+  transform: translateY(-1px);
+  transition: all 0.2s linear;
+}
+
+

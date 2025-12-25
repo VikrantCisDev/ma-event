@@ -1,6 +1,8 @@
 :root {
     --light-pink: #ead0dd;
     --pink: #921f62;
+    --star-yellow: #f37f35;
+
 }
 
 
@@ -38,30 +40,53 @@ h6 {
     color: var(--pink) !important;
 }
 
-.lightpink-text{
+.lightpink-text {
     color: var(--light-pink) !important;
 }
 
-.blue-bg{
+.blue-bg {
     background-color: #16123f !important;
 }
 
-.pink-bg{
+.pink-bg {
     background-color: var(--pink) !important;
 }
 
-.w-fit{
+.w-fit {
     width: fit-content !important;
 }
 
-.tracking-tighter { letter-spacing: -0.05em; }
-.tracking-tight { letter-spacing: -0.025em; }
-.tracking-normal { letter-spacing: 0em; }
-.tracking-wide { letter-spacing: 0.025em; }
-.tracking-wide-md { letter-spacing: 0.05em; }
-.tracking-wide-lg { letter-spacing: 0.1em; }
-.tracking-wide-xl { letter-spacing: 0.15em; }
-.tracking-wide-xxl { letter-spacing: 0.2em; }
+.tracking-tighter {
+    letter-spacing: -0.05em;
+}
+
+.tracking-tight {
+    letter-spacing: -0.025em;
+}
+
+.tracking-normal {
+    letter-spacing: 0em;
+}
+
+.tracking-wide {
+    letter-spacing: 0.025em;
+}
+
+.tracking-wide-md {
+    letter-spacing: 0.05em;
+}
+
+.tracking-wide-lg {
+    letter-spacing: 0.1em;
+}
+
+.tracking-wide-xl {
+    letter-spacing: 0.15em;
+}
+
+.tracking-wide-xxl {
+    letter-spacing: 0.2em;
+}
 
 
 
@@ -116,15 +141,16 @@ ol.breadcrumb .breadcrumb-item.active {
 /* common css  */
 
 /* Inputs */
-.form-control,
-.form-check-input,
-.input-group-text, .form-select {
+.form-control:not(.default-style),
+.form-check-input:not(.default-style),
+.input-group-text:not(.default-style),
+.form-select:not(.default-style) {
     border: 1px solid #888888 !important;
     border-radius: 0 !important;
 }
 
-.cursor-pointer{
-    cursor: pointer ;
+.cursor-pointer {
+    cursor: pointer;
 }
 
 
@@ -303,7 +329,8 @@ ol.breadcrumb .breadcrumb-item.active {
     color: white;
     height: 60px;
 }
-.sidebar-header:has(.back-btn){
+
+.sidebar-header:has(.back-btn) {
     background: #16123f;
 }
 
@@ -335,7 +362,7 @@ ol.breadcrumb .breadcrumb-item.active {
     position: relative;
 }
 
-.sidebar-content li::before{
+.sidebar-content li::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -346,16 +373,18 @@ ol.breadcrumb .breadcrumb-item.active {
     z-index: 0;
     background: #ffffff13;
     /* background: #f5f5f5; */
-    -webkit-transition: all .15s cubic-bezier(.215,.061,.355,1);
-    transition: all .15s cubic-bezier(.215,.061,.355,1);
+    -webkit-transition: all .15s cubic-bezier(.215, .061, .355, 1);
+    transition: all .15s cubic-bezier(.215, .061, .355, 1);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     display: block !important;
     z-index: -1;
 }
-.sidebar-content li:hover::before{
+
+.sidebar-content li:hover::before {
     width: 100%;
 }
+
 .sidebar-content li:hover {
     /* color: var(--pink); */
 }
@@ -387,15 +416,17 @@ ol.breadcrumb .breadcrumb-item.active {
     align-items: center;
     width: fit-content;
 }
+
 .sidebar-ftr .ftr-logo img {
     max-width: 200px;
-} 
-.sidebar-ftr .social_links li{
+}
+
+.sidebar-ftr .social_links li {
     padding: 0;
 }
 
-.header .offcanvas-backdrops.show{
-    cursor: url("./assets/Images/close.png") 16 16,pointer;
+.header .offcanvas-backdrops.show {
+    cursor: url("./assets/Images/close.png") 16 16, pointer;
 }
 
 
@@ -435,3 +466,39 @@ ol.breadcrumb .breadcrumb-item.active {
 }
 
 
+
+.border-btn {
+    display: block;
+    padding: 14px 20px;
+    font-size: 22px;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.border-btn:hover {
+    background-color: #fff;
+    color: var(--pink);
+}
+
+.border-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #fff;
+    border-radius: 12px;
+}
+
+.flex-auto {
+    flex: auto !important;
+}

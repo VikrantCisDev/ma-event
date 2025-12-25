@@ -149,10 +149,10 @@ const Header = () => {
                       <Link to="">Favourites</Link>
                     </li>
                     <li>
-                      <Link to="">Profile</Link>
+                      <Link to="/account">Profile</Link>
                     </li>
                     <li>
-                      <Link to="">Messages</Link>
+                      <Link to="/messages">Messages</Link>
                     </li>
                   </ul>
                 </div>

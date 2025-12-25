@@ -1,0 +1,42 @@
+.event-budget {
+   button, textarea, input {
+    border-radius: 8px !important;
+   }
+}
+
+.summary-bar {
+    background: var(--pink);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.summary-bar span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.budget-item {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #f8f6f7 !important;
+}
+.event_estimation_inputs{
+    input{
+        border-radius: 8px !important;
+    }
+}
+
+.budget-item h5 {
+    margin-bottom: 2px;
+}
+
+.icons svg {
+    margin-left: 15px;
+    cursor: pointer;
+    color: #7f1d63;
+}
+
+.expand-area {
+    border-top: 1px solid #d1d1d1;
+    padding-top: 15px;
+}
