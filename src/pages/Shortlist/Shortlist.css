@@ -143,6 +143,10 @@
   font-size: 24px;
 }
 
+.customOffcanvas input.form-control{
+  border-color: var(--pink) !important;
+}
+
 @media (max-width: 576px) {
   .shortlist-search {
     justify-content: stretch;

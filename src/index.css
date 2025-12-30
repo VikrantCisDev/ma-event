@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
 :root {
     --light-pink: #ead0dd;
     --pink: #921f62;
     --star-yellow: #f37f35;
-
+    --font-roboto: 'Roboto';
 }
 
+.font-roboto{
+    font-family: var(--font-roboto);
+}
 
 section.mega-menu h5 {
     font-size: 14px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Account.css";
 import image1 from "../../assets/Images/jewelry.png";
 import image2 from "../../assets/Images/decor.png";
@@ -20,8 +20,9 @@ import { FaRegStar } from "react-icons/fa";
 import ProductCardStyle2 from "../../components/ui/ProductCardStyle2";
 import Image1 from "../../assets/Images/card6.jpg";
 import ReviewCard from "../../components/ui/ReviewCard";
+import { FaXmark } from "react-icons/fa6";
 
- let cardData = [
+let cardData = [
   {
     img: image1,
     title: "Accessories",
@@ -79,7 +80,7 @@ import ReviewCard from "../../components/ui/ReviewCard";
   },
 ];
 
- const myAds = [
+const myAds = [
   {
     id: 1,
     name: null,
@@ -152,7 +153,7 @@ import ReviewCard from "../../components/ui/ReviewCard";
   },
 ];
 
- const reviewsData = [
+const reviewsData = [
   {
     id: 1,
     name: "Robert",
@@ -178,7 +179,50 @@ import ReviewCard from "../../components/ui/ReviewCard";
   },
 ];
 
+const profileInfoData = {
+  fullname: {
+    value: "Rose Jamali",
+    isEditing: false,
+  },
+  username: {
+    value: "Jamalico Beauty",
+    isEditing: false,
+  },
+  email: {
+    value: "ja****co@gmail.com",
+    isEditing: false,
+  },
+  phoneNumber: {
+    value: null,
+    isEditing: false,
+  },
+};
+
 const Account = () => {
+  const [profileInfo, setProfileInfo] = useState(profileInfoData);
+
+  const handleProfileData = (e, field) => {
+    if (profileInfo[field].isEditing) {
+      setProfileInfo({
+        ...profileInfo,
+        [field]: {
+          ...profileInfo[field],
+          value: e.target.value,
+        },
+      });
+    }
+  };
+
+  const handleProfileEdit = (field) => {
+    setProfileInfo({
+      ...profileInfo,
+      [field]: {
+        ...profileInfo[field],
+        isEditing: !profileInfo[field].isEditing,
+      },
+    });
+  };
+
   return (
     <>
       <div className="account-page">
@@ -223,49 +267,89 @@ const Account = () => {
                 <div className="personal-info">
                   <h2 className="personal-info-title">Personal information</h2>
 
+                  {/* FULL NAME */}
                   <div className="info-row d-flex justify-content-between align-items-center">
                     <div className="inputWrapCol">
                       <div className="info-label">Name &amp; surname</div>
-                      <input className="info-value" value={"Rose Jamali"} />
+                      <input
+                        className="info-value"
+                        value={profileInfo.fullname.value}
+                        disabled={!profileInfo.fullname.isEditing}
+                        onChange={(e) => handleProfileData(e, "fullname")}
+                      />
                     </div>
-                    <button className="add-btn">Edit</button>
+                    <button
+                      className="add-btn"
+                      onClick={() => handleProfileEdit("fullname")}
+                    >
+                      {profileInfo.fullname.isEditing ? <FaXmark /> : "Edit"}
+                    </button>
                   </div>
 
+                  {/* USERNAME */}
                   <div className="info-row d-flex justify-content-between align-items-center">
                     <div className="inputWrapCol">
                       <div className="info-label">Username</div>
-                      <input className="info-value" value={"Jamalico Beauty"} />
+                      <input
+                        className="info-value"
+                        value={profileInfo.username.value}
+                        disabled={!profileInfo.username.isEditing}
+                        onChange={(e) => handleProfileData(e, "username")}
+                      />
                     </div>
-                    <button className="add-btn">Edit</button>
+                    <button
+                      className="add-btn"
+                      onClick={() => handleProfileEdit("username")}
+                    >
+                      {profileInfo.username.isEditing ? <FaXmark /> : "Edit"}
+                    </button>
                   </div>
 
+                  {/* EMAIL */}
                   <div className="info-row d-flex justify-content-between align-items-center">
                     <div className="inputWrapCol">
                       <div className="info-label">Email</div>
                       <input
                         className="info-value"
-                        value={"ja****co@gmail.com"}
+                        value={profileInfo.email.value}
+                        disabled={!profileInfo.email.isEditing}
+                        onChange={(e) => handleProfileData(e, "email")}
                       />
                     </div>
-                    <button className="add-btn">Edit</button>
+                    <button
+                      className="add-btn"
+                      onClick={() => handleProfileEdit("email")}
+                    >
+                      {profileInfo.email.isEditing ? <FaXmark /> : "Edit"}
+                    </button>
                   </div>
 
+                  {/* PHONE NUMBER */}
                   <div className="info-row d-flex justify-content-between align-items-center">
                     <div className="inputWrapCol">
                       <div className="info-label">Phone number</div>
                       <input
                         className="info-value"
                         value={
+                          profileInfo.phoneNumber.value ??
                           "We'll send you an OTP to verify your mobile number."
                         }
+                        // disabled={!profileInfo.phoneNumber.isEditing}
+                        // onChange={(e) => handleProfileData(e, "phoneNumber")}
                       />
                     </div>
-                    <div className="d-flex align-items-center gap-2">
-                      <button className="add-btn">
-                        <MdAddCircle size={20} />
-                        Add
-                      </button>
-                    </div>
+                    <button
+                      className="add-btn"
+                      // onClick={() => handleProfileEdit("phoneNumber")}
+                    >
+                      {/* {profileInfo.phoneNumber.isEditing ? (
+                        <FaXmark />
+                      ) : (
+                        <> */}
+                          <MdAddCircle size={20} /> Add
+                        {/* </> */}
+                      {/* )} */}
+                    </button>
                   </div>
                 </div>
               </Col>
@@ -289,42 +373,41 @@ const Account = () => {
             </Col>
           </Row>
         </div>
-      
 
-      <div className="innerContainer mb-5">
-        <h2 class="h3 pink-text mb-4">My Active Ads ({myAds.length})</h2>
-        <div className="myads-wrapper">
-          {myAds.map((item) => (
-            <ProductCardStyle2 item={item} key={item.id} />
-          ))}
-        </div>
-      </div>
-
-      <div className="innerContainer mb-5">
-        <h2 className="h3 ">
-          Reviews <span>45</span>
-        </h2>
-        <div className="d-flex align-items-center ratings mb-4">
-          <FaRegStar className="stars" />
-          <FaRegStar className="stars" />
-          <FaRegStar className="stars" />
-          <FaRegStar className="stars" />
-          <FaRegStar className="stars" />
-          <span className=" ms-2"> 5 star average from 45 ratings</span>
-        </div>
-        <div className="reviews-wrapper">
-          <Row className="mb-3 gap-md-0 gap-3">
-            {reviewsData.map((item) => (
-              <Col key={item.id} md={4}>
-                <ReviewCard item={item} />
-              </Col>
+        <div className="innerContainer mb-5">
+          <h2 class="h3 pink-text mb-4">My Active Ads ({myAds.length})</h2>
+          <div className="myads-wrapper">
+            {myAds.map((item) => (
+              <ProductCardStyle2 item={item} key={item.id} />
             ))}
-          </Row>
+          </div>
         </div>
-        <button className="border-btn">Load More</button>
-      </div>
 
-      <IconWrapper />
+        <div className="innerContainer mb-5">
+          <h2 className="h3 ">
+            Reviews <span>45</span>
+          </h2>
+          <div className="d-flex align-items-center ratings mb-4">
+            <FaRegStar className="stars" />
+            <FaRegStar className="stars" />
+            <FaRegStar className="stars" />
+            <FaRegStar className="stars" />
+            <FaRegStar className="stars" />
+            <span className=" ms-2"> 5 star average from 45 ratings</span>
+          </div>
+          <div className="reviews-wrapper">
+            <Row className="mb-3 gap-md-0 gap-3">
+              {reviewsData.map((item) => (
+                <Col key={item.id} md={4}>
+                  <ReviewCard item={item} />
+                </Col>
+              ))}
+            </Row>
+          </div>
+          <button className="border-btn">Load More</button>
+        </div>
+
+        <IconWrapper />
       </div>
     </>
   );

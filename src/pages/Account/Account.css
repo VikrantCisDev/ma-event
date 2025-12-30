@@ -175,6 +175,9 @@
     height: auto;
     width: 100%;
 }
+.info-value:disabled{
+    background: #fff;
+}
 
 .add-btn {
     color: #06b39a;

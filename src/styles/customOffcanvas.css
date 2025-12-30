@@ -1,0 +1,41 @@
+
+body:has(.customOffcanvas.show){
+    overflow-y: unset !important;
+    padding: 0 !important;
+}
+
+.customOffcanvas{
+    top: 50% !important;
+    bottom: 50% !important;
+    width: 90%;
+    max-width: 900px;
+    border: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    height: 100%;
+    min-height: 400px;
+    max-height: 80vh;
+}
+.customOffcanvas.offcanvas.offcanvas-end{
+    width: 90%;
+}
+.customOffcanvas.show:not(.hiding), .customOffcanvas.showing{
+    transform: translateY(-50%) !important;
+}
+
+.customOffcanvas .offcanvas-header{
+    background: var(--pink);
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.customOffcanvas .offcanvas-header .oc-closeBtn {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+

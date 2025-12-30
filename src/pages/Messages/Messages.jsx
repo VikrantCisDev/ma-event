@@ -23,7 +23,7 @@ import {
 import { GiCakeSlice, GiDiamondRing, GiForkKnifeSpoon } from "react-icons/gi";
 import { MdOutlineStorefront, MdOutlineEventSeat } from "react-icons/md";
 import { FaLeaf } from "react-icons/fa";
-
+import ChatScreen from "../../components/ui/ChatScreen";
 
 const myAds = [
   {
@@ -98,21 +98,25 @@ const myAds = [
   },
 ];
 
-
 const Messages = () => {
-
   return (
     <>
       <div className="message-main py-lg-5 py-4">
         <div className="custom-container">
-          <h2 className="h3 pink-text mb-4">My Active Ads ({myAds.length})</h2>
-          <div className="myads-wrapper">
-            {myAds.map((item) => (
-              <ProductCardStyle2 item={item} key={item.id} />
-            ))}
+          <div className="mb-5 mx-xxl-5 px-xxl-5">
+            <ChatScreen />
           </div>
 
-          <br />
+          <div className="pb-4 mx-xxl-5 px-xxl-5">
+            <h2 className="h3 pink-text mb-4">
+              My Active Ads ({myAds.length})
+            </h2>
+            <div className="myads-wrapper">
+              {myAds.map((item) => (
+                <ProductCardStyle2 item={item} key={item.id} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       <IconWrapper />

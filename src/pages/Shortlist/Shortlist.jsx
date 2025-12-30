@@ -3,7 +3,14 @@ import "./Shortlist.css";
 import IconWrapper from "../../components/ui/IconWrapper";
 import ProductCardStyle2 from "../../components/ui/ProductCardStyle2";
 import Image1 from "../../assets/Images/card6.jpg";
-import { Row, Col, ButtonGroup, ToggleButton, Image } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  ButtonGroup,
+  ToggleButton,
+  Image,
+  Form,
+} from "react-bootstrap";
 import { Card, Button } from "react-bootstrap";
 import {
   FiHome,
@@ -33,7 +40,7 @@ import { LiaBlackTie } from "react-icons/lia";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { BiMessageDetail } from "react-icons/bi";
 import ToolCardsWrap from "../../components/ui/ToolCardsWrap";
-
+import CustomOffcanvas from "../../components/ui/CustomOffcanvas";
 
 export const servicesData = [
   {
@@ -158,7 +165,7 @@ export const servicesData = [
   },
 ];
 
-const ServiceCard = ({ item }) => {
+const ServiceCard = ({ item, handleClick }) => {
   const Icon = item.icon;
 
   return (
@@ -180,7 +187,7 @@ const ServiceCard = ({ item }) => {
           )}
         </div>
 
-        <Button className="text-decoration-none action-btn">
+        <Button className="text-decoration-none action-btn" onClick={handleClick}>
           {item.isBooked ? "Booked " : "Get started "} <FiChevronRight />
         </Button>
       </div>
@@ -190,15 +197,18 @@ const ServiceCard = ({ item }) => {
 
 const Shortlist = () => {
   const [tab, setTab] = useState("shortlisted");
+  const [show, setShow] = useState(false);
 
   return (
     <>
       <div className="shortlist-main my-5">
         <div className="custom-container mb-5 px-xxl-5">
           <div className="mx-xxl-5">
-            <ToolCardsWrap />
+            <div className="px-lg-3">
+              <ToolCardsWrap />
+            </div>
 
-            <div className="d-flex flex-column flex-md-row  align-items-start align-items-md-center mb-4">
+            <div className="d-flex flex-column flex-md-row  align-items-start align-items-md-center mb-4 px-lg-3">
               <div className="">
                 <h2 className="h3 pink-text mb-2">Our Shortlist</h2>
                 <p className="pink-text mb-0 fs-5">Robert Teye's Guests</p>
@@ -247,8 +257,8 @@ const Shortlist = () => {
               <Row className="g-3">
                 {tab === "shortlisted" &&
                   servicesData.map((item, idx) => (
-                    <Col key={idx} xs={12} md={6}>
-                      <ServiceCard item={item} />
+                    <Col key={idx} xs={12} md={6} >
+                      <ServiceCard item={item} handleClick={() => setShow(!show)}/>
                     </Col>
                   ))}
 
@@ -266,6 +276,13 @@ const Shortlist = () => {
         </div>
       </div>
       <IconWrapper />
+
+      <CustomOffcanvas
+        show={show}
+        onClose={() => setShow(false)}
+        title="Your Venue"
+        backdrop={false}
+      />
     </>
   );
 };

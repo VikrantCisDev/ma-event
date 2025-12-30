@@ -24,6 +24,7 @@ import EventBudget from "./pages/EventBudget/EventBudget";
 import BudgetCalculator from "./pages/BudgetCalculator/BudgetCalculator";
 import EventGuestList from "./pages/EventGuestList/EventGuestList";
 import EventTaskList from "./pages/EventTaskList/EventTaskList";
+import Congrats from "./pages/Congrats/Congrats";
 
 const App = () => {
   return (
@@ -42,15 +43,20 @@ const App = () => {
           <Route path="/faq" element={<Layout><Faq /></Layout>}></Route>
           <Route path="/privacy-policy" element={<Layout><PrivacyPolicy /></Layout>}></Route>
           <Route path="/terms-conditions" element={<Layout><TermsAndConditions /></Layout>}></Route>
+          <Route path="/test" element={<Test />}></Route>
+
+
+          {/* ↓↓↓↓↓↓↓↓↓↓  new pages ↓↓↓↓↓↓↓↓↓ */}
+
           <Route path="/account" element={<Layout><Account /></Layout>}></Route>
           <Route path="/messages" element={<Layout><Messages /></Layout>}></Route>
-          <Route path="/test" element={<Test />}></Route>
           <Route path="/shortlist" element={<Layout><Shortlist /></Layout>}></Route>
           <Route path="/event-checklist" element={<Layout><EventChecklist /></Layout>}></Route>
           <Route path="/event-budget" element={<Layout><EventBudget /></Layout>}></Route>
           <Route path="/budget-calculator" element={<Layout><BudgetCalculator  /></Layout>}></Route>
           <Route path="/event-guest-list" element={<Layout><EventGuestList  /></Layout>}></Route>
           <Route path="/event-task-list" element={<Layout><EventTaskList  /></Layout>}></Route>
+          <Route path="/congrats" element={<Layout><Congrats /></Layout>}></Route>
           
           <Route path="*" element={<h1>Error 404 page not found!!</h1>}></Route>
         </Routes>

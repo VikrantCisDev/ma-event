@@ -1,0 +1,55 @@
+.small-container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.firework-img {
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.gray-box {
+  border: 1px solid #c5c5c5;
+  background: #f2f2f2;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.iconCard-wrapper {
+  --bs-gutter-x: 0.9rem;
+}
+
+
+.icon-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.icon-box .icon-wrap {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 50%;
+  border: 3px solid var(--pink);
+}
+
+.icon-box .icon-wrap img {
+  width: 100%;
+  max-width: 50px;
+  object-fit: contain;
+}
+.congrats-section .dark-btn{
+  color: #fff;
+  min-width: auto;
+}
+.congrats-section .dark-btn:hover{
+  color: var(--pink);
+}

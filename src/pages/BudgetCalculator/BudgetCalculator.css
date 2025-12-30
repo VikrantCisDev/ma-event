@@ -1,46 +1,39 @@
-.budget-calculator {
-    /* max-width: 900px;
-    width: 100%;
-    padding: 2rem 1rem; */
-
-    .btn-group {
-        flex-wrap: wrap;
-    }
-
+.budget-calculator .btn-group {
+    flex-wrap: wrap;
 }
 
 .est_budget_input {
     border: 1px solid #888888 !important;
     padding: 5px 20px;
+}
 
-    strong {
-        font-size: 18px;
-    }
+.est_budget_input strong {
+    font-size: 18px;
+}
 
-    .form-control {
-        border: none !important;
-    }
+.est_budget_input .form-control {
+    border: none !important;
 }
 
 .section_day {
     margin-bottom: 30px;
-
-    .btn-primary {
-        background-color: var(--pink) !important;
-        border-color: var(--pink) !important;
-    }
-
-    .form-control,
-    .form-check-input,
-    .input-group-text,
-    .form-select {
-        border: 2px solid var(--pink) !important;
-        border-radius: 4px !important;
-
-    }
 }
 
-.budget-btnwrap .btn{
+.section_day .btn-primary {
+    background-color: var(--pink) !important;
+    border-color: var(--pink) !important;
+}
+
+.section_day .form-control,
+.section_day .form-check-input,
+.section_day .input-group-text,
+.section_day .form-select {
+    border: 2px solid var(--pink) !important;
+    border-radius: 4px !important;
+
+}
+
+.budget-btnwrap .btn {
     border-radius: 6px !important;
 }
 

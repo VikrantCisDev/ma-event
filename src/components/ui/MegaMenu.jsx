@@ -17,19 +17,23 @@ const MegaMenu = () => {
           <div className="menu-icon">
             <Image src={Guestlist} fluid />
           </div>
-          <Link to="/">Guestlist</Link>
+          <Link to="/event-guest-list">Guestlist</Link>
         </ListGroup.Item>
         <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
           <div className="menu-icon">
             <Image src={Checklist} fluid />
           </div>
+          <Link to="/event-checklist">
           Checklist
+          </Link>
         </ListGroup.Item>
         <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
           <div className="menu-icon">
             <Image src={BudgetCalculator} fluid />
           </div>
+          <Link to="/budget-calculator">
           Budget Calculator
+          </Link>
         </ListGroup.Item>
         <ListGroup.Item className="d-flex align-items-center gap-2 menu-category-item">
           <div className="menu-icon">
