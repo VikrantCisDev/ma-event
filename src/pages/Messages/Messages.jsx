@@ -101,7 +101,7 @@ const myAds = [
 const Messages = () => {
   return (
     <>
-      <div className="message-main py-lg-5 py-4">
+      <div className="message-main pt-lg-5 pt-4">
         <div className="custom-container">
           <div className="mb-5 mx-xxl-5 px-xxl-5">
             <ChatScreen />
@@ -115,6 +115,9 @@ const Messages = () => {
               {myAds.map((item) => (
                 <ProductCardStyle2 item={item} key={item.id} />
               ))}
+            </div>
+            <div className="d-flex mt-5 justify-content-center">
+              <button className="border-btn">Load More</button>
             </div>
           </div>
         </div>

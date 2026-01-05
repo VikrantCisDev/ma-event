@@ -45,18 +45,18 @@ const EventTaskList = () => {
         <Container>
           <ToolCardsWrap />
           {/* Header */}
-          <Row className="align-items-center mb-3">
-            <Col>
+          <Row className="align-items-center mb-3 gap-lg-0 gap-3">
+            <Col xl={5} lg={6}>
               <h2 className="pink-text">Our Event Guest list</h2>
             </Col>
-            <Col className="text-end tlp-buttons">
-              <Button variant="secondary" className="me-2">
+            <Col xl={7} lg={6} className="text-end tlp-buttons">
+              <Button variant="secondary" className="">
                 All Tasks
               </Button>
-              <Button variant="secondary" className="active me-2">
+              <Button variant="secondary" className="active ">
                 Completed (3)
               </Button>
-              <Button variant="secondary" className="me-2">
+              <Button variant="secondary" className="">
                 My Task
               </Button>
               <Button
@@ -69,9 +69,9 @@ const EventTaskList = () => {
             </Col>
           </Row>
 
-          <div className="tlp-filter-and-list rounded p-3 bg-light mb-lg-4">
+          <div className="tlp-filter-and-list rounded p-sm-3 p-2 pb-3 bg-light mb-lg-4">
             {/* Filters */}
-            <Card className="mb-3">
+            <Card className="mb-3 bg-white shadow-sm">
               <Card.Body>
                 <Row>
                   <Col md={4}>
@@ -97,11 +97,11 @@ const EventTaskList = () => {
             </Card>
 
             {/* Task Section */}
+            <h5 className="mb-3">January 2020</h5>
             <Card>
-              <Card.Header>January 2020</Card.Header>
               <Card.Body className="p-0">
                 {tasks.map((task, index) => (
-                  <div key={index} className="task-row">
+                  <div key={index} className="task-row shadow-sm">
                     <Form.Check
                       type="checkbox"
                       checked={task.completed}
@@ -116,7 +116,7 @@ const EventTaskList = () => {
                 ))}
 
                 {/* Add Task */}
-                <div className="task-add">
+                <div className="task-add shadow-sm">
                   <Form.Control
                     placeholder="Add a Task"
                     value={newTask}

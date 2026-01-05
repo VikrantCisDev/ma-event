@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../../styles/ChatScreen.css";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { MdContacts } from "react-icons/md";
+import { PiClockLight } from "react-icons/pi";
+
 
 const ChatScreen = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -168,12 +170,7 @@ const ChatScreen = () => {
                   return <div className={`msg-item ${item.type}`} key={idx}>
                     <div className="message-bubble mb-2">{item.text}</div>
                     <div className="message-time mt-2">
-                      <svg className="checkmark" viewBox="0 0 24 24" fill="none">
-                        <path
-                          d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"
-                          fill="#666"
-                        />
-                      </svg>
+                      <PiClockLight size={16} className="checkmark" />
                       {item.time}
                     </div>
                   </div>
@@ -185,13 +182,7 @@ const ChatScreen = () => {
 
           <div className="chat-input-container px-3 px-md-4 py-2 ">
             <div className="input-wrapper">
-              <svg
-                className="attach-icon"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><path d="M13 18.999a.974.974 0 0 0 .196.563l-1.79 1.81a5.5 5.5 0 1 1-7.778-7.78L15.185 2.159a4 4 0 0 1 5.63 5.685L10.259 18.276a2.5 2.5 0 0 1-3.526-3.545l8-7.999.706.707-8 8a1.5 1.5 0 0 0 2.116 2.126L20.111 7.132a3 3 0 1 0-4.223-4.263L4.332 14.304a4.5 4.5 0 1 0 6.364 6.364L13 18.338zM19 14h-1v4h-4v.999h4V23h1v-4.001h4V18h-4z"/></svg>
               <input
                 type="text"
                 className="message-input p-2"

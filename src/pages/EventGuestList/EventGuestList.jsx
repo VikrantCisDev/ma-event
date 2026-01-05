@@ -44,23 +44,23 @@ const EventGuestList = () => {
 
   return (
     <>
-      <section className="event-guest-list-section py-5">
+      <section className="event-guest-list-section py-md-5">
         <Container className="guest-list-page">
           <ToolCardsWrap />
 
           {/* Header */}
-          <Row className="align-items-center mb-3">
-            <Col>
+          <Row className="align-items-center mb-3 gap-lg-0 gap-2">
+            <Col lg={6}>
               <h2 className="pink-text">Our Event Guest list</h2>
             </Col>
-            <Col className="text-end">
-              <Button variant="secondary" className="me-2">
+            <Col lg={6} className="text-end d-flex align-items-center justify-content-lg-end justify-content-start gap-2 flex-wrap">
+              <Button variant="secondary" className="">
                 Show Filters
               </Button>
-              <Button variant="secondary" className="me-2">
+              <Button variant="secondary" className="">
                 Search
               </Button>
-              <Button variant="secondary" className="me-2">
+              <Button variant="secondary" className="">
                 Export
               </Button>
               <Button className="rounded-2  dark-btn  ">
@@ -69,7 +69,7 @@ const EventGuestList = () => {
             </Col>
           </Row>
 
-          <div className="p-3 bg-light rounded">
+          <div className="p-md-3 p-2 bg-light rounded">
             {/* Summary */}
             <div className="guest-summary mb-3 p-2 rounded bg-white">
               <div className="d-flex flex-wrap gap-2 ">
@@ -116,8 +116,8 @@ const EventGuestList = () => {
             </div>
 
             {/* Guest Card */}
-            <Card className="mb-4">
-              <div className="guest-row">
+            <Card className="mb-4 bg-transparent">
+              <div className="guest-row fw-semibold">
                 <div>Kuldeep Kumar Gaur's guests ({guests.length})</div>
                 <div className="text-center">Invites</div>
                 <div className="text-center">RSVPs</div>
@@ -161,7 +161,7 @@ const EventGuestList = () => {
 
             <Card className="mb-4">
               <Card.Body>
-                <div className="d-flex gap-2 align-items-center text-muted py-2">
+                <div className="d-flex gap-2 align-items-center add-category-btn py-2">
                   <IoMdAddCircle size={20}/> <span className="text-decoration-underline fs-6">Add a Category</span>
                 </div>
               </Card.Body>

@@ -1,6 +1,6 @@
 import { Button, Col, Form, Offcanvas, Row } from "react-bootstrap";
 import "../../styles/customOffcanvas.css";
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 import ProductCardStyle2 from "./ProductCardStyle2";
 
 import Image1 from "../../assets/Images/card1.jpg";
@@ -118,7 +118,7 @@ const CustomOffcanvas = ({
       {title && (
         <Offcanvas.Header>
           <div className="oc-closeBtn" onClick={onClose}>
-            <FaArrowLeftLong />
+            <FaArrowRightLong />
           </div>
           <Offcanvas.Title>{title}</Offcanvas.Title>
         </Offcanvas.Header>
@@ -144,7 +144,7 @@ const CustomOffcanvas = ({
 
         <div className="d-flex mt-5 justify-content-center ">
           <Button className="btn-theme fw-semibold fs-5 
-           px-lg-5 py-lg-2 text-uppercase">
+           px-lg-4 py-lg-2 text-uppercase rounded-0">
             Browse More Venues
           </Button>
         </div>

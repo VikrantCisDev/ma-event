@@ -14,6 +14,8 @@ import "./EventChecklist.css";
 import eventImage from "../../assets/Images/img-cal.jpg";
 import IconWrapper from "../../components/ui/IconWrapper";
 import ToolCardsWrap from "../../components/ui/ToolCardsWrap";
+import Calendar from "../../components/ui/Calendar";
+import CalendarCustom from "../../components/ui/Calendar";
 
 const EventChecklist = () => {
   const [show, setShow] = useState(false);
@@ -157,8 +159,8 @@ const EventChecklist = () => {
         >
           <Modal.Header className="justify-content-center border-0">
             <div className="text-center">
-              <h6 className="text-muted">Ideal Event Date</h6>
-              <h5 className="event-date pink-text">20 January 2020</h5>
+              <h5 className="text-gray ">Ideal Event Date</h5>
+              <p className="event-date mb-0 mt-2 pink-text">20 January 2020</p>
             </div>
           </Modal.Header>
 
@@ -169,7 +171,7 @@ const EventChecklist = () => {
               className="justify-content-center mb-4 custom-tabs pointer-events-none"
             >
               {/* YEAR TAB */}
-              <Tab eventKey="year" title="Year">
+              <Tab eventKey="year" title="Year" onClick={()=>{setActiveTab("year")}}>
                 <div className="d-flex flex-wrap gap-4 card_event_picker">
                   <div className="p-4 card_events border_end">
                     <h5 className="mb-3">Select a year</h5>
@@ -207,7 +209,7 @@ const EventChecklist = () => {
               </Tab>
 
               {/* MONTH TAB */}
-              <Tab eventKey="month" title="Season/Month">
+              <Tab eventKey="month" title="Season/Month" onClick={()=>{setActiveTab("month")}}>
                 <div className="d-flex flex-wrap gap-4 card_event_picker">
                   <div className="p-4 card_events border_end">
                     <h5 className="mb-3">Select a season</h5>
@@ -264,7 +266,7 @@ const EventChecklist = () => {
               </Tab>
 
               {/* DAY TAB */}
-              <Tab eventKey="day" title="Day">
+              <Tab eventKey="day" title="Day" onClick={()=>{setActiveTab("day")}}>
                 <div className="d-flex flex-wrap gap-4 card_event_picker">
                   <div className="p-4 card_events border_end">
                     <h5 className="mb-3">Select a day of the week</h5>
@@ -290,7 +292,10 @@ const EventChecklist = () => {
 
                   <div className="p-4 card_events">
                     <h5 className="mb-3">Or select a date</h5>
-                    <div>reserved for date picker</div>
+                    {/* <div>reserved for date picker</div> */}
+                    <div className="">
+                      <CalendarCustom/>
+                    </div>
 
                     <Form.Check
                       className="mt-3  month-undecided "
@@ -312,7 +317,7 @@ const EventChecklist = () => {
                 variant="link"
                 onClick={handlePrevious}
                 disabled={activeTab === "year"}
-                className="text-black fw-medium text-decoration-none"
+                className="text-black fw-medium text-decoration-none tabNav-btn"
               >
                 PREVIOUS
               </Button>
@@ -321,7 +326,7 @@ const EventChecklist = () => {
                 variant="link"
                 onClick={handleNext}
                 disabled={activeTab === "day"}
-                className="text-black fw-medium text-decoration-none"
+                className="text-black fw-medium text-decoration-none tabNav-btn"
               >
                 NEXT
               </Button>
