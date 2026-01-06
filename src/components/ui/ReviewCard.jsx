@@ -19,7 +19,7 @@ const ReviewCard = ({item = {
           {item.avatar ? (
             <img src={item.avatar} alt={item.name} className="w-100 h-100 rounded-circle object-fit-cover" />
           ) : (
-            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 8 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 20 20" aria-hidden="true" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 8 0 1114 0H3z" clipRule="evenodd"></path></svg>
             )}
         </div>
 

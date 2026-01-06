@@ -334,6 +334,7 @@ const Account = () => {
                           profileInfo.phoneNumber.value ??
                           "We'll send you an OTP to verify your mobile number."
                         }
+                        readOnly={true}
                         // disabled={!profileInfo.phoneNumber.isEditing}
                         // onChange={(e) => handleProfileData(e, "phoneNumber")}
                       />
