@@ -72,7 +72,7 @@ const Congrats = () => {
                   {listCards.map((item) => {
                     return (
                       <Col lg={3} sm={6} key={item.id} className="mb-3">
-                        <div className="gray-box icon-box">
+                        <div className="gray-box iconBox">
                           <div className="icon-wrap">
                             <Image src={item.icon} fluid />
                           </div>

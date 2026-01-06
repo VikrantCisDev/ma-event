@@ -1,33 +1,34 @@
-.categoryGrid.my-4.py-2 {
+.categoryGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1rem;
 }
 
-.catCard {
+.categoryGrid .catCard {
     background: #3186af;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
     transition: all 0.2s linear;
+    width: 100%;
 }
 
-.catCard.card-orange{
+.categoryGrid .catCard.card-orange{
     background: #f5993a;
 }
 
-.catCard.card-green{
+.categoryGrid .catCard.card-green{
     background: #35b6a0;
 }
 
-.catCard img {
+.categoryGrid .catCard img {
     width: 100%;
     height: 60px;
     object-fit: contain;
 }
 
-.catCard:hover {
+.categoryGrid .catCard:hover {
     box-shadow: 0 0 10px 4px #00000036;
     transform: translateY(-1px);
     transition: all 0.2s linear;

@@ -278,9 +278,9 @@ const AddVendorPage = () => {
                         onChange={handleChange}
                         placeholder="123 456 7890"
                       />
-                      <p className="m-0 d-flex align-items-center text-muted gap-md-2 gap-1">
+                      <div className="m-0 d-flex align-items-center text-muted gap-md-2 gap-1">
                         Show this number on my listing
-                        <Form.Check type="switch" aria-label="showListingNumber" className="custom-switch" checked /></p>
+                        <Form.Check type="switch" aria-label="showListingNumber" className="custom-switch" defaultChecked /></div>
                     </Form.Group>
                   </Col>
                   <Col md={6}>
