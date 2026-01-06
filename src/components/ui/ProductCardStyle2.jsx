@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/ProductCardStyle2.css";
+import "../../styles/productCardStyle2.css";
 
 import { Image, ListGroup, ListGroupItem } from "react-bootstrap";
 import { FaStar } from "react-icons/fa";
