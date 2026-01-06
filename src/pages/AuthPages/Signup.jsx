@@ -128,15 +128,15 @@ const Signup = () => {
                     {loading ? "Creating account..." : "Register"}
                   </button>
                   <div className="google-btngrp">
-                    <p class="text-center text-muted my-4">Or connect with</p>
+                    <p className="text-center text-muted my-4">Or connect with</p>
 
-                    <button class="google-btn btn-white mb-3">
-                      <img src={GoogleSvg} alt="Google" class="google-logo" />
+                    <button className="google-btn btn-white mb-3">
+                      <img src={GoogleSvg} alt="Google" className="google-logo" />
                       Continue with Google
                     </button>
 
-                    <button class="google-btn btn-black">
-                      <img src={GoogleSvg} alt="Google" class="google-logo" />
+                    <button className="google-btn btn-black">
+                      <img src={GoogleSvg} alt="Google" className="google-logo" />
                       Sign up with Google
                     </button>
                   </div>

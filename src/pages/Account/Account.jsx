@@ -242,7 +242,7 @@ const Account = () => {
         </div>
 
         <div className="account-container mb-5">
-          <h1 class="h3 pink-text mb-4">My Account / Personal Information</h1>
+          <h1 className="h3 pink-text mb-4">My Account / Personal Information</h1>
           <div className="accountProfileWrapper mt-3 pb-5">
             <Row className="align-items-start">
               <Col lg={3} md={4} className="align-self-center ">
@@ -375,7 +375,7 @@ const Account = () => {
         </div>
 
         <div className="innerContainer mb-5">
-          <h2 class="h3 pink-text mb-4">My Active Ads ({myAds.length})</h2>
+          <h2 className="h3 pink-text mb-4">My Active Ads ({myAds.length})</h2>
           <div className="myads-wrapper">
             {myAds.map((item) => (
               <ProductCardStyle2 item={item} key={item.id} />

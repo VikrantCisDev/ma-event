@@ -135,8 +135,8 @@ const CustomOffcanvas = ({
         </Form>
 
         <Row className="g-4">
-          {venueData.map((item) => (
-            <Col xl={4} md={6}>
+          {venueData.map((item,idx) => (
+            <Col xl={4} md={6} key={idx}>
               <ProductCardStyle2 item={item} key={item.id} />
             </Col>
           ))}

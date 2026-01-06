@@ -35,7 +35,7 @@ const Login = () => {
         <div className="row justify-content-center">
           {/* <div className="col-lg-6 col-12 authLeft py-lg-5 py-3 px-lg-5 px-2">
             <div className="auth-left-image mb-lg-5 mb-sm-3 mb-2">
-              <img class="img-fluid logo" src={Logo} alt="Ma-event"/>
+              <img className="img-fluid logo" src={Logo} alt="Ma-event"/>
             </div>
             <div className="auth-left-content">
               <h1 className=" mb-sm-2 pink-text">Welcome Back!</h1>
@@ -105,22 +105,22 @@ const Login = () => {
                   {loading ? "Logging in..." : "Login"}
                 </button>
                 <div className="google-btngrp">
-                  <p class="text-center text-muted my-4">Or login with</p>
+                  <p className="text-center text-muted my-4">Or login with</p>
 
-                  <button class="google-btn btn-white mb-3">
+                  <button className="google-btn btn-white mb-3">
                     <img
                       src={GoogleSvg}
                       alt="Google"
-                      class="google-logo"
+                      className="google-logo"
                     />
                     Continue with Google
                   </button>
 
-                  <button class="google-btn btn-black">
+                  <button className="google-btn btn-black">
                     <img
                       src={GoogleSvg}
                       alt="Google"
-                      class="google-logo"
+                      className="google-logo"
                     />
                     Sign up with Google
                   </button>

@@ -379,7 +379,7 @@ const VendorsPage = () => {
                             <Button
                               type="submit"
                               className="dark-btn rounded-0 w-100 fs-4 fw-bold"
-                              block
+                              
                             >
                               Send Message
                             </Button>
