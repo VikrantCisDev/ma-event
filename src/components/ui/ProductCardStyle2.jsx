@@ -59,7 +59,10 @@ const ProductCardStyle2 = ({
                 <ListGroupItem className="border-0 pb-2 p-0">
                   <div className="d-flex align-items-center ratingStars">
                     {Array.from({ length: 5 }, (_, i) => (
-                      <span key={i} className={i < item.rating ? "rated" : "unrated"} >
+                      <span
+                        key={i}
+                        className={i < item.rating ? "rated" : "unrated"}
+                      >
                         {/* {i < item.rating ? <FaStar /> :  */}
                         <FaRegStar />
                         {/* } */}
@@ -92,9 +95,11 @@ const ProductCardStyle2 = ({
                 </span>{" "}
                 {item.location}
               </h4>
-              {item.mapLocation && <h6 className="pink-text text-uppercase fw-bold mb-3">
-                &#40; Map Location &#41;
-              </h6>}
+              {item.mapLocation && (
+                <h6 className="pink-text text-uppercase fw-bold mb-3">
+                  &#40; Map Location &#41;
+                </h6>
+              )}
             </div>
           </div>
         </div>
