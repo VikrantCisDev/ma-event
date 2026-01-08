@@ -117,7 +117,7 @@ const AddVendorPage = () => {
 
   return (
     <>
-      <section>
+      <section className="add-vendor-page">
         <div className="custom-container py-5">
           <div className="mt-4 ">
             <Container>
@@ -229,7 +229,7 @@ const AddVendorPage = () => {
                       name="rateType"
                       value={formData.rateType}
                       onChange={handleChange}
-                      className="border-start-0"
+                      className="border-start-0 rateType-input"
                       >
                       <option value="type1">Type your price</option>
                       <option value="type2">Type your price</option>

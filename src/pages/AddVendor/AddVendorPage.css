@@ -48,3 +48,19 @@
     height: 100%;
     opacity: 0;
 }
+
+.add-vendor-page :is(.form-select,.form-control) {
+    border-radius: 4px !important;
+}
+.add-vendor-page .rateType-input,
+.add-vendor-page .form-select:not(.default-style):is(.rateType-input) {
+    border-left: 0 !important;
+}
+
+
+.add-vendor-page .input-group>:first-child {
+    border-radius: 4px 0 0 4px !important;
+}
+.add-vendor-page .input-group>:last-child {
+    border-radius: 0 4px 4px 0 !important;
+}
