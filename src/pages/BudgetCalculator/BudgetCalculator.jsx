@@ -156,7 +156,7 @@ const BudgetCalculator = () => {
             Select optional categories to INCLUDE in your event budget otherwise
             they’re excluded:
           </h5>
-          <Row>
+          <Row className="budget-checkboxes">
             <Col md={6}>
               <Form.Check
                 label="Videographer"

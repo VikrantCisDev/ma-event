@@ -45,6 +45,15 @@
     color: #000;
 }
 
+.budget-checkboxes{
+    max-width: 800px;
+    margin-top: 0.75rem;
+}
+
+.budget-checkboxes .form-check {
+    margin-bottom: .5rem;
+}
+
 /* .budget-btnwrap .btn:is(:focus,:focus-visible){
     color: inherit !important; 
     background-color: inherit !important;
