@@ -63,7 +63,7 @@ const BudgetCalculator = () => {
         <h4 className="mb-2">Let’s calculate your Event budget!</h4>
         <p className="text-muted">
           Events Manager powerful algorithms will allocate your budget based on
-          your preferences and thousands of previous couples’ actual budgets.
+          your preferences and thousands <br className="d-lg-block d-none" /> of previous couples’ actual budgets.
           Are you ready?
         </p>
 
@@ -153,8 +153,9 @@ const BudgetCalculator = () => {
         {/* Optional Categories */}
         <div className="section_day">
           <h5 className="mb-2">
-            Select optional categories to INCLUDE in your event budget otherwise
-            they’re excluded:
+            Select optional categories to INCLUDE in your event budget
+            <br className="d-lg-block d-none" />
+             otherwise they’re excluded:
           </h5>
           <Row className="budget-checkboxes">
             <Col md={6}>
