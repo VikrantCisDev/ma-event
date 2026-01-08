@@ -15,7 +15,7 @@ const PlanningTools = () => {
       description:
         "Easily track invitations, RSVPs, and guest info all in one place.",
       button: "Get Started",
-      link: "#",
+      link: "/event-guest-list",
     },
     {
       title: "Checklist",
@@ -23,7 +23,7 @@ const PlanningTools = () => {
       description:
         "Keep track of tasks, deadlines, and event details all in one place.",
       button: "Get Started",
-      link: "#",
+      link: "/event-checklist",
     },
     {
       title: "Budget",
@@ -31,7 +31,7 @@ const PlanningTools = () => {
       description:
         "Estimate total event costs by comparing different service providers in one place.",
       button: "Get Started",
-      link: "#",
+      link: "/budget-calculator",
     },
     {
       title: "Shortlist",
@@ -39,7 +39,7 @@ const PlanningTools = () => {
       description:
         "Save favorite vendors, compare options, and decide faster all in one place.",
       button: "Get Started",
-      link: "#",
+      link: "/shortlist",
     },
   ];
 
