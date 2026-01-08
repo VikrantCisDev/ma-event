@@ -62,9 +62,7 @@ const BudgetCalculator = () => {
         <h2 className="pink-text fw-medium mb-1">Budget Calculator</h2>
         <h4 className="mb-2">Let’s calculate your Event budget!</h4>
         <p className="text-muted">
-          Events Manager powerful algorithms will allocate your budget based on
-          your preferences and thousands <br className="d-lg-block d-none" /> of previous couples’ actual budgets.
-          Are you ready?
+          Events Manager powerful algorithms will allocate your budget based on your preferences and thousands <br className="d-lg-block d-none" /> of previous couples’ actual budgets. Are you ready?
         </p>
 
         {/* Budget Input */}

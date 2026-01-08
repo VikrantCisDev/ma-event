@@ -55,6 +55,9 @@ const Footer = () => {
               <li>
                 <a href="#">Latest</a>
               </li>
+              <li>
+                <a href="#">Blogs</a>
+              </li>
             </ul>
           </Col>
           <Col>
